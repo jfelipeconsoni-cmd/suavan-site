@@ -396,12 +396,31 @@
       if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}
     });
   });
-  // Preserva UTMs/campanha: repassa a query string + hash atuais para todos os links externos (.out).
+
+  // Links externos (.out): repassa UTMs e mede o clique no Clarity (segmento + origem).
   (function(){
     var extra = window.location.search;
-    if(!extra) return;
+    function origem(el){
+      var s = el.closest('section, footer, header');
+      if(!s) return 'outro';
+      if(s.tagName === 'FOOTER') return 'rodape';
+      if(s.id) return s.id;                       // motorista | familias | escolha
+      if(s.classList.contains('hero')) return 'hero';
+      return 'outro';
+    }
     document.querySelectorAll('a.out').forEach(function(el){
-      el.href = el.href.split('?')[0] + extra;
+      // Preserva UTMs/campanha: repassa a query string atual para a sub-página.
+      if(extra){ el.href = el.href.split('?')[0] + extra; }
+      // Clarity: ao clicar, marca o segmento da sessão e conta o evento do garfo.
+      el.addEventListener('click', function(){
+        if(typeof window.clarity !== 'function') return;
+        var href = el.getAttribute('href') || '';
+        var seg = href.indexOf('motorista.suavan') > -1 ? 'motorista'
+                : (href.indexOf('pais.suavan') > -1 ? 'pai' : 'outro');
+        window.clarity('set', 'segmento', seg);        // filtra gravações/heatmap por perfil
+        window.clarity('set', 'cta_origem', origem(el)); // onde clicou (hero, secao, garfo, rodape)
+        window.clarity('event', 'cta_' + seg);          // conta o clique: cta_motorista / cta_pai
+      });
     });
   })();
 </script>
