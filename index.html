@@ -1,29 +1,140 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Fallback sem JavaScript: redireciona em 0s. -->
-  <meta http-equiv="refresh" content="0; url=https://pais.suavan.com.br/">
-  <link rel="canonical" href="https://pais.suavan.com.br/">
-  <meta name="robots" content="noindex">
-  <title>Sua Van</title>
-  <style>
-    html, body { height: 100%; margin: 0; }
-    body {
-      display: flex; align-items: center; justify-content: center;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #FFC400; color: #1a1a1a; text-align: center; padding: 24px;
-    }
-    a { color: #1a1a1a; font-weight: 700; }
-  </style>
-  <script>
-    // Preserva query string e hash (ex.: campanhas com ?utm_...).
-    var alvo = "https://pais.suavan.com.br/" + window.location.search + window.location.hash;
-    window.location.replace(alvo);
-  </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Microsoft Clarity -->
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "xm3hw0zsli");
+</script>
+<title>Sua Van — transporte escolar que conecta motoristas e famílias</title>
+<meta name="description" content="O Sua Van conecta motoristas de van escolar e famílias num só lugar: mais alunos pra quem dirige, mais tranquilidade pra quem confia o filho. Escolha seu caminho.">
+<link rel="canonical" href="https://suavan.com.br/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Sua Van — transporte escolar que conecta motoristas e famílias">
+<meta property="og:description" content="Mais alunos pra quem dirige, mais tranquilidade pra quem confia o filho. Escolha seu caminho.">
+<meta property="og:url" content="https://suavan.com.br/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Francois+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<style>
+  :root{
+    --y400:#FACC15;--y500:#FFC500;
+    --g900:#111827;--g800:#1F2937;--g700:#374151;--g600:#4B5563;--g500:#6B7280;
+    --g400:#9CA3AF;--g300:#D1D5DB;--g200:#E5E7EB;--g100:#F3F4F6;--g50:#F9FAFB;
+    --green:#16A34A;--cream:#FFFBEB;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;color:var(--g800);background:var(--g50);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .ms{font-family:'Material Symbols Outlined';font-weight:normal;line-height:1;vertical-align:middle}
+  a{text-decoration:none;color:inherit}
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px}
+  .logo{font-family:'Francois One',sans-serif;font-size:24px;letter-spacing:.5px;color:var(--g900)}
+  .logo b{background:var(--y500);padding:1px 8px;border-radius:6px}
+
+  header{padding:22px 0;text-align:center}
+  .tag{font-size:12px;color:var(--g500);font-weight:500;margin-top:2px}
+
+  .hero{text-align:center;padding:30px 0 8px}
+  .avatar{width:72px;height:72px;border-radius:50%;background:var(--y500);display:flex;align-items:center;justify-content:center;margin:0 auto 20px}
+  .avatar .ms{font-size:38px;color:var(--g800)}
+  h1{font-size:36px;line-height:1.12;font-weight:800;letter-spacing:-.5px;color:var(--g900);margin-bottom:14px}
+  .lead{font-size:17px;color:var(--g500);max-width:560px;margin:0 auto}
+
+  .fork{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:680px;margin:34px auto 0}
+  .pick{display:flex;flex-direction:column;background:#fff;border:1px solid var(--g200);border-radius:18px;padding:26px;text-align:left}
+  .pick.motorista{border-color:var(--y400);background:linear-gradient(180deg,#FFFDF5 0%,#fff 60%);box-shadow:0 6px 24px rgba(250,204,21,.14)}
+  .pick .ic{width:48px;height:48px;border-radius:13px;background:rgba(250,204,21,.20);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+  .pick .ic .ms{font-size:26px;color:#92611A}
+  .pick .role{font-size:11px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:var(--g400);margin-bottom:6px}
+  .pick h2{font-size:19px;font-weight:800;color:var(--g900);line-height:1.2;margin-bottom:8px}
+  .pick p{font-size:14px;color:var(--g500);margin-bottom:22px;flex:1}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;height:50px;border:0;border-radius:12px;font-size:15px;font-weight:700;font-family:inherit;cursor:pointer}
+  .btn-primary{background:var(--y400);color:var(--g900)}
+  .btn-ghost{background:#fff;color:var(--g800);border:1px solid var(--g300)}
+  .btn .ms{font-size:20px}
+
+  .how{max-width:640px;margin:52px auto 0}
+  .how .htitle{text-align:center;font-size:13px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:var(--g400);margin-bottom:22px}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .step{text-align:center}
+  .step .n{width:34px;height:34px;border-radius:50%;background:var(--y500);color:var(--g900);font-weight:800;font-size:15px;display:flex;align-items:center;justify-content:center;margin:0 auto 10px}
+  .step h3{font-size:14.5px;font-weight:700;color:var(--g900);margin-bottom:3px}
+  .step p{font-size:12.5px;color:var(--g500)}
+
+  footer{text-align:center;padding:52px 0 40px;font-size:13px;color:var(--g500)}
+  footer a{color:var(--g800);font-weight:600}
+  footer .cr{display:block;margin-top:8px;font-size:12.5px;color:var(--g400)}
+
+  @media(max-width:560px){
+    h1{font-size:28px}
+    .fork{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr;gap:12px}
+  }
+</style>
 </head>
 <body>
-  <p>Redirecionando para <a href="https://pais.suavan.com.br/">pais.suavan.com.br</a>…</p>
+
+<header class="wrap">
+  <div class="logo">SUA<b>VAN</b></div>
+  <div class="tag">para motoristas e famílias</div>
+</header>
+
+<section class="hero wrap">
+  <div class="avatar"><span class="ms">directions_bus</span></div>
+  <h1>Transporte escolar, do jeito que devia ser.</h1>
+  <p class="lead">O Sua Van conecta motoristas escolares e famílias num só lugar — mais alunos pra quem dirige, mais tranquilidade pra quem confia o filho.</p>
+</section>
+
+<section class="wrap">
+  <div class="fork">
+    <div class="pick motorista">
+      <div class="ic"><span class="ms">local_shipping</span></div>
+      <div class="role">Sou motorista</div>
+      <h2>Lote sua van e tenha renda previsível</h2>
+      <p>Receba novos alunos na sua rota e deixe a cobrança das mensalidades com a gente.</p>
+      <a id="go-motorista" class="btn btn-primary" href="https://motorista.suavan.com.br">Quero lotar minha van <span class="ms">arrow_forward</span></a>
+    </div>
+    <div class="pick pais">
+      <div class="ic"><span class="ms">family_restroom</span></div>
+      <div class="role">Sou pai / responsável</div>
+      <h2>Uma van de confiança, perto de você</h2>
+      <p>Encontre um motorista verificado para a escola do seu filho, sem dor de cabeça.</p>
+      <a id="go-pais" class="btn btn-ghost" href="https://pais.suavan.com.br">Entrar na lista de espera <span class="ms">arrow_forward</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="how wrap">
+  <div class="htitle">Como funciona</div>
+  <div class="steps">
+    <div class="step"><div class="n">1</div><h3>O motorista cadastra</h3><p>Sua van, suas rotas e as escolas que atende.</p></div>
+    <div class="step"><div class="n">2</div><h3>As famílias encontram</h3><p>Vans de confiança perto de casa e da escola.</p></div>
+    <div class="step"><div class="n">3</div><h3>O Sua Van cuida</h3><p>Do encontro, da cobrança e da comunicação.</p></div>
+  </div>
+</section>
+
+<footer class="wrap">
+  Feito para conectar famílias e motoristas de van escolar.
+  <span class="cr">© 2026 Sua Van</span>
+</footer>
+
+<script>
+  // Preserva UTMs/campanha: repassa a query string + hash atuais para as duas pontas do garfo.
+  (function(){
+    var extra = window.location.search + window.location.hash;
+    if(!extra) return;
+    ['go-motorista','go-pais'].forEach(function(id){
+      var el = document.getElementById(id);
+      if(el){ el.href = el.href.split('#')[0].split('?')[0] + extra; }
+    });
+  })();
+</script>
+
 </body>
 </html>
