@@ -60,7 +60,7 @@
 <h1>Política de Privacidade</h1>
 <div class="meta">
   Aplicável ao aplicativo <strong>Sua Van — Motorista</strong><br>
-  Última atualização: <strong>30 de julho de 2026</strong> · Versão 1.0
+  Última atualização: <strong>28 de agosto de 2026</strong> · Versão 1.0 <span style="opacity:.75">(revisão de redação — nenhuma mudança no que é coletado ou em como é usado)</span>
 </div>
 
 <p>Esta Política explica como o <strong>Sua Van</strong> (o "App"), operado por <strong>João Felipe Consoni</strong>, inscrito no CPF nº <strong>379.809.078-50</strong> ("nós"), coleta, usa, compartilha e protege dados pessoais, em conformidade com a <strong>Lei Geral de Proteção de Dados (Lei 13.709/2018 — LGPD)</strong>.</p>
@@ -77,8 +77,8 @@
 <ul>
   <li><strong>Cadastro:</strong> nome, e-mail, CPF, telefone e apelido.</li>
   <li><strong>Veículo:</strong> modelo, placa, ano, cor e número de lugares.</li>
-  <li><strong>Cobrança:</strong> chave Pix e o texto da mensagem de cobrança que você configura.</li>
-  <li><strong>Autenticação:</strong> senha, armazenada de forma protegida (nunca em texto legível).</li>
+  <li><strong>Cobrança:</strong> o texto da mensagem de cobrança que você configura. A <strong>chave Pix fica guardada apenas no seu aparelho</strong>, em área protegida do sistema — ela não é enviada para nós nem para terceiros, e só sai do celular dentro da mensagem que <em>você</em> escolhe enviar.</li>
+  <li><strong>Autenticação:</strong> se você cria a conta com e-mail, uma senha, armazenada de forma protegida (nunca em texto legível). Se você entra com o <strong>Google</strong>, recebemos do Google apenas <strong>nome e e-mail</strong>, e <strong>nenhuma senha é criada</strong> — quem verifica a sua identidade é o próprio Google.</li>
 </ul>
 
 <h3>b) De terceiros, inseridos por você (alunos e responsáveis)</h3>
@@ -92,7 +92,7 @@
 
 <h3>c) Dados técnicos e de uso</h3>
 <p>Identificadores do dispositivo e registros mínimos necessários ao funcionamento e à segurança.</p>
-<p>O App usa o <strong>Microsoft Clarity</strong> (análise de uso: gravação de sessão e mapas de calor) para entender como o app é usado e melhorá-lo. As gravações são feitas com o <strong>mascaramento no modo "Strict"</strong> ativado: nessa configuração, os textos e as imagens exibidos na tela são ocultados pelo próprio SDK antes de qualquer envio, de modo que o conteúdo visível — como nome de aluno, chave Pix ou CPF — não seja transmitido. São registrados os sinais de interação (toques, rolagem, navegação) e dados técnicos do aparelho.</p>
+<p>O App usa o <strong>Microsoft Clarity</strong> (análise de uso: gravação de sessão e mapas de calor) para entender como o app é usado e melhorá-lo. As gravações são feitas com <strong>mascaramento aplicado pelo próprio aplicativo</strong>: os textos e as imagens exibidos na tela são ocultados antes de qualquer envio, de modo que o conteúdo visível — como nome de aluno, chave Pix ou CPF — não seja transmitido. Esse mascaramento é parte do código do app e <strong>não depende de configuração remota</strong>, de forma que ele não pode ser desligado sem uma nova versão publicada. São registrados os sinais de interação (toques, rolagem, navegação) e dados técnicos do aparelho.</p>
 <p>O App <strong>não</strong> usa rastreamento publicitário e <strong>não</strong> exibe anúncios.</p>
 
 <h2>3. Para que usamos (finalidades)</h2>
@@ -128,6 +128,7 @@
   <li>Toda comunicação com o servidor via <strong>HTTPS</strong>.</li>
   <li>Tokens de sessão guardados no <strong>armazenamento seguro do sistema</strong> (Android Keystore).</li>
   <li><strong>Isolamento por motorista</strong>: cada conta acessa exclusivamente os próprios dados, garantido por regras no banco de dados.</li>
+  <li><strong>CPF guardado como código irreversível</strong>: usamos o CPF para identificar você e impedir cadastros duplicados, mas o número não fica guardado nos nossos servidores — apenas um código gerado a partir dele, que não permite recuperar o CPF original.</li>
 </ul>
 
 <h2>7. Por quanto tempo guardamos</h2>
