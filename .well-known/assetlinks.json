@@ -1,0 +1,10 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "io.suavan.motorista",
+      "sha256_cert_fingerprints": ["25:F6:43:E8:4B:74:2D:B3:85:3F:2A:24:82:10:18:9E:E7:C9:14:08:05:26:4E:FA:2F:D4:0E:70:05:67:15:F0"]
+    }
+  }
+]
