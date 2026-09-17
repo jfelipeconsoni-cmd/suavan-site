@@ -29,7 +29,9 @@
 
   var CLARITY_PROJECT = 'xm3hw0zsli';
   var STORAGE_KEY = 'suavan_consent_analytics'; // 'accepted' | 'declined'
-  var POLICY_URL = 'https://suavan.com.br/privacidade';
+  // Relativa de propósito: cada subdomínio tem a SUA Política (17/09/2026), e o
+  // aviso deve levar à que descreve o Clarity daquela página.
+  var POLICY_URL = '/privacidade/';
 
   /* FILA ANTES DO ACEITE (16/09/2026). As páginas chamam window.clarity('event', …)
      e window.clarity('set', …) nos cliques (cta_motorista, acesso_whatsapp_enviar…).
@@ -113,7 +115,7 @@
     text.innerHTML =
       'Usamos uma ferramenta de análise para entender como o site é usado e ' +
       'melhorá-lo. <strong>Ela só é ativada se você aceitar.</strong> ' +
-      '<a href="' + POLICY_URL + '" style="color:#FACC15;text-decoration:underline">' +
+      '<a href="' + POLICY_URL + '" target="_blank" rel="noopener" style="color:#FACC15;text-decoration:underline">' +
       'Política de Privacidade</a>';
 
     var actions = document.createElement('div');
