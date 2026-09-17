@@ -18,6 +18,11 @@
  * suavan-motorista), porque cada um é um GitHub Pages próprio, num subdomínio
  * próprio. Servir de um só criaria dependência cross-origin justamente na peça
  * de privacidade. **Ao alterar, alterar nos três.**
+ *
+ * 16/09/2026: fila de eventos antes do aceite (ver queueStub) e sinal
+ * clarity('consent') depois dele. O aceite fica guardado POR SUBDOMÍNIO
+ * (localStorage é por origem): quem aceita em suavan.com.br vê o aviso de novo
+ * em motorista. e pais. — é o preço de três origens, não um defeito.
  */
 (function () {
   'use strict';
@@ -25,6 +30,17 @@
   var CLARITY_PROJECT = 'xm3hw0zsli';
   var STORAGE_KEY = 'suavan_consent_analytics'; // 'accepted' | 'declined'
   var POLICY_URL = 'https://suavan.com.br/privacidade';
+
+  /* FILA ANTES DO ACEITE (16/09/2026). As páginas chamam window.clarity('event', …)
+     e window.clarity('set', …) nos cliques (cta_motorista, acesso_whatsapp_enviar…).
+     Sem isto, tudo que acontecia ANTES de "Aceitar" — inclusive o clique que
+     motivou o aceite — se perdia, porque window.clarity só existia depois do
+     script carregar. O stub abaixo é o mesmo enfileirador do snippet oficial:
+     guarda as chamadas em memória e NÃO envia nada a lugar nenhum. Ao aceitar,
+     a tag do Clarity consome a fila; ao recusar, a fila é descartada e o stub
+     vira no-op. Assim o opt-in continua sendo o portão: sem aceite, zero rede. */
+  function queueStub() { (queueStub.q = queueStub.q || []).push(arguments); }
+  if (typeof window.clarity !== 'function') { window.clarity = queueStub; window.clarity.q = queueStub.q = []; }
 
   /* Leitura/escrita tolerantes: navegação privativa e bloqueio de cookies
      fazem localStorage lançar. Falhar aqui não pode quebrar a página — e, na
@@ -55,6 +71,17 @@
       y = l.getElementsByTagName(r)[0];
       y.parentNode.insertBefore(t, y);
     })(window, document, 'clarity', 'script', CLARITY_PROJECT);
+    /* API de consentimento do Clarity: registra que o visitante aceitou. É
+       redundante com o portão acima (o script nem carregava antes), mas deixa
+       o consentimento visível no painel e cobre o caso de o projeto ganhar a
+       opção "exigir consentimento de cookies". */
+    window.clarity('consent');
+  }
+
+  /* Recusou: a fila em memória é descartada e as páginas passam a falar com
+     um no-op — nunca com a rede. */
+  function dropQueue() {
+    window.clarity = function () {};
   }
 
   function removeBanner(el) {
@@ -115,7 +142,8 @@
     no.addEventListener('click', function () {
       saveChoice('declined');
       removeBanner(wrap);
-      /* Nada a desligar: o Clarity nunca foi carregado. */
+      /* Nada a desligar: o Clarity nunca foi carregado. A fila morre aqui. */
+      dropQueue();
     });
 
     yes.addEventListener('click', function () {
@@ -138,7 +166,9 @@
   var choice = readChoice();
   if (choice === 'accepted') {
     loadClarity();
-  } else if (choice !== 'declined') {
+  } else if (choice === 'declined') {
+    dropQueue();
+  } else {
     /* Sem escolha registrada: pergunta. Enquanto não houver aceite, nada é
        carregado — o estado inicial é "não rastrear". */
     showBanner();
