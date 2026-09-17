@@ -60,7 +60,7 @@
 <h1>Política de Privacidade</h1>
 <div class="meta">
   Aplicável ao aplicativo <strong>Sua Van — Motorista</strong><br>
-  Última atualização: <strong>31 de agosto de 2026</strong> · Versão 1.1 <span style="opacity:.75">(passa a declarar a <strong>foto de perfil</strong> do motorista, que é opcional — veja a seção 2a)</span>
+  Última atualização: <strong>17 de setembro de 2026</strong> · Versão 1.2 <span style="opacity:.75">(passa a declarar os <strong>relatórios de falha</strong> do app, enviados ao Google Firebase Crashlytics a partir da versão 1.7.49 — veja as seções 2c e 5. A 1.1, de 31/08/2026, declarou a foto de perfil.)</span>
 </div>
 
 <p>Esta Política explica como o <strong>Sua Van</strong> (o "App"), operado por <strong>João Felipe Consoni</strong>, inscrito no CPF nº <strong>379.809.078-50</strong> ("nós"), coleta, usa, compartilha e protege dados pessoais, em conformidade com a <strong>Lei Geral de Proteção de Dados (Lei 13.709/2018 — LGPD)</strong>.</p>
@@ -94,7 +94,8 @@
 <h3>c) Dados técnicos e de uso</h3>
 <p>Identificadores do dispositivo e registros mínimos necessários ao funcionamento e à segurança.</p>
 <p>O App usa o <strong>Microsoft Clarity</strong> (análise de uso: gravação de sessão e mapas de calor) para entender como o app é usado e melhorá-lo. As gravações são feitas com <strong>mascaramento aplicado pelo próprio aplicativo</strong>: os textos e as imagens exibidos na tela são ocultados antes de qualquer envio, de modo que o conteúdo visível — como nome de aluno, chave Pix ou CPF — não seja transmitido. Esse mascaramento é parte do código do app e <strong>não depende de configuração remota</strong>, de forma que ele não pode ser desligado sem uma nova versão publicada. São registrados os sinais de interação (toques, rolagem, navegação) e dados técnicos do aparelho.</p>
-<p>O App <strong>não</strong> usa rastreamento publicitário e <strong>não</strong> exibe anúncios.</p>
+<p><strong>Relatórios de falha (a partir da versão 1.7.49 do App).</strong> Quando o App falha ou encontra um erro interno, ele envia ao <strong>Google Firebase Crashlytics</strong> um relatório técnico: o erro, a sequência de chamadas do código onde ele ocorreu, a versão do App, o modelo e a versão do Android e um identificador da instalação do App neste aparelho. Esse relatório <strong>não</strong> contém seu nome, e-mail, CPF nem os dados dos alunos, e o App não associa o relatório à sua conta. Finalidade: encontrar e corrigir defeitos.</p>
+<p>O App <strong>não</strong> usa rastreamento publicitário, <strong>não</strong> exibe anúncios e <strong>não</strong> coleta o identificador de publicidade do Android.</p>
 
 <h2>3. Para que usamos (finalidades)</h2>
 <ul>
@@ -117,6 +118,7 @@
 <ul>
   <li><strong>Supabase</strong> — banco de dados e autenticação em nuvem, com servidores na região <strong>sa-east-1 (Brasil)</strong>.</li>
   <li><strong>Microsoft Clarity</strong> — análise de uso, com os dados mascarados descritos na seção 2c. Pode tratar dados <strong>fora do Brasil</strong>, o que constitui <strong>transferência internacional</strong> permitida pela LGPD (art. 33), mediante as salvaguardas do fornecedor.</li>
+  <li><strong>Google (Firebase Crashlytics)</strong> — relatórios técnicos de falha do App, descritos na seção 2c, para corrigir defeitos. Pode tratar dados <strong>fora do Brasil</strong>, nas mesmas condições de transferência internacional acima.</li>
   <li><strong>Autoridades públicas</strong>, quando exigido por lei ou ordem judicial.</li>
 </ul>
 <div class="callout info">
