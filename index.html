@@ -449,16 +449,25 @@
     return 'outro';
   }
 
-  // Links externos (.out): repassa UTMs e mede o clique no Clarity (segmento + origem).
+  // Repasse de UTM entre as três páginas: a query string atual vai junto em todo link para a raiz
+  // de suavan.com.br, motorista. ou pais. — os botões do garfo (.out) e os links do rodapé. Assim a
+  // origem que entrou na principal chega ao formulário do subdomínio (e vira o "via …" na mensagem).
+  // ⛔ A query entra antes do #hash; sem UTM na URL atual, nada muda.
   (function(){
     var extra = window.location.search;
+    function repassarUtm(el){
+      if(!extra) return;
+      var u = new URL(el.href);
+      if(!/(^|\.)suavan\.com\.br$/.test(u.hostname) || u.pathname !== '/') return; // só a raiz das três landings
+      new URLSearchParams(extra).forEach(function(v, k){ u.searchParams.set(k, v); });
+      el.href = u.toString();
+    }
+    document.querySelectorAll('a.out, footer nav.links a[href^="https://"]').forEach(repassarUtm);
+  })();
+
+  // Links externos (.out): mede o clique no Clarity (segmento + origem).
+  (function(){
     document.querySelectorAll('a.out').forEach(function(el){
-      // Preserva UTMs/campanha: repassa a query string atual para a sub-página.
-      if(extra){
-        var u = new URL(el.href);
-        new URLSearchParams(extra).forEach(function(v, k){ u.searchParams.set(k, v); });
-        el.href = u.toString(); // a query entra antes do #hash, que fica preservado
-      }
       // Clarity: ao clicar, marca o segmento da sessão e conta o evento do garfo.
       el.addEventListener('click', function(){
         if(typeof window.clarity !== 'function') return;
