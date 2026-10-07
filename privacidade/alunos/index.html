@@ -62,7 +62,9 @@
 
 <h1>Aviso de privacidade — dados de alunos e responsáveis</h1>
 <div class="meta">
-  Versão 1.0 · <strong>21 de setembro de 2026</strong> · Complementa a <a href="/privacidade/">Política de Privacidade</a> do Sua Van.
+  Versão 1.1 · <strong>7 de outubro de 2026</strong> · Complementa a <a href="/privacidade/">Política de Privacidade</a> do Sua Van (versão 1.5).<br>
+  <strong>O que mudou na 1.1:</strong> o aviso passa a explicar o <strong>recibo da mensalidade</strong> que o motorista pode gerar no app e enviar a você: quais dados ele leva (seção 2), com quem ele vai (seção 4), que o Sua Van guarda uma cópia até 31 de dezembro do 6º ano depois do ano do pagamento (seção 5) e como pedir para apagá-la (seção 6). A seção 6 também atualiza o nome da ANPD, hoje Agência Nacional de Proteção de Dados.<br>
+  <span style="opacity:.75">A 1.0 é de 21 de setembro de 2026.</span>
 </div>
 
 <h2>1. Para quem é este aviso</h2>
@@ -73,7 +75,7 @@
 <p><strong>Quem responde por estes dados.</strong> João Felipe Consoni, pessoa física, é quem mantém o Sua Van e responde pelos dados guardados no aplicativo e nos servidores. O papel de cada um — do Sua Van e do motorista — está sendo confirmado com apoio jurídico; o que não muda é o canal: você fala com a gente e a gente resolve. Contato: <strong><a href="mailto:privacidade@suavan.com.br">privacidade@suavan.com.br</a></strong>. Encarregado pelo tratamento de dados: <strong>João Felipe Consoni</strong>, pelo mesmo e-mail.</p>
 
 <h2>2. Quais dados do seu filho existem no Sua Van</h2>
-<p>Os dados chegam por dois caminhos. O que existe depende de qual foi usado.</p>
+<p>Os dados chegam por dois caminhos. O que existe depende de qual foi usado. Se o motorista enviar recibos, existe também a cópia deles, explicada no fim desta seção.</p>
 
 <h3>Quando o motorista cadastra o aluno no app (é o caminho mais comum)</h3>
 <table>
@@ -85,7 +87,7 @@
   <tr><td>Endereço de embarque</td><td>não</td><td>o motorista saber onde buscar</td></tr>
   <tr><td>Valor e dia de vencimento da mensalidade</td><td>sim</td><td>gerar a cobrança do mês</td></tr>
   <tr><td>Situação do pagamento de cada mês (em aberto, pago, quanto foi recebido e quando)</td><td>gerado pelo app</td><td>o motorista controlar o que recebeu</td></tr>
-  <tr><td>Nome e telefone do responsável</td><td>não</td><td>enviar a cobrança e falar com você</td></tr>
+  <tr><td>Nome e telefone do responsável</td><td>não (o nome é pedido ao motorista uma vez, antes do primeiro recibo, se ainda não estiver cadastrado)</td><td>enviar a cobrança, falar com você e aparecer no recibo como quem pagou ("Recebi de")</td></tr>
 </table>
 
 <h3>Quando você preenche o formulário do convite</h3>
@@ -99,19 +101,31 @@
 </table>
 <p>O que você preenche no formulário prevalece sobre o que o motorista digitou, e fica visível para o motorista que mandou o convite.</p>
 
+<h3>Quando o motorista envia um recibo</h3>
+<p>O recibo é um arquivo PDF que o motorista gera no app, depois de receber a mensalidade, e envia para você pelo aplicativo de mensagem que ele escolher. Ele só existe se o motorista tocar em "Enviar recibo": o app nunca gera nem envia recibo sozinho. O Sua Van guarda uma cópia dos dados do recibo, para que o motorista possa reenviar o mesmo recibo, com o mesmo número.</p>
+<table>
+  <tr><th>Dado</th><th>Obrigatório?</th><th>Para quê</th></tr>
+  <tr><td>Nome do aluno</td><td>vem do cadastro</td><td>dizer de qual aluno é a mensalidade</td></tr>
+  <tr><td>Nome do responsável, como quem pagou ("Recebi de")</td><td>sim, para gerar o recibo</td><td>dizer de quem o motorista recebeu</td></tr>
+  <tr><td>Mês, valor, data do pagamento e número do recibo</td><td>gerado pelo app</td><td>registrar o que foi pago e quando</td></tr>
+  <tr><td>Meses anteriores daquele aluno ainda em aberto no dia do recibo</td><td>gerado pelo app, só quando houver</td><td>deixar escrito no recibo que aqueles meses seguem em aberto</td></tr>
+  <tr><td>Nome completo e apelido do motorista e a cidade onde ele recebe, se ele informou</td><td>dados do motorista</td><td>dizer quem recebeu e onde</td></tr>
+</table>
+
 <div class="callout">
   <strong>O que o Sua Van não guarda do seu filho:</strong> foto, documento (CPF ou RG), data de nascimento, localização em tempo real. O app do motorista não tem rastreio da van hoje. Se isso mudar, este aviso muda antes.
 </div>
 
 <h2>3. Para que os dados servem</h2>
-<p>Só para o motorista fazer o trabalho dele: montar a lista de alunos, organizar a rota por escola e turno, gerar a mensalidade de cada mês e enviar a cobrança para você. O Sua Van não usa os dados do seu filho para publicidade, não vende e não cruza com outras bases.</p>
+<p>Só para o motorista fazer o trabalho dele: montar a lista de alunos, organizar a rota por escola e turno, gerar a mensalidade de cada mês, enviar a cobrança para você e, quando ele quiser, o recibo do que você pagou. O Sua Van não usa os dados do seu filho para publicidade, não vende e não cruza com outras bases.</p>
 
 <h2>4. Quem mais vê ou recebe os dados</h2>
 <table>
   <tr><th>Quem</th><th>O quê</th><th>Por quê</th></tr>
   <tr><td><strong>O motorista</strong></td><td>tudo o que está na seção 2</td><td>é ele quem presta o serviço; os dados ficam no aparelho dele e na nuvem do Sua Van</td></tr>
-  <tr><td><strong>Supabase</strong> (banco de dados e login, servidores no Brasil)</td><td>os dados da seção 2</td><td>guardar e sincronizar os dados do motorista entre aparelhos</td></tr>
+  <tr><td><strong>Supabase</strong> (banco de dados e login, servidores no Brasil)</td><td>os dados da seção 2</td><td>guardar e sincronizar os dados do motorista entre aparelhos, inclusive a cópia dos recibos</td></tr>
   <tr><td><strong>WhatsApp, Telegram ou SMS</strong></td><td>o nome do aluno, o valor e o mês, dentro da mensagem de cobrança que o motorista escolhe enviar para o seu número</td><td>é assim que a cobrança chega até você; a mensagem sai do celular do motorista</td></tr>
+  <tr><td><strong>O aplicativo que o motorista escolher para enviar o recibo</strong> (por exemplo, o WhatsApp)</td><td>o PDF do recibo, com o nome do aluno, o seu nome, o nome do motorista, o mês, o valor, a data e, quando houver, os meses ainda em aberto</td><td>é assim que o recibo chega até você; o arquivo é montado no celular do motorista e sai de lá para o contato que ele escolher</td></tr>
   <tr><td><strong>Google Maps</strong></td><td>o endereço de embarque, só quando o motorista toca em "Mapa" no cadastro do aluno para ver onde fica</td><td>abrir o mapa no celular dele</td></tr>
   <tr><td><strong>Google Places</strong></td><td>o nome da escola que o motorista digita ao cadastrá-la — nenhum dado do aluno</td><td>sugerir o endereço da escola</td></tr>
   <tr><td><strong>ViaCEP</strong></td><td>o CEP que você digita no formulário do convite</td><td>preencher rua, bairro e cidade automaticamente</td></tr>
@@ -122,10 +136,11 @@
 <h2>5. Por quanto tempo</h2>
 <ul>
   <li><strong>Enquanto o aluno estiver na lista do motorista.</strong></li>
-  <li><strong>Se o motorista excluir o aluno do app</strong>, o cadastro sai das listas dele, mas continua guardado por até <strong>12 meses</strong> a partir da exclusão, para que o motorista possa restaurá-lo — o histórico do que foi pago fica. Se não for restaurado nesse prazo, os dados pessoais do aluno e do responsável são eliminados; ficam apenas os valores do histórico de pagamento, sem identificação.</li>
-  <li><strong>Se o motorista excluir a conta dele</strong>, tudo o que está na nuvem é apagado junto, inclusive os dados dos alunos e dos responsáveis.</li>
+  <li><strong>Se o motorista excluir o aluno do app</strong>, o cadastro sai das listas dele, mas continua guardado por até <strong>12 meses</strong> a partir da exclusão, para que o motorista possa restaurá-lo — o histórico do que foi pago fica. Se não for restaurado nesse prazo, os dados pessoais do aluno e do responsável são eliminados; ficam apenas os valores do histórico de pagamento, sem identificação. A exceção são os recibos, no item seguinte.</li>
+  <li><strong>A cópia de cada recibo</strong> fica guardada até <strong>31 de dezembro do 6º ano depois do ano do pagamento</strong> — um recibo de mensalidade paga em 2026 fica até 31/12/2032 —, mesmo que o seu filho tenha saído da van. Nesse tempo, ela mantém o nome do seu filho e o nome do responsável que aparece no recibo. Por quê: o recibo é um documento do motorista, e ele pode precisar reenviá-lo a você ou comprovar o que recebeu. Vencido o prazo, a cópia é apagada sozinha. Você pode pedir antes que ela seja apagada (seção 6).</li>
+  <li><strong>Se o motorista excluir a conta dele</strong>, tudo o que está na nuvem é apagado junto, inclusive os dados dos alunos e dos responsáveis e a cópia dos recibos.</li>
   <li><strong>O formulário do convite</strong> que você preencheu fica guardado por até <strong>12 meses</strong> depois de importado para o cadastro do motorista. Depois, os dados pessoais são eliminados e fica apenas o registro da data e da versão do aceite.</li>
-  <li><strong>A cópia no celular do motorista</strong> existe enquanto o app estiver instalado. Quem apaga essa cópia é o motorista.</li>
+  <li><strong>A cópia no celular do motorista</strong> existe enquanto o app estiver instalado. Quem apaga essa cópia é o motorista. Os recibos são a exceção: quando a cópia da nuvem é apagada (pelo prazo, pelo seu pedido ou com a conta do motorista), a do celular sai na próxima vez que o app sincronizar. O PDF que já foi enviado continua na conversa onde foi enviado.</li>
 </ul>
 
 <h2>6. Seus direitos, e como pedir</h2>
@@ -136,7 +151,8 @@
 </div>
 
 <p><strong>O caminho mais rápido</strong> para corrigir ou apagar é falar direto com o motorista: ele edita ou exclui o aluno no app na hora. Se preferir não falar com ele, o e-mail acima resolve.</p>
-<p>Se achar que seus direitos não foram respeitados, você pode falar com a Autoridade Nacional de Proteção de Dados (ANPD).</p>
+<p><strong>A cópia dos recibos</strong> guardada no app não sai quando o motorista exclui o aluno. Para apagá-la antes do prazo da seção 5, o caminho é o e-mail acima: escreva pedindo para apagar a cópia dos recibos do seu filho. Quem pede tem de ser o responsável cujo nome aparece no recibo. A gente confere, apaga a cópia e responde; o recibo que você já recebeu continua com você.</p>
+<p>Se achar que seus direitos não foram respeitados, você pode falar com a Agência Nacional de Proteção de Dados (ANPD).</p>
 
 <h2>7. Encarregado</h2>
 <p><strong>João Felipe Consoni</strong>, responsável por receber pedidos e dúvidas sobre dados pessoais: <strong><a href="mailto:privacidade@suavan.com.br">privacidade@suavan.com.br</a></strong>.</p>
