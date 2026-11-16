@@ -47,6 +47,7 @@
   footer{border-top:1px solid var(--g100);padding:28px 0 40px;font-size:14px;color:var(--g500)}
   footer a{color:var(--g600)}
   .fnav{display:flex;gap:20px;flex-wrap:wrap;margin-bottom:14px}
+  .pendente{background:#FEF9C3;color:var(--g900);font-weight:600;padding:0 4px;border-radius:4px}
   @media(max-width:640px){h1{font-size:27px}h2{font-size:19px}main{padding:32px 0 56px}table{font-size:14px}th,td{padding:10px}}
 </style>
 </head>
@@ -64,9 +65,9 @@
 <h1>Política de Privacidade</h1>
 <div class="meta">
   Aplicável ao aplicativo <strong>Suavan</strong>, o app das famílias (Android, pacote io.suavan), e à sua conta de responsável<br>
-  Versão <strong>2.1</strong> · Em vigor desde <strong>6 de novembro de 2026</strong><br>
-  <strong>O que mudou na 2.1:</strong> o app passa a ter <strong>foto de perfil</strong>, que é opcional. Se você entra com o Google, a foto da sua conta Google é copiada uma única vez. Você também pode escolher uma foto na galeria do celular e trocá-la ou removê-la em Meu perfil. Depois de removida, o app não copia a foto do Google de novo. Só você vê a sua foto (seção 2b). As seções 3 a 8 dizem para que ela serve, onde fica, por quanto tempo e como apagá-la.<br>
-  <span style="opacity:.75">A versão é do conjunto Termos + Política de Privacidade, que são aceitos juntos. A 2.0, de 5/11/2026: antes, a página pais.suavan.com.br (Política 1.3 e Termos 1.0) só recebia o pedido para entrar na lista de espera. Agora, no app Suavan, você procura pela escola do seu filho os motoristas de van escolar que atendem a escola e o turno, cria a sua conta de responsável e manda o pedido às vans que escolher. Esta Política passa a valer para o app e para essa conta. Os dados do seu filho que um motorista já registra no app dele seguem a <a href="/privacidade">Política de Privacidade do app do motorista</a> e o <a href="/privacidade/alunos/">Aviso de privacidade — dados de alunos e responsáveis</a>.</span>
+  Versão <strong>2.2</strong> · Em vigor desde <strong><mark class="pendente">[data]</mark></strong><br>
+  <strong>O que mudou na 2.2:</strong> agora você vê as propostas das vans e pode <strong>fechar</strong> com um motorista pelo app. Para fechar, você completa os dados de cada filho (o nome completo, o endereço e os contatos), que vão <strong>só ao motorista com quem você fechar, e só depois de fechar</strong> (seção 2g). Antes de fechar, você vê o <strong>nome completo e o CNPJ</strong> do motorista. Você pode <strong>desistir</strong> do acordo pelo app, no prazo que aparece nele, e o motorista também pode desistir antes do início. Nos dois casos, <strong>os dados dos seus filhos saem do servidor do Suavan na hora</strong>, menos o recibo que o motorista já tiver emitido (seção 2h). O app passa a <strong>avisar você por e-mail</strong> quando há novidade, sem o nome do seu filho (seção 2i). O motorista passa a ver <strong>quantos filhos</strong> já no pedido. Saiu o "Já achei van", que o app não tem.<br>
+  <span style="opacity:.75">A versão é do conjunto Termos + Política de Privacidade, que são aceitos juntos. A 2.1, de 6/11/2026: o app passou a ter foto de perfil, opcional, que só você vê. A 2.0, de 5/11/2026: antes, a página pais.suavan.com.br (Política 1.3 e Termos 1.0) só recebia o pedido para entrar na lista de espera. Agora, no app Suavan, você procura pela escola do seu filho os motoristas de van escolar que atendem a escola e o turno, cria a sua conta de responsável e manda o pedido às vans que escolher. Esta Política passa a valer para o app e para essa conta. Os dados do seu filho que um motorista já registra no app dele seguem a <a href="/privacidade">Política de Privacidade do app do motorista</a> e o <a href="/privacidade/alunos/">Aviso de privacidade — dados de alunos e responsáveis</a>.</span>
 </div>
 
 <p>O Suavan é um app de van escolar: o motorista organiza alunos, mensalidades e cobrança, e a família acha a van pela escola do filho. Ele é operado por <strong>João Felipe Consoni</strong>, inscrito no CPF nº <strong>379.809.078-50</strong> ("nós"). Esta Política explica como coletamos, usamos, compartilhamos e protegemos dados pessoais, de acordo com a <strong>Lei Geral de Proteção de Dados (Lei nº 13.709/2018, a LGPD)</strong>.</p>
@@ -75,7 +76,9 @@
   <p><strong>Em resumo</strong></p>
   <ul>
     <li>Antes de você entrar na conta, nada do seu pedido vai ao servidor do Suavan: ele fica no seu celular. O nome da escola que você digita vai ao Google, e o CEP vai ao ViaCEP, só para preencher.</li>
-    <li>Os motoristas que você escolher veem o seu primeiro nome, o seu bairro, a escola, o turno e o trajeto. Do seu filho, nunca o nome.</li>
+    <li>Os motoristas que você escolher veem o seu primeiro nome, o seu bairro, a escola, o turno, o trajeto e quantos filhos. <strong>O nome do seu filho, o endereço e os contatos, só o motorista com quem você fechar, e só depois de fechar.</strong></li>
+    <li>Se você ou o motorista desistirem do acordo pelo app, os dados dos seus filhos saem do servidor do Suavan na hora, e do celular do motorista quando o app dele sincroniza. Fica o recibo que o motorista já tiver emitido.</li>
+    <li>Os e-mails de aviso só dizem que há novidade: nunca levam o nome do seu filho, a escola, o bairro, o endereço, a van ou o valor.</li>
     <li>Do seu CPF, guardamos só um código. O número não fica guardado, e o app nunca o mostra.</li>
     <li>Não vendemos dados, não mostramos anúncios e não usamos os dados do seu filho para publicidade.</li>
     <li>Você exclui a sua conta no próprio app, em Configurações.</li>
@@ -118,7 +121,7 @@
 <h3>c) O pedido e as respostas</h3>
 <ul>
   <li><strong>Quando você envia:</strong> para cada filho (sem o nome), a escola, o turno e o trajeto; quantos filhos; as vans que você marcou; a data; e o endereço de casa, que fica na sua conta para o próximo pedido. Filhos com escola, turno ou trajeto diferentes viram pedidos separados, ligados entre si.</li>
-  <li><strong>O que volta dos motoristas:</strong> se aceitaram ou não; o motivo da recusa, numa frase escrita para você; a proposta de valor, com o início, o fim e o vencimento propostos, e as atualizações dela; e os prazos de cada pedido.</li>
+  <li><strong>O que volta dos motoristas:</strong> se o motorista atende, já com a proposta: a parcela, o número de parcelas, o total, o início, o fim, o vencimento e o "Vale até", e as atualizações dela, com o valor de antes; o motivo da recusa, numa frase escrita para você, também quando ele retira uma proposta; e os prazos de cada pedido. Antes de você fechar, também quem é o motorista: o nome completo e o CNPJ, se ele informou.</li>
   <li><strong>A procura:</strong> se não houver van no momento, o pedido fica guardado como procura (seção 7).</li>
 </ul>
 
@@ -140,10 +143,41 @@
   <li>Quando o app falha, ele envia ao <strong>Google Firebase Crashlytics</strong> um relatório técnico: o erro, a sequência do código onde ele ocorreu, a versão do app, o modelo e a versão do Android e um identificador da instalação do app neste aparelho. O relatório <strong>não</strong> leva o seu nome, e-mail, CPF nem dado do seu filho, e o app não o liga à sua conta.</li>
 </ul>
 
+<h3>g) Fechar com o motorista</h3>
+<ul>
+  <li><strong>O que é:</strong> fechar é aceitar a proposta de um motorista como ela está. Você fecha na tela "Confira o acordo", que mostra a parcela, o número de parcelas, o total, o início, o fim, o vencimento, a 1ª parcela, quem é o motorista (o nome completo e o CNPJ, se ele informou) e até quando você pode desistir. As regras do fechar estão na seção 4 dos <a href="/familias/termos/">Termos de Uso</a>.</li>
+  <li><strong>Os dados de cada filho:</strong> <strong>para fechar pelo Suavan, estes dados são obrigatórios</strong>, para cada filho do pedido: o <strong>nome completo</strong>; o <strong>endereço</strong> onde a van busca e deixa (o CEP, se você souber, a rua, o número, o bairro, a cidade e a UF; o endereço do seu pedido vem preenchido, e você pode mudar o de um filho); e você como <strong>1º contato</strong>, com o nome e o telefone da sua conta, quem você é para o seu filho e se o telefone é WhatsApp. São opcionais o complemento e a referência (não escreva neles dados de saúde) e até 3 contatos a mais, cada um com o nome, o telefone, quem é e se é WhatsApp. O Suavan vê pelo número se o telefone é celular ou fixo. <strong>Sem esses dados, não dá para fechar pelo Suavan</strong>; você pode combinar o transporte com o motorista fora do app.</li>
+  <li><strong>A sua autorização, filho a filho:</strong> antes de fechar, você marca, para cada filho, a caixa "Declaro que sou responsável legal por {nome do filho} e autorizo o Suavan a guardar os dados deste formulário e a enviá-los só para {nome da van}, para o transporte que combinamos." Guardamos, com os dados de cada filho, a versão destes documentos e a hora.</li>
+  <li><strong>Antes do "Fechar":</strong> o que você digita para fechar fica só na memória do app, enquanto ele está aberto. Nada vai ao servidor nem ao motorista antes de você tocar em "Fechar com {nome da van}". Se você fechar o app no meio, digita de novo.</li>
+  <li><strong>O que vai ao motorista com quem você fechou, e só a ele:</strong> o nome completo de cada filho do pedido; o endereço, com o complemento e a referência, se houver; os contatos daquele filho; o seu nome completo e o seu telefone. Esses dados entram no cadastro do aluno no app do motorista, com a parcela, o número de parcelas, o período, o vencimento e a data da 1ª parcela combinados. Daí em diante, seguem a <a href="/privacidade">Política de Privacidade do app do motorista</a> e o <a href="/privacidade/alunos/">Aviso de privacidade — dados de alunos e responsáveis</a>.</li>
+  <li><strong>O que você recebe:</strong> o telefone do motorista.</li>
+  <li><strong>Os outros pedidos:</strong> os pedidos às outras vans daqueles filhos, na mesma escola, turno e trajeto, se encerram, e esses motoristas deixam de ver o seu nome, o bairro e quantos filhos (seção 5a). Um pedido ligado, de outro filho em outra escola ou turno, continua aberto.</li>
+</ul>
+
+<h3>h) A desistência</h3>
+<ul>
+  <li><strong>Quem desiste, e até quando:</strong> você pode desistir do acordo pelo app, no prazo da seção 5 dos <a href="/familias/termos/">Termos de Uso</a>. O motorista pode desistir pelo app até o último dia antes do mês de início.</li>
+  <li><strong>Os dados dos seus filhos saem do servidor do Suavan na hora</strong>, nos dois casos: a cópia do pedido e a cópia do app do motorista guardada no servidor ficam anônimas, e o pedido perde o seu primeiro nome, o seu bairro e o seu telefone. Do celular do motorista, eles saem quando o app dele sincroniza, na próxima vez que ele o abrir com internet.</li>
+  <li><strong>A cópia que chega depois:</strong> para valer também para a cópia que o celular do motorista enviar depois (por exemplo, se ele estava sem internet), guardamos só um código antigo de cada filho, com o código da conta do motorista e o dia, sem o nome nem outro dado do seu filho, enquanto a conta do motorista existir. A cópia que chegar com esse código entra apagada e anônima. Num caso raro, em que o celular do motorista envia os dados no mesmo instante da desistência, eles saem no envio seguinte ou, no mais tardar, no dia seguinte.</li>
+  <li><strong>O que fica:</strong> o pagamento que o motorista já registrou e o recibo que ele já emitiu, que tem o nome do seu filho e o de quem pagou. Eles seguem os prazos do <a href="/privacidade/alunos/">Aviso de privacidade — dados de alunos e responsáveis</a>.</li>
+</ul>
+
+<h3>i) Os avisos por e-mail</h3>
+<ul>
+  <li><strong>Quando:</strong> mandamos um e-mail ao e-mail da sua conta quando um motorista manda uma proposta ou um valor novo, e quando ele desiste do acordo. Vai no máximo um por hora e seis por dia: o que chegar nesse meio-tempo vem no e-mail seguinte. O e-mail da proposta espera pelo menos 2 minutos, e não sai se ela deixar de valer antes do envio.</li>
+  <li><strong>O que diz:</strong> sempre o mesmo texto, "Você tem uma novidade no Suavan. Abra o app Suavan para ver.", com um botão para o app na Google Play. <strong>O e-mail nunca leva o nome do seu filho, a escola, o bairro, o endereço, a van ou o valor</strong>; o conteúdo fica no app.</li>
+  <li><strong>Para quem:</strong> só depois de você aceitar estes documentos na versão 2.2, e só se o e-mail da sua conta estiver confirmado. <strong>Nesta versão, não dá para desligar estes e-mails no app.</strong> O e-mail pode atrasar ou não chegar (seção 6 dos <a href="/familias/termos/">Termos de Uso</a>).</li>
+  <li>Nesta versão, o app não manda notificação no celular.</li>
+</ul>
+
 <h2>3. Para que usamos</h2>
 <ul>
   <li>Mostrar os motoristas que atendem a escola e o turno de cada filho, numa ordem sorteada a cada pedido, e levar o seu pedido às vans que você escolher.</li>
   <li>Trazer as respostas e as propostas, com o mínimo de dados em cada momento (seção 5a).</li>
+  <li>Mostrar as propostas na ordem em que os motoristas mandaram o valor, e quem é o motorista antes de você fechar.</li>
+  <li>Registrar o acordo que você fecha e levar ao motorista com quem você fechou os dados dos seus filhos que o transporte pede.</li>
+  <li>Registrar a desistência, sua ou do motorista, e tirar os dados dos seus filhos.</li>
+  <li>Avisar você por e-mail quando há novidade.</li>
   <li>Guardar o pedido como procura quando não há van no momento.</li>
   <li>Manter a sua conta: entrar, recuperar a senha, identificar a conta e ter uma conta por pessoa.</li>
   <li>Mostrar a sua foto de perfil, se você tiver uma, para você ver no app com qual conta entrou.</li>
@@ -156,22 +190,26 @@
 <h2>4. Base legal (LGPD arts. 7º e 14)</h2>
 <ul>
   <li><strong>A conta, o pedido, o envio às vans que você escolher e as respostas:</strong> a execução do contrato de uso do app e dos procedimentos que antecedem o contrato de transporte que você combina com o motorista, a seu pedido (art. 7º, V).</li>
+  <li><strong>O fechar:</strong> o seu nome completo e o seu telefone ao motorista com quem você fechou, e o telefone dele a você: a execução do contrato que você combina com ele, a seu pedido (art. 7º, V).</li>
   <li><strong>O CPF:</strong> o nosso legítimo interesse em identificar a conta, ter uma conta por pessoa e prevenir fraude (art. 7º, IX); e a execução do contrato de uso, no login pelo CPF (art. 7º, V).</li>
   <li><strong>O registro de acesso, os limites contra abuso e as contagens para melhorar o app:</strong> o nosso legítimo interesse, só com o estritamente necessário (art. 7º, IX, e art. 10, §1º).</li>
   <li><strong>Os relatórios de falha:</strong> o nosso legítimo interesse em corrigir defeitos (art. 7º, IX).</li>
+  <li><strong>Os avisos por e-mail:</strong> a execução do contrato de uso do app (art. 7º, V).</li>
   <li><strong>A foto de perfil:</strong> quando você escolhe a foto na galeria, a execução do contrato de uso do app, a seu pedido (art. 7º, V). Quando o app copia a foto da sua conta Google, o nosso legítimo interesse em mostrar a sua conta com a foto que você já usa no Google. A foto é mostrada só a você, e você pode removê-la quando quiser (art. 7º, IX, e art. 10, II).</li>
-  <li><strong>Os dados dos seus filhos:</strong> sempre no melhor interesse da criança e do adolescente (art. 14). A escola, o turno e o trajeto do pedido, para o transporte que você pede (art. 7º, V).</li>
-  <li><strong>Quando um dado é condição para usar o app</strong> (o CPF e o telefone na conta), esta Política diz isso em destaque, e você pode exercer os seus direitos pelos meios da seção 8 (art. 9º, §3º).</li>
+  <li><strong>Os dados dos seus filhos:</strong> sempre no melhor interesse da criança e do adolescente (art. 14). A escola, o turno e o trajeto do pedido, para o transporte que você pede (art. 7º, V). No fechar, o nome completo, o endereço e os contatos, para o transporte que você combina com o motorista (art. 7º, V, e art. 14), com a sua autorização específica e em destaque, numa caixa para cada filho (art. 14, §1º).</li>
+  <li><strong>Os contatos de outras pessoas que você cadastrar no fechar:</strong> o nosso legítimo interesse em o motorista ter a quem chamar quando precisar, no transporte do seu filho, só com o nome, o telefone, quem é e se é WhatsApp (art. 7º, IX, e art. 10, §1º).</li>
+  <li><strong>O código antigo de cada filho, na desistência:</strong> o nosso legítimo interesse em garantir que a cópia que o celular do motorista enviar depois também fique anônima (art. 7º, IX, e art. 10, §1º).</li>
+  <li><strong>Quando um dado é condição para usar o app</strong> (o CPF e o telefone na conta; os dados de cada filho para fechar pelo Suavan), esta Política diz isso em destaque, e você pode exercer os seus direitos pelos meios da seção 8 (art. 9º, §3º).</li>
 </ul>
 
 <h2>5. Com quem compartilhamos</h2>
 <p><strong>Não vendemos dados pessoais.</strong> Compartilhamos só com:</p>
 <ul>
-  <li><strong>Os motoristas que você escolher</strong>, no que a seção 5a diz e só no momento que ela diz. Cada motorista responde pelo uso que faz dos dados que recebe, para o transporte que vocês combinarem.</li>
+  <li><strong>Os motoristas que você escolher</strong>, no que a seção 5a diz e só no momento que ela diz. Só o motorista com quem você fechar recebe os dados dos seus filhos, e só depois de fechar. Cada motorista responde pelo uso que faz dos dados que recebe, para o transporte que vocês combinarem.</li>
   <li><strong>Supabase</strong>: banco de dados, contas, funções do servidor e o armazenamento da foto de perfil. Os dados ficam em São Paulo (região <strong>sa-east-1</strong>).</li>
   <li><strong>Google</strong>: o Places, na busca da escola, que recebe o texto que você digita e o endereço de rede (IP) do seu celular e pode usá-lo para mostrar primeiro as escolas da sua região; o login, se você entra com o Google, e a cópia da foto do seu perfil Google, que o app baixa do Google; e o Firebase Crashlytics, para os relatórios de falha.</li>
   <li><strong>ViaCEP</strong>: só o CEP que você digita, para preencher o endereço.</li>
-  <li><strong>Resend</strong>: os e-mails da conta, como o código para recuperar a senha. Recebe o seu e-mail e o texto da mensagem, sem nenhum dado do seu filho. Os servidores de envio ficam no Brasil (<strong>sa-east-1</strong>), e o fornecedor pode guardar registros de entrega fora do Brasil.</li>
+  <li><strong>Resend</strong>: os e-mails da conta, como o código para recuperar a senha, e os avisos de novidade (seção 2i). Recebe o seu e-mail e o texto da mensagem, sem nenhum dado do seu filho. Os servidores de envio ficam no Brasil (<strong>sa-east-1</strong>), e o fornecedor pode guardar registros de entrega fora do Brasil.</li>
   <li><strong>WhatsApp</strong>: só se você abrir a conversa com o suporte.</li>
   <li><strong>Autoridades públicas</strong>, quando a lei ou uma ordem judicial exigir.</li>
 </ul>
@@ -183,19 +221,21 @@
     <tr><th>Momento</th><th>O que o motorista vê</th></tr>
   </thead>
   <tbody>
-    <tr><td>Você envia o pedido</td><td>O seu primeiro nome, o seu bairro, a escola, o turno e o trajeto. Do seu filho, nunca o nome</td></tr>
-    <tr><td>Ele toca em "Aceito"</td><td>Também quantos filhos</td></tr>
-    <tr><td>O pedido se encerra sem acordo com ele (você desistiu, ele recusou ou alguém não respondeu no prazo)</td><td>Só a escola, o turno, o trajeto e que o pedido foi encerrado. O seu nome, o bairro e quantos filhos deixam de aparecer</td></tr>
-    <tr><td>Nunca</td><td>O seu sobrenome, o seu CPF, o seu e-mail e a sua foto</td></tr>
+    <tr><td>Você envia o pedido</td><td>O seu primeiro nome, o seu bairro, a escola, o turno, o trajeto e quantos filhos. Do seu filho, nunca o nome</td></tr>
+    <tr><td>Você fecha com ele</td><td>O nome completo de cada filho do pedido, o endereço (com o complemento e a referência, se houver), os contatos daquele filho, o seu nome completo e o seu telefone. A parcela, o número de parcelas, o período, o vencimento e a 1ª parcela viram as cobranças do aluno no app dele</td></tr>
+    <tr><td>O pedido se encerra sem acordo com ele (você fechou com outra van, ele recusou ou retirou a proposta, ou alguém não respondeu no prazo)</td><td>Só a escola, o turno, o trajeto e que o pedido foi encerrado. O seu nome, o bairro e quantos filhos deixam de aparecer</td></tr>
+    <tr><td>Você ou ele desiste do acordo</td><td>Só a escola, o turno, o trajeto e que o acordo terminou. Os dados dos seus filhos ficam anônimos no servidor na hora e saem do celular dele quando o app dele sincroniza. Fica com ele o recibo que ele já tiver emitido</td></tr>
+    <tr><td>Nunca</td><td>O seu CPF, o seu e-mail e a sua foto. Antes de fechar, também o seu sobrenome e o seu telefone</td></tr>
   </tbody>
 </table>
-<p>Só recebe pedido o motorista que atende a escola e o turno que você escolheu e está com a opção "Receber pedidos" ligada. Antes de você enviar, o app mostra o que os motoristas vão ver.</p>
+<p>Só recebe pedido o motorista que atende a escola e o turno que você escolheu e está com a opção "Receber pedidos" ligada. Antes de você enviar, o app mostra o que os motoristas vão ver. Antes de fechar, o app mostra o acordo na tela "Confira o acordo".</p>
 
 <h2>6. Segurança</h2>
 <ul>
   <li>A comunicação do app é sempre por conexão criptografada (<strong>HTTPS</strong>).</li>
   <li>A sessão e o rascunho do pedido ficam no armazenamento protegido do celular (no Android, com a chave guardada no <strong>Keystore</strong>). O app não deixa os arquivos dele saírem pelo backup do Android.</li>
   <li>Cada conta vê só os próprios dados: o app não lê as tabelas do banco direto, e as funções do servidor conferem o dono de cada dado.</li>
+  <li>Os dados dos seus filhos só passam por funções do servidor, que os entregam só ao motorista com quem você fechou, e só depois de fechar.</li>
   <li>O CPF, só como código protegido por chave secreta (seção 2b).</li>
   <li>A foto de perfil fica numa área privada do armazenamento do servidor, que só a sua conta abre, por um link que vale 1 hora.</li>
   <li>Limites de tentativas contra abuso (seção 2d).</li>
@@ -205,16 +245,22 @@
 <h2>7. Por quanto tempo guardamos</h2>
 <ul>
   <li><strong>O rascunho do pedido:</strong> no seu celular, por até 24 horas (seção 2a).</li>
+  <li><strong>O que você digita para fechar:</strong> só na memória do app, até você fechar ou fechar o app (seção 2g).</li>
   <li><strong>A conta, o código do CPF, o nome, o telefone e o endereço de casa:</strong> enquanto a conta existir. O endereço sai antes se você o trocar.</li>
   <li><strong>O registro do aceite e da declaração de responsável legal:</strong> enquanto a conta existir, e sai junto com ela.</li>
   <li><strong>O registro de acesso:</strong> enquanto a conta existir.</li>
   <li><strong>A foto de perfil:</strong> até você removê-la, ou até a exclusão da conta ou do seu lado de responsável.</li>
   <li><strong>Os limites contra abuso:</strong> de minutos a 24 horas; o que passa de um limite, até 14 dias.</li>
-  <li><strong>Os prazos do pedido:</strong> cada motorista tem 7 dias, contados do envio, para aceitar e mandar a proposta. Você tem 7 dias para responder a cada proposta. Sem resposta, aquele pedido expira.</li>
+  <li><strong>Os prazos do pedido:</strong> cada motorista tem 7 dias para responder. Você tem até o "Vale até" de cada proposta para fechar: 7 dias contados do último valor, mas nunca depois do último dia do mês de início. Os prazos terminam às 23h59 do último dia, horário de Brasília. Sem resposta, aquele pedido expira.</li>
+  <li><strong>A procura:</strong> apagada sozinha 12 meses depois de criada.</li>
   <li><strong>O pedido que não termina em acordo:</strong> é apagado sozinho 12 meses depois de enviado.</li>
-  <li><strong>"Já achei van":</strong> encerra a procura na hora e apaga a procura e os pedidos sem acordo.</li>
+  <li><strong>O acordo fechado:</strong> aparece na sua tela até o mês da última parcela e fica na sua conta enquanto ela existir. Se o motorista excluir a conta dele, o acordo sai junto e some do seu app.</li>
+  <li><strong>A cópia dos dados dos seus filhos no pedido fechado:</strong> segue o aluno no app do motorista e fica anônima 12 meses depois de ele tirar o aluno do app dele. Se o app do motorista nunca ler o fechar, ela fica no servidor enquanto a conta dele existir. Sai antes se você ou o motorista desistirem do acordo (seção 2h) ou se um de vocês excluir a conta.</li>
+  <li><strong>Na desistência:</strong> os dados dos seus filhos saem do servidor na hora, menos o recibo já emitido (seção 2h). O código antigo de cada filho, com o código da conta do motorista e o dia, sem o nome nem outro dado do seu filho, fica enquanto a conta do motorista existir.</li>
+  <li><strong>O acordo desistido:</strong> perde na hora os dados dos filhos, o seu primeiro nome, o bairro e o telefone. A escola, o turno, o trajeto, quantos filhos, o valor e as datas ficam na sua conta enquanto ela existir. O motorista deixa de ver o acordo 60 dias depois da desistência.</li>
+  <li><strong>A fila dos avisos por e-mail:</strong> guarda só códigos, sem nome nem e-mail, e é apagada em 30 dias.</li>
   <li><strong>As sessões:</strong> enquanto você estiver conectado. Saem quando você sai da conta ou quando a conta é excluída.</li>
-  <li><strong>As contas do teste fechado do app:</strong> os dados delas são apagados quando o teste acabar.</li>
+  <li><strong>As contas de teste do Suavan:</strong> os dados delas são apagados quando o teste acabar.</li>
   <li><strong>Os relatórios de falha:</strong> 90 dias no Crashlytics.</li>
 </ul>
 
@@ -224,20 +270,22 @@
   <p><strong>Excluir a conta, no app</strong></p>
   <p>Toque na sua foto, no alto da tela, depois em <strong>Configurações</strong> e em <strong>Excluir minha conta</strong>.</p>
   <ul>
-    <li>Se a conta é só de responsável, ela sai inteira, com todos os seus pedidos, a foto de perfil, os aceites e o registro de acesso.</li>
+    <li>Se a conta é só de responsável, ela sai inteira, com todos os seus pedidos e acordos, a cópia dos dados dos filhos que você mandou no fechar, a foto de perfil, os aceites e o registro de acesso.</li>
     <li>Se você também é motorista, sai só o seu lado de responsável, com a foto do app das famílias. A conta continua no app do motorista, com o CPF, o nome, o telefone, a foto do app do motorista, os alunos e as cobranças. Para apagar a conta inteira, exclua também pelo app do motorista.</li>
+    <li>O que já foi para o cadastro do aluno no app do motorista com quem você fechou fica com ele e segue a Política de Privacidade do app do motorista. Para apagar, fale com o motorista ou escreva para privacidade@suavan.com.br. Na desistência é diferente: os dados dos filhos saem também do app do motorista, menos o recibo já emitido (seção 2h).</li>
   </ul>
   <p>O passo a passo também está em <a href="/familias/excluir-conta/">suavan.com.br/familias/excluir-conta</a>.</p>
 </div>
+<p><strong>Corrigir ou apagar depois de fechar:</strong> para corrigir um dado do seu filho depois de fechar, fale com o motorista: o app das famílias não manda a correção ao app dele. Quando você nos pede para corrigir ou apagar um dado que já foi ao motorista, avisamos o motorista para que ele faça o mesmo (art. 18, §6º).</p>
 <p><strong>Os outros pedidos:</strong> escreva para <strong><a href="mailto:privacidade@suavan.com.br">privacidade@suavan.com.br</a></strong>, do e-mail da sua conta. O acesso completo aos seus dados sai em até 15 dias (art. 19, II); o resto, no prazo da lei. Você também pode reclamar à ANPD ou a um órgão de defesa do consumidor (art. 18, §1º e §8º).</p>
 
 <h2>9. Dados de crianças e adolescentes</h2>
 <ul>
   <li>O app é para adultos. Quem cria a conta declara ter 18 anos ou mais e ser o responsável legal pelos filhos que cadastrar.</li>
-  <li>Do seu filho, só vão aos motoristas a escola, o turno, o trajeto e quantos filhos, nunca o nome.</li>
+  <li><strong>Antes de você fechar</strong>, do seu filho só vão aos motoristas a escola, o turno, o trajeto e quantos filhos, nunca o nome. <strong>Depois de fechar</strong>, o nome completo, o endereço e os contatos vão só ao motorista com quem você fechou. Se você ou ele desistirem, eles saem do servidor na hora, menos o recibo já emitido (seção 2h).</li>
   <li>Não usamos os dados do seu filho para publicidade, não fazemos perfil dele e não os vendemos.</li>
   <li>O tratamento segue o <strong>melhor interesse da criança e do adolescente</strong> (LGPD art. 14).</li>
-  <li>Os dados que um motorista já registra no app dele sobre o seu filho seguem o <a href="/privacidade/alunos/"><strong>Aviso de privacidade — dados de alunos e responsáveis</strong></a>.</li>
+  <li>Os dados que um motorista registra no app dele sobre o seu filho, também os que você mandou no fechar, seguem o <a href="/privacidade/alunos/"><strong>Aviso de privacidade — dados de alunos e responsáveis</strong></a>.</li>
 </ul>
 
 <h2>10. Alterações</h2>
