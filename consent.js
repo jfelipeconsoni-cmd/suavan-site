@@ -1,52 +1,13 @@
-/* Sua Van — consentimento de análise de uso (Microsoft Clarity).
- *
- * POR QUE ESTE ARQUIVO EXISTE
- * ---------------------------
- * Até 03/08/2026 o script do Clarity ficava direto no <head> dos três sites e
- * começava a gravar a sessão no primeiro milissegundo, sem perguntar nada — em
- * `pais.` isso incluía um formulário com nome, WhatsApp e A ESCOLA DO FILHO,
- * dado que identifica um menor indiretamente.
- *
- * Análise de uso e replay de sessão são finalidade NÃO-ESSENCIAL. Sob a LGPD
- * isso pede **opt-in**: nada é carregado antes do aceite. Recusar não é
- * "desligar depois" — o script simplesmente nunca entra na página.
- *
- * É a mesma lógica que, corretamente, manteve o Clarity FORA do
- * `cadastro.suavan.com.br` desde o início. Ela só não tinha voltado para cá.
- *
- * ⚠️ THIS FILE IS DUPLICATED nos 3 repos (suavan-site, suavan-pais,
- * suavan-motorista), porque cada um é um GitHub Pages próprio, num subdomínio
- * próprio. Servir de um só criaria dependência cross-origin justamente na peça
- * de privacidade. **Ao alterar, alterar nos três.**
- *
- * 16/09/2026: fila de eventos antes do aceite (ver queueStub) e sinal
- * clarity('consent') depois dele. O aceite fica guardado POR SUBDOMÍNIO
- * (localStorage é por origem): quem aceita em suavan.com.br vê o aviso de novo
- * em motorista. e pais. — é o preço de três origens, não um defeito.
- */
 (function () {
   'use strict';
 
   var CLARITY_PROJECT = 'xm3hw0zsli';
-  var STORAGE_KEY = 'suavan_consent_analytics'; // 'accepted' | 'declined'
-  // Relativa de propósito: cada subdomínio tem a SUA Política (17/09/2026), e o
-  // aviso deve levar à que descreve o Clarity daquela página.
+  var STORAGE_KEY = 'suavan_consent_analytics';
   var POLICY_URL = '/privacidade/';
 
-  /* FILA ANTES DO ACEITE (16/09/2026). As páginas chamam window.clarity('event', …)
-     e window.clarity('set', …) nos cliques (cta_motorista, acesso_whatsapp_enviar…).
-     Sem isto, tudo que acontecia ANTES de "Aceitar" — inclusive o clique que
-     motivou o aceite — se perdia, porque window.clarity só existia depois do
-     script carregar. O stub abaixo é o mesmo enfileirador do snippet oficial:
-     guarda as chamadas em memória e NÃO envia nada a lugar nenhum. Ao aceitar,
-     a tag do Clarity consome a fila; ao recusar, a fila é descartada e o stub
-     vira no-op. Assim o opt-in continua sendo o portão: sem aceite, zero rede. */
   function queueStub() { (queueStub.q = queueStub.q || []).push(arguments); }
   if (typeof window.clarity !== 'function') { window.clarity = queueStub; window.clarity.q = queueStub.q = []; }
 
-  /* Leitura/escrita tolerantes: navegação privativa e bloqueio de cookies
-     fazem localStorage lançar. Falhar aqui não pode quebrar a página — e, na
-     dúvida, o padrão é NÃO rastrear. */
   function readChoice() {
     try {
       return window.localStorage.getItem(STORAGE_KEY);
@@ -59,12 +20,9 @@
     try {
       window.localStorage.setItem(STORAGE_KEY, value);
     } catch (e) {
-      /* Sem persistência, a escolha vale só para esta visita. Melhor isso do
-         que quebrar, e melhor perguntar de novo do que assumir consentimento. */
     }
   }
 
-  /* Snippet oficial do Clarity, inalterado — só passou a rodar sob demanda. */
   function loadClarity() {
     (function (c, l, a, r, i, t, y) {
       c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
@@ -73,15 +31,9 @@
       y = l.getElementsByTagName(r)[0];
       y.parentNode.insertBefore(t, y);
     })(window, document, 'clarity', 'script', CLARITY_PROJECT);
-    /* API de consentimento do Clarity: registra que o visitante aceitou. É
-       redundante com o portão acima (o script nem carregava antes), mas deixa
-       o consentimento visível no painel e cobre o caso de o projeto ganhar a
-       opção "exigir consentimento de cookies". */
     window.clarity('consent');
   }
 
-  /* Recusou: a fila em memória é descartada e as páginas passam a falar com
-     um no-op — nunca com a rede. */
   function dropQueue() {
     window.clarity = function () {};
   }
@@ -135,16 +87,12 @@
       return b;
     }
 
-    /* "Recusar" vem primeiro na ordem do DOM de propósito: a opção que
-       preserva a privacidade não deve ser a mais escondida nem a mais difícil
-       de alcançar por teclado. */
     var no = makeButton('Recusar', false);
     var yes = makeButton('Aceitar', true);
 
     no.addEventListener('click', function () {
       saveChoice('declined');
       removeBanner(wrap);
-      /* Nada a desligar: o Clarity nunca foi carregado. A fila morre aqui. */
       dropQueue();
     });
 
@@ -171,8 +119,6 @@
   } else if (choice === 'declined') {
     dropQueue();
   } else {
-    /* Sem escolha registrada: pergunta. Enquanto não houver aceite, nada é
-       carregado — o estado inicial é "não rastrear". */
     showBanner();
   }
 })();

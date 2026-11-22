@@ -3,11 +3,6 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Microsoft Clarity — carregado SOMENTE apos consentimento explicito.
-     Antes, o script subia aqui no <head> e comecava a gravar a sessao no
-     primeiro milissegundo, sem perguntar nada. Analise de uso e finalidade
-     NAO-essencial: sob a LGPD isso pede opt-in, nao opt-out. O carregador vive
-     em /consent.js, compartilhado pelos 3 sites. -->
 <script src="consent.js" defer></script>
 <title>Suavan — aplicativo de van escolar, do motorista à família</title>
 <meta name="description" content="Aplicativo de transporte escolar: o motorista organiza alunos e mensalidades, e a família recebe a cobrança pronta no WhatsApp, com o Pix dele. Hoje é grátis para o motorista, sem limite de alunos.">
@@ -77,7 +72,7 @@
           "name": "Sou pai ou mãe. O que eu faço hoje?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Hoje o Sua Van é o app do motorista que leva o seu filho: é ele quem organiza os alunos e manda a cobrança, com o Pix dele. Não existe app para famílias. Se quiser ser avisado caso haja novidade, deixe seu contato na lista de espera em pais.suavan.com.br."
+            "text": "Hoje o Sua Van é o app do motorista que leva o seu filho: é ele quem organiza os alunos e manda a cobrança, com o Pix dele. Não existe app para famílias."
           }
         },
         {
@@ -136,11 +131,9 @@
 <meta name="twitter:image" content="https://suavan.com.br/og-suavan.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<!-- Fontes do Design System (Inter, Francois One). -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Francois+One&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=account_balance_wallet,arrow_forward,chat,check_circle,check_circle_outline,close,directions_bus,download,edit_note,expand_more,family_restroom,groups,how_to_reg,link,local_shipping,lock,manage_accounts,menu,notifications_active,support_agent,toggle_on&display=block" rel="stylesheet">
 <style>
-  /* ---------- tokens do Design System ---------- */
   :root{
     --y400:#FACC15;--y500:#FFC500;
     --g900:#111827;--g800:#1F2937;--g700:#374151;--g600:#4B5563;--g500:#6B7280;
@@ -148,8 +141,6 @@
     --cream:#FFFBEB;--green:#16A34A;--green800:#166534;--orange700:#C2410C;--red:#EF4444;--red700:#B91C1C;
     --display:"Francois One",Impact,sans-serif;--body:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
   }
-  /* Mobile-first: as regras sem media query são o CELULAR; os blocos min-width
-     (600 / 760 / 980) só acrescentam o que muda em tela maior. */
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
@@ -160,14 +151,12 @@
   .hero :focus-visible{outline-color:var(--y400)}
   .skip{position:absolute;left:16px;top:-60px;z-index:30;background:var(--g900);color:#fff;padding:10px 14px;border-radius:10px;font-weight:600}
   .skip:focus{top:12px}
-  /* text-transform:none — a ligadura do ícone é sensível a maiúsculas (o eyebrow é uppercase) */
   .ms{font-family:"Material Symbols Outlined";font-weight:normal;font-style:normal;line-height:1;display:inline-block;vertical-align:middle;font-size:20px;text-transform:none}
   .wrap{max-width:1120px;margin:0 auto;padding:0 16px}
   h1,h2,h3{font-weight:700;line-height:1.15}
   h1,h2{font-family:var(--body);font-weight:700;letter-spacing:-.4px}
   b{font-weight:700}
 
-  /* ---------- botões (DS §3.1–3.2) ---------- */
   .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:50px;padding:0 22px;border-radius:12px;font-weight:700;font-size:15px;border:1px solid transparent;cursor:pointer;transition:background .15s,transform .15s}
   .btn:active{transform:translateY(1px)}
   .btn-primary{background:var(--y400);color:var(--g900)}
@@ -176,7 +165,6 @@
   .btn-outline:hover{background:var(--g50)}
   .btn-lg{height:54px;padding:0 26px;font-size:16px}
 
-  /* ---------- cabeçalho: no celular, wordmark + CTA + menu ≡ ---------- */
   header.top{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--g200)}
   .nav{height:64px;display:flex;align-items:center;gap:8px}
   .home{display:inline-flex;align-items:center;gap:10px;color:var(--g800);font-weight:700;padding:6px 8px 6px 6px;border-radius:12px}
@@ -186,7 +174,6 @@
   .menu{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:0;background:none;border-radius:10px;color:var(--g700);cursor:pointer;flex:0 0 auto}
   .menu:hover{background:var(--g100)}
   .menu .ms{font-size:26px}
-  /* O painel de links fica escondido sob o cabeçalho até o ≡ abrir. */
   .nav-links{display:none;position:absolute;left:0;right:0;top:64px;background:#fff;border-bottom:1px solid var(--g200);flex-direction:column;padding:8px 12px 12px;box-shadow:0 14px 30px rgba(17,24,39,.10)}
   .nav-links.open{display:flex}
   .nav-links a{display:flex;align-items:center;min-height:48px;font-size:16px;font-weight:500;color:var(--g700);padding:8px 12px;border-radius:10px}
@@ -197,9 +184,7 @@
     .nav{gap:4px}.nav .cta{padding:0 10px;font-size:13px}.menu{width:40px}
   }
 
-  /* ---------- hero: a tese ---------- */
   .hero{background:var(--g900);color:#fff;padding:44px 0 48px;overflow:hidden}
-  /* Três blocos, na ordem do celular: copy → prova visual → selos. */
   .hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;align-items:center}
   .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:var(--y400);margin-bottom:16px}
   .eyebrow .ms{font-size:18px}
@@ -215,12 +200,10 @@
   .note{margin-top:18px;font-size:13.5px;color:#9CA3AF;max-width:540px}
   .phone{width:180px;margin:0 auto;background:#0B0F19;border-radius:28px;padding:7px;box-shadow:0 30px 70px rgba(0,0,0,.45);border:1px solid #2A3140}
   .phone img{display:block;width:100%;height:auto;border-radius:22px}
-  /* No celular o print "espia" na borda de baixo do hero: as portas ficam a uma tela. */
   .hero.peek{padding-bottom:0}
   .hero.peek .phone{margin-bottom:-150px}
-  .hero.peek .hero-visual{order:2}          /* o celular fica por último, para espiar na borda */
-  .hero.peek .hero-proof{display:none}      /* no celular as portas já trazem os mesmos selos */
-  /* ---------- faixa ESCOLAR: o divisor de seções ---------- */
+  .hero.peek .hero-visual{order:2}
+  .hero.peek .hero-proof{display:none}
   .band{background:var(--cream);border-top:1px solid #FDE68A;border-bottom:1px solid #FDE68A}
   .band .inner{display:flex;align-items:flex-start;gap:14px;padding:24px 16px}
   .band .ic{width:44px;height:44px;border-radius:50%;background:var(--y400);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
@@ -228,7 +211,6 @@
   .band h2{font-size:18px;color:var(--g900);margin-bottom:4px;letter-spacing:-.2px}
   .band p{font-size:15px;color:var(--g700);max-width:760px}
 
-  /* ---------- seções ---------- */
   section{padding:52px 0;scroll-margin-top:72px}
   .sec-tag{font-size:12.5px;font-weight:700;letter-spacing:.8px;color:var(--g500);text-transform:uppercase;margin-bottom:10px}
   .sec-title{font-size:26px;color:var(--g900);margin-bottom:12px}
@@ -251,7 +233,6 @@
   .legal-links{margin-top:22px;font-size:13.5px;color:var(--g500);display:flex;flex-wrap:wrap;gap:0 18px}
   .legal-links a{text-decoration:underline;text-underline-offset:3px;display:inline-flex;align-items:center;min-height:40px}
 
-  /* ---------- as duas portas ---------- */
   .doors{display:grid;grid-template-columns:1fr;gap:16px}
   .door{background:#fff;border:1px solid var(--g200);border-radius:16px;padding:22px 20px;display:flex;flex-direction:column;scroll-margin-top:80px}
   .door.motorista{border-top:4px solid var(--y400)}
@@ -267,7 +248,6 @@
   .door .actions .btn{width:100%}
   .door .more{font-size:14px;font-weight:600;color:var(--g700);text-align:center;display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px}
   .door .more:hover{color:var(--g900)}
-  /* faq */
   .faq{max-width:760px}
   details{border-bottom:1px solid var(--g200);padding:6px 0}
   details:first-of-type{border-top:1px solid var(--g200)}
@@ -286,10 +266,9 @@
   footer .social{display:flex;gap:4px}
   footer .social a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:8px}
   footer .social a:hover{background:var(--g100)}
-  footer .social a[hidden]{display:none} /* rede sem página ainda (Facebook): fica no HTML, não aparece */
+  footer .social a[hidden]{display:none}
   footer .social svg{width:20px;height:20px;fill:currentColor}
 
-  /* ---------- telas maiores: só o que muda ---------- */
   @media (min-width:600px){
     .wrap{padding:0 20px}
     .hero{padding:60px 0 64px}
@@ -331,7 +310,6 @@
   @media (min-width:980px){
     .hero{padding:72px 0 80px}
     .hero-grid{grid-template-columns:1.02fr .98fr;gap:0 56px}
-    /* O bloco copy+selos fica centralizado contra a prova visual: a sobra de altura vai acima da copy e abaixo dos selos. */
     .hero-copy{grid-column:1;grid-row:1;align-self:end}
     .hero-proof{grid-column:1;grid-row:2;margin-top:24px;align-self:start}
     .hero-visual{grid-column:2;grid-row:1/3;align-self:center;justify-self:end}
@@ -360,7 +338,6 @@
 
 <header class="top">
   <div class="wrap nav">
-    <!-- O wordmark leva ao topo desta página (o cabeçalho). -->
     <a class="home" href="#topo" aria-label="Início — voltar ao topo"><span class="wordmark">SUAVAN</span></a>
     <nav class="nav-links" id="nav-links" aria-label="Seções">
       <a href="#motoristas">Para motoristas</a>
@@ -382,7 +359,7 @@
       <p class="lead wide">Para quem dirige: alunos, mensalidades e cobrança no celular, sem papel e caneta. Para quem confia o filho a ela: a cobrança pronta no WhatsApp, com o Pix do motorista — sem intermediário no meio.</p>
       <div class="hero-ctas">
         <a class="btn btn-primary btn-lg out" href="https://motorista.suavan.com.br/#acesso"><span class="ms" aria-hidden="true">local_shipping</span> Sou motorista</a>
-        <a class="btn btn-outline btn-lg out" href="https://pais.suavan.com.br" style="background:transparent;color:#fff;border-color:#9CA3AF"><span class="ms" aria-hidden="true">family_restroom</span> Sou pai ou mãe</a>
+        <a class="btn btn-outline btn-lg out" href="https://suavan.com.br/#familias" style="background:transparent;color:#fff;border-color:#9CA3AF"><span class="ms" aria-hidden="true">family_restroom</span> Sou pai ou mãe</a>
       </div>
     </div>
 
@@ -431,10 +408,6 @@
           <li><span class="ms" aria-hidden="true">check_circle</span> Quem escolhe o motorista é você; o contato é direto.</li>
           <li><span class="ms" aria-hidden="true">check_circle</span> Os dados do seu filho ficam protegidos, e você pode pedir para ver, corrigir ou apagar.</li>
         </ul>
-        <div class="actions">
-          <a class="btn btn-outline btn-lg out" href="https://pais.suavan.com.br"><span class="ms" aria-hidden="true">family_restroom</span> Entrar na lista de espera</a>
-          <a class="more out" href="https://pais.suavan.com.br">Ver a página das famílias <span class="ms" aria-hidden="true">arrow_forward</span></a>
-        </div>
       </div>
     </div>
   </div>
@@ -513,7 +486,7 @@
       </details>
       <details>
         <summary>Sou pai ou mãe. O que eu faço hoje? <span class="ms" aria-hidden="true">expand_more</span></summary>
-        <p>Hoje o Sua Van é o app do motorista que leva o seu filho: é ele quem organiza os alunos e manda a cobrança, com o Pix dele. Não existe app para famílias. Se quiser ser avisado caso haja novidade, deixe seu contato na lista de espera em pais.suavan.com.br.</p>
+        <p>Hoje o Sua Van é o app do motorista que leva o seu filho: é ele quem organiza os alunos e manda a cobrança, com o Pix dele. Não existe app para famílias.</p>
       </details>
       <details>
         <summary>Como funciona a cobrança da mensalidade? <span class="ms" aria-hidden="true">expand_more</span></summary>
@@ -554,7 +527,7 @@
     <nav class="links" aria-label="Links do rodapé">
       <a href="https://suavan.com.br/" aria-current="page">Página principal</a>
       <a href="https://motorista.suavan.com.br/">Para motoristas</a>
-      <a href="https://pais.suavan.com.br/">Para famílias</a>
+      <a href="https://suavan.com.br/#familias">Para famílias</a>
       <a href="/privacidade/" target="_blank" rel="noopener">Privacidade</a>
       <a href="/termos/" target="_blank" rel="noopener">Termos</a>
       <a href="https://suavan.com.br/excluir-conta/">Excluir conta</a>
@@ -565,51 +538,42 @@
 </footer>
 
 <script>
-  // De onde veio o clique — vira a tag `cta_origem` no Clarity. ⛔ Valores fixos
-  // (id da seção, hero, cabecalho, rodape): nada digitado pelo usuário entra em tag.
   function origem(el){
     var s = el.closest('section, footer, header');
     if(!s) return 'outro';
     if(s.tagName === 'FOOTER') return 'rodape';
     if(s.tagName === 'HEADER') return 'cabecalho';
-    if(s.id) return s.id;                       // portas | como | compromissos | duvidas
+    if(s.id) return s.id;
     if(s.classList.contains('hero')) return 'hero';
     return 'outro';
   }
 
-  // Repasse de UTM entre as três páginas: a query string atual vai junto em todo link para a raiz
-  // de suavan.com.br, motorista. ou pais. — os botões do garfo (.out) e os links do rodapé. Assim a
-  // origem que entrou na principal chega ao formulário do subdomínio (e vira o "via …" na mensagem).
-  // ⛔ A query entra antes do #hash; sem UTM na URL atual, nada muda.
   (function(){
     var extra = window.location.search;
     function repassarUtm(el){
       if(!extra) return;
       var u = new URL(el.href);
-      if(!/(^|\.)suavan\.com\.br$/.test(u.hostname) || u.pathname !== '/') return; // só a raiz das três landings
+      if(!/(^|\.)suavan\.com\.br$/.test(u.hostname) || u.pathname !== '/') return;
       new URLSearchParams(extra).forEach(function(v, k){ u.searchParams.set(k, v); });
       el.href = u.toString();
     }
     document.querySelectorAll('a.out, footer nav.links a[href^="https://"]').forEach(repassarUtm);
   })();
 
-  // Links externos (.out): mede o clique no Clarity (segmento + origem).
   (function(){
     document.querySelectorAll('a.out').forEach(function(el){
-      // Clarity: ao clicar, marca o segmento da sessão e conta o evento do garfo.
       el.addEventListener('click', function(){
         if(typeof window.clarity !== 'function') return;
         var href = el.getAttribute('href') || '';
         var seg = href.indexOf('motorista.suavan') > -1 ? 'motorista'
-                : (href.indexOf('pais.suavan') > -1 ? 'pai' : 'outro');
-        window.clarity('set', 'segmento', seg);        // filtra gravações/heatmap por perfil
-        window.clarity('set', 'cta_origem', origem(el)); // onde clicou (hero, secao, garfo, rodape)
-        window.clarity('event', 'cta_' + seg);          // conta o clique: cta_motorista / cta_pai
+                : (href.indexOf('#familias') > -1 ? 'pai' : 'outro');
+        window.clarity('set', 'segmento', seg);
+        window.clarity('set', 'cta_origem', origem(el));
+        window.clarity('event', 'cta_' + seg);
       });
     });
   })();
 
-  // Menu ≡ do celular: abre o painel de links sob o cabeçalho; qualquer link, ou Esc, fecha.
   (function(){
     var btn = document.querySelector('.menu'), nav = document.getElementById('nav-links');
     if(!btn || !nav) return;
@@ -619,7 +583,6 @@
       btn.setAttribute('aria-expanded', open ? 'true' : 'false');
       btn.querySelector('.ms').textContent = open ? 'close' : 'menu';
       btn.setAttribute('aria-label', open ? 'Fechar o menu' : 'Abrir o menu');
-      // Teclado: ao abrir, o foco vai para o primeiro link; ao fechar, volta para o botão.
       if(open){ var first = nav.querySelector('a'); if(first) first.focus(); }
       else if(wasInside){ btn.focus(); }
     }
@@ -628,8 +591,6 @@
     document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && nav.classList.contains('open')) set(false); });
   })();
 
-  // Redes sociais (rodapé): um evento por rede, com nome LITERAL — regra §1-Z vale para o site.
-  // ⛔ Rede nova = link no HTML + linha aqui (Facebook entra quando a página existir).
   (function(){
     var eventos = { instagram: 'social_instagram', tiktok: 'social_tiktok', linkedin: 'social_linkedin', facebook: 'social_facebook' };
     document.querySelectorAll('footer .social a[data-rede]').forEach(function(el){
@@ -640,13 +601,8 @@
     });
   })();
 
-  // Ano do rodapé: vem do relógio do visitante, então não precisa editar a cada virada de ano.
-  // O "2026" no HTML é só reserva para quem estiver sem JavaScript.
   (function(){ var el = document.getElementById("ano"); if(el){ el.textContent = new Date().getFullYear(); } })();
 
-
-  // FAQ: um evento só para qualquer pergunta aberta. ⛔ Sem o texto da pergunta no
-  // nome — nome de evento é fixo (regra §1-Z, vale para o site também).
   document.querySelectorAll('#duvidas details').forEach(function(d){
     d.addEventListener('toggle', function(){ if(d.open && typeof window.clarity === 'function'){ window.clarity('event', 'faq_abrir'); } });
   });
