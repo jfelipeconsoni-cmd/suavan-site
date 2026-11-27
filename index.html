@@ -205,7 +205,7 @@
   .hero { padding: 32px 20px 24px; }
   .hero-painel {
     display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr);
-    grid-template-areas: "chapeu" "titulo" "imagem" "selo" "passos" "sub";
+    grid-template-areas: "chapeu" "titulo" "imagem" "selo" "sub";
     max-width: 640px; margin: 0 auto;
   }
   .chapeu {
@@ -221,13 +221,6 @@
   .selo-play { grid-area: selo; justify-self: start; display: block; border-radius: 8px; }
   .selo-play img { height: 48px; width: auto; }
 
-  .passos { grid-area: passos; list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px; }
-  .passos li { display: flex; align-items: center; gap: 8px; font: 500 14px/normal var(--texto); color: var(--tinta); white-space: nowrap; }
-  .passos span {
-    flex: none; display: flex; align-items: center; justify-content: center;
-    width: 24px; height: 24px; border-radius: 12px; background: var(--amarelo);
-    font: 400 12px/normal var(--display); color: var(--tinta);
-  }
 
   .vantagens { padding: 40px 20px 32px; }
   .vantagens-cartoes {
@@ -472,8 +465,8 @@
     .hero-painel {
       max-width: 1200px; padding: 88px 0 88px 80px;
       grid-template-columns: minmax(0, 632fr) minmax(0, 488fr);
-      grid-template-rows: auto auto auto auto 1fr;
-      grid-template-areas: "chapeu imagem" "titulo imagem" "sub imagem" "selo imagem" "passos imagem";
+      grid-template-rows: auto auto auto 1fr;
+      grid-template-areas: "chapeu imagem" "titulo imagem" "sub imagem" "selo imagem";
       gap: 24px 0; align-items: start;
     }
     .chapeu { justify-self: start; padding: 8px 16px; font-size: 12px; letter-spacing: 0.1em; }
@@ -483,16 +476,6 @@
     .hero-imagem img { position: absolute; left: -0.2%; top: 0; width: 104.67%; height: 100%; max-width: none; object-fit: fill; }
     .selo-play { margin-top: 8px; }
     .selo-play img { height: 60px; }
-    .passos { display: grid; grid-template-columns: auto 1fr auto 1fr auto; gap: 0; align-items: center; }
-    .passos::before, .passos::after {
-      content: ""; justify-self: center; width: 5.8px; height: 9.8px;
-      background: url(img/icone-seta-passo.svg) center / 5.8px 9.8px no-repeat;
-    }
-    .passos::before { grid-column: 2; grid-row: 1; }
-    .passos::after { grid-column: 4; grid-row: 1; }
-    .passos li:nth-child(1) { grid-column: 1; grid-row: 1; }
-    .passos li:nth-child(2) { grid-column: 3; grid-row: 1; }
-    .passos li:nth-child(3) { grid-column: 5; grid-row: 1; }
 
     .vantagens { padding: 72px 64px 32px; }
     .vantagens-cartoes {
@@ -699,11 +682,6 @@
       <a class="selo-play js-play" href="https://play.google.com/store/apps/details?id=io.suavan&amp;hl=pt_BR">
         <img src="img/GetItOnGooglePlay_Badge_Web_color_Portuguese-Brazil.svg" width="203" height="60" alt="Disponível no Google Play">
       </a>
-      <ol class="passos" aria-label="Como funciona">
-        <li><span aria-hidden="true">1</span>Busque a escola</li>
-        <li><span aria-hidden="true">2</span>Faça um cadastro rápido</li>
-        <li><span aria-hidden="true">3</span>Continue no app</li>
-      </ol>
     </div>
   </section>
 
