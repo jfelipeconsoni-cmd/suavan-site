@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="places-key" content="">
 <script src="consent.js" defer data-banner-style="page"></script>
 <title>Suavan — busca de van escolar para os pais</title>
 <meta name="description" content="Busca de van escolar grátis para os pais: veja quais motoristas atendem a escola do seu filho, conheça cada um antes de fechar e pague direto no Pix do motorista.">
@@ -225,7 +226,7 @@
   .busca :focus-visible { outline-color: var(--tinta); }
   .busca-linha { display: flex; flex-direction: column; gap: 8px; }
   .busca-campo {
-    flex: 1 1 auto; min-width: 0;
+    position: relative; flex: 1 1 auto; min-width: 0;
     display: flex; align-items: center; gap: 12px;
     padding: 18px 16px; border-radius: 16px; background: var(--branco); cursor: text;
   }
@@ -237,6 +238,18 @@
   }
   .busca-campo input::placeholder { color: var(--texto-auxiliar); opacity: 1; }
   .busca-campo input:focus { outline: none; }
+  .busca-sugestoes {
+    position: absolute; left: 0; right: 0; top: calc(100% + 8px); z-index: 20;
+    list-style: none; margin: 0; padding: 8px; border-radius: 16px; background: var(--branco);
+    box-shadow: 0 6px 18px rgba(18, 23, 38, 0.16);
+  }
+  .busca-sugestoes[hidden] { display: none; }
+  .busca-sugestoes li {
+    display: flex; flex-direction: column; gap: 2px; padding: 12px 16px; border-radius: 12px; cursor: pointer;
+    font: 600 16px/1.3 var(--texto); color: var(--tinta);
+  }
+  .busca-sugestoes li span { font: 400 14px/1.4 var(--texto); color: var(--texto-auxiliar); }
+  .busca-sugestoes li[aria-selected="true"], .busca-sugestoes li:hover { background: var(--fundo); }
   .busca-divisor { flex: none; width: 1px; height: 32px; background: rgba(17, 24, 39, 0.14); }
   .busca-turno { position: relative; flex: none; display: flex; align-items: center; }
   .busca-turno select {
@@ -730,21 +743,22 @@
         <img src="img/familia-motorista-van-escolar.webp" width="765" height="654" fetchpriority="high" alt="Motorista de van escolar bate a mão com um menino ao lado da van amarela, enquanto uma mãe abraça a filha.">
       </figure>
       <p class="hero-sub">Veja quais motoristas atendem a escola dele e saiba quem é cada um antes de fechar. Mais segurança para o seu filho e mais tranquilidade para você.</p>
-      <form class="busca js-busca" action="https://play.google.com/store/apps/details" method="get" role="search" aria-label="Buscar van escolar">
+      <form class="busca js-busca" data-clarity-mask="True" action="https://play.google.com/store/apps/details" method="get" role="search" aria-label="Buscar van escolar">
         <input type="hidden" name="id" value="io.suavan">
         <input type="hidden" name="hl" value="pt_BR">
         <div class="busca-linha">
           <div class="busca-campo">
             <img src="img/icone-busca.svg" width="21" height="21" alt="">
             <label class="so-leitor" for="busca-escola">Nome da escola</label>
-            <input id="busca-escola" type="text" placeholder="Nome da escola" autocomplete="off" enterkeyhint="search">
+            <input id="busca-escola" type="text" placeholder="Nome da escola" autocomplete="off" enterkeyhint="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="busca-sugestoes">
+            <ul class="busca-sugestoes" id="busca-sugestoes" role="listbox" aria-label="Escolas encontradas" hidden></ul>
             <span class="busca-divisor" aria-hidden="true"></span>
             <div class="busca-turno">
               <label class="so-leitor" for="busca-turno">Turno</label>
               <select id="busca-turno">
-                <option>Manhã</option>
-                <option>Tarde</option>
-                <option>Integral</option>
+                <option value="morning">Manhã</option>
+                <option value="afternoon">Tarde</option>
+                <option value="full_time">Integral</option>
               </select>
               <img src="img/icone-seta-turno.svg" width="12" height="7" alt="">
             </div>
@@ -1141,10 +1155,122 @@
     });
 
     var busca = document.querySelector('.js-busca');
+    var campo = document.getElementById('busca-escola');
+    var lista = document.getElementById('busca-sugestoes');
+    var turno = document.getElementById('busca-turno');
+    var chave = (document.querySelector('meta[name="places-key"]').content || '').trim();
+    var escolha = null, sessao = null, espera = null, pedido = null, itens = [], ativo = -1;
+
+    function fecharLista() {
+      lista.hidden = true;
+      lista.textContent = '';
+      itens = [];
+      ativo = -1;
+      campo.setAttribute('aria-expanded', 'false');
+      campo.removeAttribute('aria-activedescendant');
+    }
+
+    function marcar(i) {
+      ativo = i;
+      Array.prototype.forEach.call(lista.children, function (li, j) { li.setAttribute('aria-selected', j === i ? 'true' : 'false'); });
+      campo.setAttribute('aria-activedescendant', 'busca-sugestao-' + i);
+    }
+
+    function escolher(i) {
+      var item = itens[i];
+      if (!item) return;
+      escolha = item.placeId;
+      campo.value = item.principal;
+      sessao = null;
+      fecharLista();
+    }
+
+    function mostrar(sugestoes) {
+      fecharLista();
+      itens = sugestoes;
+      if (!itens.length) return;
+      itens.forEach(function (item, i) {
+        var li = document.createElement('li');
+        li.id = 'busca-sugestao-' + i;
+        li.setAttribute('role', 'option');
+        li.setAttribute('aria-selected', 'false');
+        li.textContent = item.principal;
+        if (item.secundario) {
+          var sub = document.createElement('span');
+          sub.textContent = item.secundario;
+          li.appendChild(sub);
+        }
+        li.addEventListener('mousedown', function (e) { e.preventDefault(); });
+        li.addEventListener('click', function () { escolher(i); });
+        lista.appendChild(li);
+      });
+      lista.hidden = false;
+      campo.setAttribute('aria-expanded', 'true');
+    }
+
+    function consultar(texto, comTipos) {
+      if (pedido) pedido.abort();
+      pedido = new AbortController();
+      var corpo = { input: texto, sessionToken: sessao, languageCode: 'pt-BR', includedRegionCodes: ['br'] };
+      if (comTipos) corpo.includedPrimaryTypes = ['school', 'primary_school', 'secondary_school'];
+      return fetch('https://places.googleapis.com/v1/places:autocomplete', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'X-Goog-Api-Key': chave },
+        body: JSON.stringify(corpo),
+        signal: pedido.signal
+      }).then(function (r) {
+        if (r.status === 400 && comTipos) return consultar(texto, false);
+        if (!r.ok) throw new Error(String(r.status));
+        return r.json();
+      });
+    }
+
+    function buscar() {
+      var texto = campo.value.trim();
+      if (texto.length < 3) { fecharLista(); return; }
+      if (!sessao) sessao = window.crypto.randomUUID();
+      consultar(texto, true).then(function (dados) {
+        if (!dados || campo.value.trim() !== texto) return;
+        mostrar((dados.suggestions || []).map(function (s) { return s.placePrediction; }).filter(Boolean).slice(0, 5).map(function (p) {
+          var f = p.structuredFormat || {};
+          return {
+            placeId: p.placeId,
+            principal: (f.mainText && f.mainText.text) || (p.text && p.text.text) || '',
+            secundario: (f.secondaryText && f.secondaryText.text) || ''
+          };
+        }));
+      }).catch(function (erro) { if (erro.name !== 'AbortError') fecharLista(); });
+    }
+
+    if (chave && window.crypto && window.crypto.randomUUID) {
+      campo.addEventListener('input', function () {
+        escolha = null;
+        clearTimeout(espera);
+        espera = setTimeout(buscar, 300);
+      });
+      campo.addEventListener('keydown', function (e) {
+        if (lista.hidden) return;
+        if (e.key === 'ArrowDown') { e.preventDefault(); marcar((ativo + 1) % itens.length); }
+        else if (e.key === 'ArrowUp') { e.preventDefault(); marcar(ativo <= 0 ? itens.length - 1 : ativo - 1); }
+        else if (e.key === 'Enter' && ativo >= 0) { e.preventDefault(); escolher(ativo); }
+        else if (e.key === 'Escape') { e.preventDefault(); fecharLista(); }
+      });
+      campo.addEventListener('blur', fecharLista);
+    } else {
+      ['role', 'aria-autocomplete', 'aria-expanded', 'aria-controls'].forEach(function (a) { campo.removeAttribute(a); });
+    }
+
     busca.addEventListener('submit', function (e) {
       e.preventDefault();
+      var escolhida = !!escolha && /^[A-Za-z0-9_-]{1,300}$/.test(escolha);
+      var destino = play.toString();
+      if (escolhida) {
+        var dados = 'place_id=' + escolha + '&shift=' + turno.value + (ref ? '&' + ref : '');
+        destino = 'https://play.google.com/store/apps/details?id=io.suavan&hl=pt_BR&referrer=' + encodeURIComponent(dados);
+      }
+      if (typeof window.clarity === 'function') window.clarity('set', 'escola_escolhida', escolhida ? 'sim' : 'nao');
       registrar(busca, 'pai', 'busca_enviar');
-      window.location.href = play.toString();
+      window.location.href = destino;
     });
   })();
 
