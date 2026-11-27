@@ -222,6 +222,24 @@
   .selo-play img { height: 48px; width: auto; }
 
 
+  .baixar { padding: 32px 20px; }
+  .baixar-painel {
+    position: relative; max-width: 640px; margin: 0 auto;
+    display: flex; flex-direction: column; gap: 28px;
+    padding: 28px 20px; border-radius: 32px; background: var(--branco);
+  }
+  .baixar-texto { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
+  .baixar h2 { margin: 0; font: 400 28px/1.2 var(--display); color: var(--tinta); }
+  .baixar h2 span { display: block; }
+  .baixar-texto p { margin: 0; font: 400 16px/1.5 var(--texto); color: var(--texto-auxiliar); }
+  .baixar-imagem { position: relative; width: min(100%, 310px); aspect-ratio: 310 / 350; }
+  .baixar-imagem img { position: absolute; max-width: none; }
+  .baixar-fundo { left: 12.258%; top: 27.143%; width: 75.806%; height: 65.57%; }
+  .baixar-foto { left: 18.71%; top: 0; width: 62.58%; height: 97.143%; }
+  .baixar-formas { inset: 0; width: 100%; height: 100%; }
+  .baixar-formas.computador, .baixar-fundo.computador, .baixar-enfeite.computador { display: none; }
+  .baixar-enfeite { position: absolute; right: -4px; top: -30px; }
+
   .vantagens { padding: 40px 20px 32px; }
   .vantagens-cartoes {
     position: relative; display: flex; flex-direction: column;
@@ -474,8 +492,20 @@
     .hero-sub { font-size: 19px; }
     .hero-imagem { aspect-ratio: 487 / 436; overflow: hidden; }
     .hero-imagem img { position: absolute; left: -0.2%; top: 0; width: 104.67%; height: 100%; max-width: none; object-fit: fill; }
-    .selo-play { margin-top: 8px; }
+    .hero .selo-play { margin-top: 8px; }
     .selo-play img { height: 60px; }
+
+    .baixar { padding: 80px 64px 40px; }
+    .baixar-painel { max-width: 1200px; flex-direction: row; align-items: flex-start; gap: 64px; padding: 56px; border-radius: 40px; }
+    .baixar-texto { flex: none; width: 440px; }
+    .baixar h2 { font-size: 36px; }
+    .baixar-texto p { font-size: 18px; }
+    .baixar-imagem { flex: none; width: 420px; aspect-ratio: 420 / 400; }
+    .baixar-fundo { left: 16.667%; top: 27.5%; width: 66.667%; height: 68.37%; }
+    .baixar-foto { left: 23.095%; width: 53.81%; height: 98.75%; }
+    .baixar-formas.celular, .baixar-fundo.celular, .baixar-enfeite.celular { display: none; }
+    .baixar-formas.computador, .baixar-fundo.computador { display: block; }
+    .baixar-enfeite.computador { display: block; left: 1176px; right: auto; top: -26px; }
 
     .vantagens { padding: 72px 64px 32px; }
     .vantagens-cartoes {
@@ -682,6 +712,27 @@
       <a class="selo-play js-play" href="https://play.google.com/store/apps/details?id=io.suavan&amp;hl=pt_BR">
         <img src="img/GetItOnGooglePlay_Badge_Web_color_Portuguese-Brazil.svg" width="203" height="60" alt="Disponível no Google Play">
       </a>
+    </div>
+  </section>
+
+  <section class="baixar" id="baixar-o-app" aria-labelledby="baixar-titulo">
+    <div class="baixar-painel">
+      <div class="baixar-texto">
+        <h2 id="baixar-titulo">Busque motorista <span class="destaque">com segurança</span></h2>
+        <p>Baixe o Suavan e veja na hora os motoristas que atendem a escola do seu filho.</p>
+        <a class="selo-play js-play" href="https://play.google.com/store/apps/details?id=io.suavan&amp;hl=pt_BR">
+          <img src="img/GetItOnGooglePlay_Badge_Web_color_Portuguese-Brazil.svg" width="203" height="60" alt="Disponível no Google Play" loading="lazy">
+        </a>
+      </div>
+      <div class="baixar-imagem">
+        <img class="baixar-formas computador" src="img/baixar-formas.svg" width="420" height="400" alt="" loading="lazy">
+        <img class="baixar-fundo celular" src="img/baixar-fundo-celular.svg" width="235" height="229" alt="" loading="lazy">
+        <img class="baixar-fundo computador" src="img/baixar-fundo.svg" width="280" height="273" alt="" loading="lazy">
+        <img class="baixar-foto" src="img/familias-mae-e-filha-com-o-app.webp" width="339" height="593" alt="Mãe e filha sorriem olhando o app Suavan no celular." loading="lazy" decoding="async">
+        <img class="baixar-formas celular" src="img/baixar-formas-celular.svg" width="310" height="350" alt="" loading="lazy">
+      </div>
+      <img class="baixar-enfeite celular" src="img/baixar-enfeite-celular.svg" width="44" height="36" alt="" loading="lazy">
+      <img class="baixar-enfeite computador" src="img/baixar-enfeite.svg" width="44" height="46" alt="" loading="lazy">
     </div>
   </section>
 
