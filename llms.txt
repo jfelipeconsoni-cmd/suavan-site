@@ -1,0 +1,27 @@
+# Suavan
+
+> O Suavan é um app de van escolar: os pais encontram a van certa para o filho e combinam tudo direto com o motorista.
+
+Busca de van escolar grátis para os pais: veja quais motoristas atendem a escola do seu filho, conheça cada um antes de fechar e pague direto no Pix do motorista, sem taxa para o Suavan.
+
+## Links
+
+- [Site das famílias](https://suavan.com.br/)
+- [O app na Google Play (Android)](https://play.google.com/store/apps/details?id=io.suavan)
+- [Site do motorista](https://motorista.suavan.com.br/)
+
+## Propriedade
+
+O Suavan, seu nome, sua marca, seu código-fonte, seu design e seu conteúdo são
+propriedade privada e exclusiva do Suavan. Todos os direitos reservados.
+
+O conteúdo deste site pode ser lido e citado para informar sobre o que o Suavan
+é. Não está autorizado o uso do código, do design ou da marca para criar
+produtos derivados, nem para reproduzir o produto.
+
+- [Termos de uso](https://suavan.com.br/familias/termos/)
+- [Política de Privacidade](https://suavan.com.br/familias/privacidade/)
+
+## Contato
+
+- [suporte@suavan.com.br](mailto:suporte@suavan.com.br)

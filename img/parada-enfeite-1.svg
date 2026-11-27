@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="48.9157" height="40" viewBox="0 0 48.9157 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Enfeites">
+<circle id="C&#195;&#173;rculo" cx="6" cy="18" r="5.25" stroke-width="1.5" stroke="#FFC500"/>
+<mask id="stroke0_0_112" fill="white">
+<path d="M21.8492 16.5819C21.7821 15.815 22.5703 15.2631 23.268 15.5884L31.9018 19.6144C32.5994 19.9397 32.6833 20.8983 32.0527 21.3399L24.2492 26.8039C23.6187 27.2455 22.7466 26.8388 22.6795 26.0719L21.8492 16.5819Z"/>
+</mask>
+<path id="Tri&#195;&#162;ngulo" d="M24.2492 26.8039L32.0527 21.3399C32.6833 20.8983 32.5994 19.9397 31.9018 19.6144L23.268 15.5884C22.5703 15.2631 21.7821 15.815 21.8492 16.5819L22.6795 26.0719C22.7466 26.8388 23.6187 27.2455 24.2492 26.8039Z" stroke-width="3" stroke="#FFC500" mask="url(#stroke0_0_112)"/>
+<path id="X" d="M42.0576 10.8345L45.9424 19.1657M48.1656 13.0577L39.8344 16.9425" stroke-width="1.5" stroke-linecap="round" stroke="#FFC500"/>
+</g>
+</svg>

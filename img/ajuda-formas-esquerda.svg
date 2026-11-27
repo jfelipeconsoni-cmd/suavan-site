@@ -1,0 +1,10 @@
+<svg preserveAspectRatio="none" overflow="visible" style="display: block;" width="47.4887" height="47.8739" viewBox="0 0 47.4887 47.8739" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Formas &#194;&#183; esquerda embaixo">
+<mask id="stroke0_0_19" fill="white">
+<path d="M2.14967 32.0629C1.45778 31.7255 1.39065 30.7656 2.02885 30.3351L11.3624 24.0395C12.0006 23.609 12.8655 24.0309 12.9192 24.7988L13.7045 36.0297C13.7582 36.7976 12.9605 37.3357 12.2686 36.9982L2.14967 32.0629Z"/>
+</mask>
+<path id="Tri&#195;&#162;ngulo" d="M13.7045 36.0297L12.9192 24.7988C12.8655 24.0309 12.0006 23.609 11.3624 24.0395L2.02885 30.3351C1.39065 30.7656 1.45778 31.7255 2.14967 32.0629L12.2686 36.9982C12.9605 37.3357 13.7582 36.7976 13.7045 36.0297Z" stroke-width="3" stroke="#111827" mask="url(#stroke0_0_19)"/>
+<circle id="C&#195;&#173;rculo" cx="30.1149" cy="6.50008" r="5.75" stroke-width="1.5" stroke="#111827"/>
+<path id="X" d="M44.1503 34.8764L37.0793 47.1238M46.7385 44.5356L34.4911 37.4645" stroke-width="1.5" stroke-linecap="round" stroke="#111827"/>
+</g>
+</svg>

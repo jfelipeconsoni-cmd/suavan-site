@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Suavan — WhatsApp do suporte</title>
+<noscript><meta http-equiv="refresh" content="0; url=https://wa.me/5511949426358?text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20a%20busca%20de%20van%20escolar%20do%20Suavan"></noscript>
+<style>
+  body {
+    margin: 0; min-height: 100vh; box-sizing: border-box; padding: 24px 20px;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    background: #FCF7EE; color: #111827;
+    font: 400 16px/1.5 Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  }
+  main { max-width: 360px; }
+  h1 { margin: 0 0 8px; font-size: 20px; line-height: 1.3; }
+  p { margin: 0 0 24px; color: #636A77; }
+  p a { color: inherit; }
+  .botao {
+    display: inline-block; padding: 12px 24px; border-radius: 999px;
+    background: #25D366; color: #111827; font-weight: 600; text-decoration: none;
+  }
+  .botao:hover { background: #1EBE5A; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Abrindo o WhatsApp do suporte do Suavan</h1>
+  <p>Abre o seu WhatsApp com uma mensagem pronta, e você decide se envia. Veja a <a href="/familias/privacidade/">Política de Privacidade</a>.</p>
+  <a class="botao" id="abrir" href="https://wa.me/5511949426358?text=Ol%C3%A1%2C%20tenho%20uma%20d%C3%BAvida%20sobre%20a%20busca%20de%20van%20escolar%20do%20Suavan">Abrir o WhatsApp</a>
+</main>
+<script>
+  function origemUtm(search){
+    var p = new URLSearchParams(search);
+    function slug(k){ var v = (p.get(k) || '').trim().toLowerCase(); return /^[a-z0-9_-]{1,24}$/.test(v) ? v : ''; }
+    var fonte = slug('utm_source');
+    if(!fonte) return '';
+    var meio = slug('utm_medium');
+    return meio ? fonte + '/' + meio : fonte;
+  }
+
+  (function(){
+    var WHATS = '5511949426358';
+    var via = origemUtm(window.location.search);
+    var msg = 'Olá, tenho uma dúvida sobre a busca de van escolar do Suavan' + (via ? ' — via ' + via : '');
+    var url = 'https://wa.me/' + WHATS + '?text=' + encodeURIComponent(msg);
+    document.getElementById('abrir').href = url;
+    window.location.replace(url);
+  })();
+</script>
+</body>
+</html>
