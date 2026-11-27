@@ -3,23 +3,57 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<script src="consent.js" defer></script>
-<title>Suavan — aplicativo de van escolar, do motorista à família</title>
-<meta name="description" content="Aplicativo de transporte escolar: o motorista organiza alunos e mensalidades, e a família recebe a cobrança pronta no WhatsApp, com o Pix dele. Hoje é grátis para o motorista, sem limite de alunos.">
+<script src="consent.js" defer data-banner-style="page"></script>
+<title>Suavan — busca de van escolar para os pais</title>
+<meta name="description" content="Busca de van escolar grátis para os pais: veja quais motoristas atendem a escola do seu filho, conheça cada um antes de fechar e pague direto no Pix do motorista.">
 <link rel="canonical" href="https://suavan.com.br/">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": "https://suavan.com.br/#site",
+      "url": "https://suavan.com.br/",
+      "name": "Suavan",
+      "alternateName": "Sua Van",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://suavan.com.br/#org" }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://suavan.com.br/#pagina",
+      "url": "https://suavan.com.br/",
+      "name": "Suavan — busca de van escolar para os pais",
+      "inLanguage": "pt-BR",
+      "isPartOf": { "@id": "https://suavan.com.br/#site" },
+      "copyrightHolder": { "@id": "https://suavan.com.br/#org" },
+      "copyrightYear": 2026,
+      "creditText": "Suavan",
+      "license": "https://suavan.com.br/familias/termos/"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "A busca é grátis?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. A busca é grátis para os pais: você encontra a van, fala com o motorista e combina tudo sem pagar nada ao Suavan." } },
+        { "@type": "Question", "name": "Como falo com o motorista?", "acceptedAnswer": { "@type": "Answer", "text": "Pelo app Suavan. Você busca a escola, vê os motoristas que atendem o turno do seu filho e fala direto com quem escolher." } },
+        { "@type": "Question", "name": "Como pago a van?", "acceptedAnswer": { "@type": "Answer", "text": "Direto para o motorista, no Pix dele. O dinheiro não passa pelo Suavan, e o Suavan não cobra taxa." } },
+        { "@type": "Question", "name": "Preciso baixar algum app?", "acceptedAnswer": { "@type": "Answer", "text": "Sim. A busca continua no app Suavan, que está na Google Play para celulares Android." } },
+        { "@type": "Question", "name": "E se não tiver van para a escola do meu filho?", "acceptedAnswer": { "@type": "Answer", "text": "A busca mostra os motoristas que atendem a escola e o turno que você escolheu. Se ainda não houver nenhum, fale com o suporte pelo WhatsApp ou por email." } },
+        { "@type": "Question", "name": "Como sei que o motorista é de confiança?", "acceptedAnswer": { "@type": "Answer", "text": "Antes de fechar, você vê o nome do motorista e as escolas e os turnos que ele atende. Depois de fechar, recebe o telefone e o CPF ou CNPJ dele para pesquisar. Confira também os cuidados exigidos por lei, como a CNH categoria D e a vistoria da van." } }
+      ]
+    },
+    {
       "@type": "Organization",
       "@id": "https://suavan.com.br/#org",
       "name": "Suavan",
       "alternateName": "Sua Van",
       "url": "https://suavan.com.br/",
+      "logo": "https://suavan.com.br/img/icone-app.jpg",
       "sameAs": [
         "https://www.instagram.com/suavan.br/",
-        "https://www.tiktok.com/@suavan.br"
+        "https://www.tiktok.com/@suavan.br",
+        "https://www.linkedin.com/company/sua-van/"
       ]
     },
     {
@@ -27,586 +61,1126 @@
       "name": "Suavan",
       "alternateName": "Sua Van",
       "operatingSystem": "Android",
-      "applicationCategory": "BusinessApplication",
-      "description": "Aplicativo de van escolar: o motorista de transporte escolar organiza alunos, mensalidades e cobrança, e manda a cobrança pronta no WhatsApp com a própria chave Pix.",
-      "url": "https://play.google.com/store/apps/details?id=io.suavan.motorista",
+      "applicationCategory": "LifestyleApplication",
+      "description": "Aplicativo de van escolar para os pais: busque a escola do seu filho, veja os motoristas que atendem o turno dele e combine tudo direto com o motorista.",
+      "url": "https://play.google.com/store/apps/details?id=io.suavan",
       "inLanguage": "pt-BR",
-      "publisher": {
-        "@id": "https://suavan.com.br/#org"
-      },
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "BRL"
-      }
-    },
-    {
-      "@type": "FAQPage",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "O que é o Sua Van?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "É o app que o motorista de van escolar usa para organizar alunos, escolas e mensalidades e mandar a cobrança pronta pelo WhatsApp, com a própria chave Pix."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Tem que pagar alguma coisa?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Para o motorista, cadastrar alunos, lançar mensalidade e cobrar é grátis, sem limite de alunos — e continua grátis. Se um dia houver algo pago, o básico segue de graça. Para as famílias, o Sua Van não cobra nada: a mensalidade da van é a que cada uma combina com o motorista."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Já dá para usar? Como eu consigo o app?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Já dá. O app do motorista está na Google Play, para celular Android, e é grátis, sem limite de alunos. Toque em \"Baixar o app\": você vai para a página do motorista, com o botão da loja."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Sou pai ou mãe. O que eu faço hoje?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Hoje o Sua Van é o app do motorista que leva o seu filho: é ele quem organiza os alunos e manda a cobrança, com o Pix dele. Não existe app para famílias."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Como funciona a cobrança da mensalidade?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "O motorista lança a mensalidade do mês, marca quem pagou (e quem pagou só metade) e monta a cobrança com valor, vencimento e o Pix dele, pronta para o WhatsApp. O dinheiro cai direto na conta dele, no valor que ele combinou com cada família."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Onde o Sua Van atua?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Estamos expandindo para o Brasil todo — peça o seu acesso."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Tem para iPhone?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Ainda não. Hoje o app é para Android — qualquer aparelho atual serve, sem precisar de celular novo. A versão para iPhone está a caminho."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "O Sua Van escolhe o motorista para mim?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Quem escolhe é você, e o contato é direto com o motorista. O Sua Van é a ferramenta que ele usa para organizar alunos e mensalidades. Alvará, curso e vistoria são obrigação dele com a prefeitura — é lá que você confere."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Onde ficam os dados do meu filho?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Num servidor no Brasil, criptografados no celular e no caminho até lá. Para ver, corrigir ou apagar os dados, fale com o motorista, que pode fazer na hora pelo app, ou escreva para privacidade@suavan.com.br. A cópia dos recibos guardada no app é a exceção: corrigir o cadastro não muda os recibos já gerados, e, para apagá-la, o caminho é o e-mail. A Política de Privacidade está em suavan.com.br/privacidade."
-          }
-        }
-      ]
+      "publisher": { "@id": "https://suavan.com.br/#org" }
     }
   ]
 }
 </script>
 <meta property="og:type" content="website">
-<meta property="og:title" content="Suavan — aplicativo de van escolar, do motorista à família">
-<meta property="og:description" content="Para quem dirige e para quem confia o filho a ela. O motorista controla alunos e cobrança no celular; a família recebe a cobrança pronta, com o Pix dele.">
+<meta property="og:title" content="Suavan — busca de van escolar para os pais">
+<meta property="og:description" content="Veja quais motoristas atendem a escola do seu filho e saiba quem é cada um antes de fechar. A busca é grátis.">
 <meta property="og:url" content="https://suavan.com.br/">
+<meta property="og:site_name" content="Suavan">
 <meta property="og:image" content="https://suavan.com.br/og-suavan.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://suavan.com.br/og-suavan.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Francois+One&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=account_balance_wallet,arrow_forward,chat,check_circle,check_circle_outline,close,directions_bus,download,edit_note,expand_more,family_restroom,groups,how_to_reg,link,local_shipping,lock,manage_accounts,menu,notifications_active,support_agent,toggle_on&display=block" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --y400:#FACC15;--y500:#FFC500;
-    --g900:#111827;--g800:#1F2937;--g700:#374151;--g600:#4B5563;--g500:#6B7280;
-    --g400:#9CA3AF;--g300:#D1D5DB;--g200:#E5E7EB;--g100:#F3F4F6;--g50:#F9FAFB;
-    --cream:#FFFBEB;--green:#16A34A;--green800:#166534;--orange700:#C2410C;--red:#EF4444;--red700:#B91C1C;
-    --display:"Francois One",Impact,sans-serif;--body:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
-  body{font-family:var(--body);color:var(--g900);background:#fff;line-height:1.55;-webkit-font-smoothing:antialiased}
-  a{color:inherit;text-decoration:none}
-  img{max-width:100%}
-  :focus-visible{outline:3px solid var(--g900);outline-offset:3px}
-  .hero :focus-visible{outline-color:var(--y400)}
-  .skip{position:absolute;left:16px;top:-60px;z-index:30;background:var(--g900);color:#fff;padding:10px 14px;border-radius:10px;font-weight:600}
-  .skip:focus{top:12px}
-  .ms{font-family:"Material Symbols Outlined";font-weight:normal;font-style:normal;line-height:1;display:inline-block;vertical-align:middle;font-size:20px;text-transform:none}
-  .wrap{max-width:1120px;margin:0 auto;padding:0 16px}
-  h1,h2,h3{font-weight:700;line-height:1.15}
-  h1,h2{font-family:var(--body);font-weight:700;letter-spacing:-.4px}
-  b{font-weight:700}
-
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;height:50px;padding:0 22px;border-radius:12px;font-weight:700;font-size:15px;border:1px solid transparent;cursor:pointer;transition:background .15s,transform .15s}
-  .btn:active{transform:translateY(1px)}
-  .btn-primary{background:var(--y400);color:var(--g900)}
-  .btn-primary:hover{background:#E9BD14}
-  .btn-outline{background:#fff;color:var(--g800);border-color:var(--g300);font-weight:600;font-size:14px}
-  .btn-outline:hover{background:var(--g50)}
-  .btn-lg{height:54px;padding:0 26px;font-size:16px}
-
-  header.top{position:sticky;top:0;z-index:20;background:#fff;border-bottom:1px solid var(--g200)}
-  .nav{height:64px;display:flex;align-items:center;gap:8px}
-  .home{display:inline-flex;align-items:center;gap:10px;color:var(--g800);font-weight:700;padding:6px 8px 6px 6px;border-radius:12px}
-  .home:hover{background:var(--g100)}
-  .wordmark{font-family:var(--display);font-size:24px;color:var(--g800);background:var(--y500);padding:2px 10px;border-radius:6px;line-height:1.15;letter-spacing:.4px}
-  .nav .cta{margin-left:auto;height:44px;padding:0 14px;font-size:14px;white-space:nowrap}
-  .menu{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:0;background:none;border-radius:10px;color:var(--g700);cursor:pointer;flex:0 0 auto}
-  .menu:hover{background:var(--g100)}
-  .menu .ms{font-size:26px}
-  .nav-links{display:none;position:absolute;left:0;right:0;top:64px;background:#fff;border-bottom:1px solid var(--g200);flex-direction:column;padding:8px 12px 12px;box-shadow:0 14px 30px rgba(17,24,39,.10)}
-  .nav-links.open{display:flex}
-  .nav-links a{display:flex;align-items:center;min-height:48px;font-size:16px;font-weight:500;color:var(--g700);padding:8px 12px;border-radius:10px}
-  .nav-links a:hover{color:var(--g900);background:var(--g100)}
-
-  @media (max-width:339px){
-    .home{padding:6px 4px}.wordmark{font-size:22px;padding:2px 8px}
-    .nav{gap:4px}.nav .cta{padding:0 10px;font-size:13px}.menu{width:40px}
+  :root {
+    --amarelo: #FFC500;
+    --amarelo-destaque: #EFB300;
+    --ambar-borda: #E0A800;
+    --tinta: #111827;
+    --branco: #FFFFFF;
+    --texto-auxiliar: #636A77;
+    --fundo: #FCF7EE;
+    --whatsapp: #25D366;
+    --whatsapp-hover: #1EBE5A;
+    --display: "Special Gothic Expanded One", "Arial Black", sans-serif;
+    --texto: Inter, system-ui, -apple-system, "Segoe UI", sans-serif;
   }
 
-  .hero{background:var(--g900);color:#fff;padding:44px 0 48px;overflow:hidden}
-  .hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:28px;align-items:center}
-  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:.6px;text-transform:uppercase;color:var(--y400);margin-bottom:16px}
-  .eyebrow .ms{font-size:18px}
-  .hero h1{font-size:31px;line-height:1.1;color:#fff;margin-bottom:14px}
-  .hero h1 .hl{color:var(--y400)}
-  .hero .lead{font-size:16.5px;color:#D1D5DB;max-width:540px;margin-bottom:22px}
-  .hero-ctas{display:flex;flex-direction:column;align-items:stretch;gap:12px}
-  .hero-ctas .link{font-size:15px;font-weight:600;color:#E5E7EB;display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px}
-  .hero-ctas .link:hover{color:var(--y400)}
-  .trust{display:grid;grid-template-columns:1fr;gap:8px;font-size:13.5px;color:#D1D5DB}
-  .trust span{display:inline-flex;align-items:flex-start;gap:6px}
-  .trust .ms{font-size:17px;color:var(--y400);flex:0 0 auto}
-  .note{margin-top:18px;font-size:13.5px;color:#9CA3AF;max-width:540px}
-  .phone{width:180px;margin:0 auto;background:#0B0F19;border-radius:28px;padding:7px;box-shadow:0 30px 70px rgba(0,0,0,.45);border:1px solid #2A3140}
-  .phone img{display:block;width:100%;height:auto;border-radius:22px}
-  .hero.peek{padding-bottom:0}
-  .hero.peek .phone{margin-bottom:-150px}
-  .hero.peek .hero-visual{order:2}
-  .hero.peek .hero-proof{display:none}
-  .band{background:var(--cream);border-top:1px solid #FDE68A;border-bottom:1px solid #FDE68A}
-  .band .inner{display:flex;align-items:flex-start;gap:14px;padding:24px 16px}
-  .band .ic{width:44px;height:44px;border-radius:50%;background:var(--y400);display:flex;align-items:center;justify-content:center;flex:0 0 auto}
-  .band .ic .ms{font-size:24px;color:var(--g900)}
-  .band h2{font-size:18px;color:var(--g900);margin-bottom:4px;letter-spacing:-.2px}
-  .band p{font-size:15px;color:var(--g700);max-width:760px}
-
-  section{padding:52px 0;scroll-margin-top:72px}
-  .sec-tag{font-size:12.5px;font-weight:700;letter-spacing:.8px;color:var(--g500);text-transform:uppercase;margin-bottom:10px}
-  .sec-title{font-size:26px;color:var(--g900);margin-bottom:12px}
-  .sec-sub{font-size:16px;color:var(--g600);max-width:640px;margin-bottom:28px}
-  .center{text-align:center}.sec-sub.center{margin-left:auto;margin-right:auto}
-
-  .steps{display:grid;grid-template-columns:1fr;gap:14px}
-  .step{background:#fff;border:1px solid var(--g200);border-radius:12px;padding:22px 20px}
-  .step .num{font-family:var(--body);font-weight:700;font-size:30px;color:var(--y500);line-height:1;margin-bottom:12px}
-  .step h3{font-size:17px;margin-bottom:6px}
-  .step p{font-size:14.5px;color:var(--g600)}
-
-  .cards{display:grid;grid-template-columns:1fr;gap:14px}
-  .card{background:#fff;border:1px solid var(--g200);border-radius:14px;padding:22px 20px}
-  .card .ic{width:48px;height:48px;border-radius:12px;background:rgba(250,204,21,.18);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
-  .card .ic .ms{font-size:26px;color:#92611A}
-  .card h3{font-size:16.5px;margin-bottom:7px}
-  .card p{font-size:14px;color:var(--g600)}
-  .card a{color:var(--g900);text-decoration:underline;text-underline-offset:3px}
-  .legal-links{margin-top:22px;font-size:13.5px;color:var(--g500);display:flex;flex-wrap:wrap;gap:0 18px}
-  .legal-links a{text-decoration:underline;text-underline-offset:3px;display:inline-flex;align-items:center;min-height:40px}
-
-  .doors{display:grid;grid-template-columns:1fr;gap:16px}
-  .door{background:#fff;border:1px solid var(--g200);border-radius:16px;padding:22px 20px;display:flex;flex-direction:column;scroll-margin-top:80px}
-  .door.motorista{border-top:4px solid var(--y400)}
-  .door.pais{border-top:4px solid var(--g300)}
-  .door .role{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;font-weight:700;letter-spacing:.7px;text-transform:uppercase;color:var(--g500);margin-bottom:12px}
-  .door .role .ms{font-size:20px;color:var(--g700)}
-  .door h3{font-size:22px;margin-bottom:10px;line-height:1.15}
-  .door p{font-size:15.5px;color:var(--g600);margin-bottom:16px}
-  .door ul{list-style:none;display:grid;gap:8px;margin-bottom:22px}
-  .door li{display:flex;gap:9px;align-items:flex-start;font-size:14.5px;color:var(--g700)}
-  .door li .ms{color:var(--green);font-size:19px;flex:0 0 auto;margin-top:1px}
-  .door .actions{margin-top:auto;display:flex;flex-direction:column;gap:10px}
-  .door .actions .btn{width:100%}
-  .door .more{font-size:14px;font-weight:600;color:var(--g700);text-align:center;display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px}
-  .door .more:hover{color:var(--g900)}
-  .faq{max-width:760px}
-  details{border-bottom:1px solid var(--g200);padding:6px 0}
-  details:first-of-type{border-top:1px solid var(--g200)}
-  summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px;font-weight:600;font-size:16px;color:var(--g900);padding:12px 0;min-height:48px}
-  summary::-webkit-details-marker{display:none}
-  summary .ms{color:var(--g500);transition:transform .2s;flex:0 0 auto}
-  details[open] summary .ms{transform:rotate(180deg)}
-  details p{margin:2px 0 12px;font-size:15px;color:var(--g600);max-width:680px}
-
-  footer{border-top:1px solid var(--g200);padding:30px 0;color:var(--g500);font-size:13.5px}
-  footer .row{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
-  footer .links{display:flex;flex-wrap:wrap;gap:0 18px}
-  footer .links a{display:inline-flex;align-items:center;min-height:40px}
-  footer a{color:var(--g600)}footer a:hover{color:var(--g900)}
-  footer .foot-brand{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-  footer .social{display:flex;gap:4px}
-  footer .social a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:8px}
-  footer .social a:hover{background:var(--g100)}
-  footer .social a[hidden]{display:none}
-  footer .social svg{width:20px;height:20px;fill:currentColor}
-
-  @media (min-width:600px){
-    .wrap{padding:0 20px}
-    .hero{padding:60px 0 64px}
-    .hero h1{font-size:38px}
-    .hero .lead{font-size:18px}
-    .hero-ctas{flex-direction:row;align-items:center;gap:22px}
-    .trust{display:flex;flex-wrap:wrap;gap:18px}
-    .trust span{align-items:center}
-    .hero-ctas .link{font-size:14.5px}
-    .phone{width:230px;border-radius:32px;padding:9px}.phone img{border-radius:24px}
-    .band .inner{align-items:center;gap:18px;padding:28px 20px}
-    .band .ic{width:52px;height:52px}.band .ic .ms{font-size:26px}
-    .band h2{font-size:19px}
-    section{padding:72px 0}
-    .sec-title{font-size:28px}
-    .sec-sub{font-size:17px;margin-bottom:36px}
-    .steps,.cards{grid-template-columns:1fr 1fr;gap:18px}
-    .step{padding:26px 22px}
-    .card{padding:24px 20px}
-    .legal-links{margin-top:26px}
-    details{padding:8px 0}
-    summary{font-size:16.5px}
-    footer{padding:34px 0}
-    footer .row{flex-direction:row;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px}
-    footer .copy{margin-left:auto}
-    .hero.peek .hero-proof{display:block}
-    .door{padding:30px}
-    .door h3{font-size:24px}
-    .door p{margin-bottom:18px}.door ul{margin-bottom:24px}
-    .doors{gap:22px}
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+  body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--tinta);
+    font-family: var(--texto);
+    -webkit-font-smoothing: antialiased;
   }
-  @media (min-width:840px){
-    .nav{gap:4px}
-    .menu{display:none}
-    .nav-links{display:flex;position:static;flex-direction:row;gap:4px;margin-left:auto;background:none;border:0;padding:0;box-shadow:none}
-    .nav-links a{display:inline-block;min-height:0;font-size:14.5px;color:var(--g600);padding:8px 12px}
-    .nav .cta{margin-left:0;height:44px;padding:0 16px}
+  img { display: block; max-width: 100%; }
+  :focus-visible { outline: 2px solid var(--amarelo); outline-offset: 2px; }
+  html.menu-aberto { overflow: hidden; }
+
+  .pular {
+    position: absolute; left: -9999px; top: 12px; z-index: 60;
+    background: var(--tinta); color: var(--branco); padding: 10px 14px; border-radius: 12px;
+    font-weight: 600; text-decoration: none;
   }
-  @media (min-width:980px){
-    .hero{padding:72px 0 80px}
-    .hero-grid{grid-template-columns:1.02fr .98fr;gap:0 56px}
-    .hero-copy{grid-column:1;grid-row:1;align-self:end}
-    .hero-proof{grid-column:1;grid-row:2;margin-top:24px;align-self:start}
-    .hero-visual{grid-column:2;grid-row:1/3;align-self:center;justify-self:end}
-    .eyebrow{margin-bottom:22px}
-    .hero h1{font-size:48px;margin-bottom:20px}
-    .hero .lead{margin-bottom:30px}
-    .phone{width:270px;margin:0;border-radius:36px;padding:10px}.phone img{border-radius:27px}
-    .band .inner{gap:22px;padding:30px 20px}
-    .band .ic{width:56px;height:56px}.band .ic .ms{font-size:28px}
-    .band h2{font-size:22px}
-    section{padding:80px 0}
-    .sec-title{font-size:34px}
-    .sec-sub{margin-bottom:44px}
-    .steps{grid-template-columns:repeat(3,1fr)}
-    .cards{grid-template-columns:repeat(4,1fr)}
-    .hero.peek{padding-bottom:80px}
-    .hero.peek .phone{margin-bottom:0}
-    .hero.peek .hero-visual{justify-self:center}
-    .hero .lead.wide{max-width:600px}
-    .doors{grid-template-columns:1fr 1fr}
-    .door h3{font-size:26px}
+  .pular:focus { left: 12px; }
+  .so-leitor {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
   }
+  .destaque { color: var(--amarelo-destaque); }
+
+  .topo { position: relative; z-index: 30; padding: 16px 20px 0; }
+  .barra {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    background: var(--tinta); border-radius: 999px; padding: 8px 8px 8px 20px;
+  }
+  .logo { display: inline-flex; align-items: center; gap: 5.76px; text-decoration: none; border-radius: 10px; }
+  .logo-icone { width: 25.92px; height: 25.92px; border-radius: 7.2px; object-fit: cover; flex: none; }
+  .logo-palavra {
+    font-family: var(--display); font-size: 23.04px; letter-spacing: 0.02em; line-height: normal;
+    color: var(--branco); white-space: nowrap;
+  }
+  .logo-palavra span { color: var(--amarelo-destaque); }
+  .links { display: none; }
+  .chave { display: flex; gap: 4px; padding: 4px; border: 1px solid var(--ambar-borda); border-radius: 999px; }
+  .chave a {
+    padding: 12px 20px; border-radius: 999px;
+    font: 600 15px/normal var(--texto); color: var(--branco); text-decoration: none; white-space: nowrap;
+  }
+  .chave a[aria-current="page"] { background: var(--amarelo); color: var(--tinta); }
+  .chave a:not([aria-current]):hover { background: rgba(255, 255, 255, 0.08); }
+  .chave-barra { display: none; }
+  .chave-linha { margin: 12px 20px 0; background: var(--tinta); }
+  .chave-linha a { flex: 1 1 0; min-width: 0; text-align: center; padding-inline: clamp(8px, 4vw, 20px); }
+
+  .menu-botao, .menu-fechar {
+    position: relative; flex: none;
+    width: 44px; height: 44px; border: 0; border-radius: 22px;
+    background: var(--amarelo); cursor: pointer; padding: 0;
+  }
+  .menu-botao:hover, .menu-fechar:hover { background: var(--ambar-borda); }
+  .menu-botao:focus-visible, .menu-fechar:focus-visible { outline-color: var(--branco); }
+  .menu-botao span {
+    position: absolute; left: 13px; width: 18px; height: 2.5px; border-radius: 1.25px; background: var(--tinta);
+  }
+  .menu-botao span:nth-child(1) { top: 14.25px; }
+  .menu-botao span:nth-child(2) { top: 20.25px; }
+  .menu-botao span:nth-child(3) { top: 26.25px; }
+  .menu-fechar span {
+    position: absolute; left: 12px; top: 20.75px; width: 20px; height: 2.5px; border-radius: 2px; background: var(--tinta);
+  }
+  .menu-fechar span:nth-child(1) { transform: rotate(45deg); }
+  .menu-fechar span:nth-child(2) { transform: rotate(-45deg); }
+
+  .menu-celular {
+    position: fixed; inset: 0; z-index: 50;
+    display: flex; flex-direction: column;
+    background: var(--amarelo); padding: 16px 20px 40px;
+    overflow-y: auto; overscroll-behavior: contain;
+  }
+  .menu-celular[hidden] { display: none; }
+  .menu-celular :focus-visible { outline-color: var(--tinta); }
+  .menu-links { list-style: none; margin: 0; padding: 56px 0 0; display: flex; flex-direction: column; gap: 4px; }
+  .menu-links a {
+    display: flex; align-items: center; padding: 12px 16px; border-radius: 16px;
+    font: 400 28px/normal var(--display); color: var(--tinta); text-decoration: none;
+  }
+  .menu-links a:hover { background: var(--tinta); color: var(--amarelo); }
+  .menu-espaco { flex: 1 0 24px; }
+  .menu-contato { display: flex; flex-direction: column; gap: 16px; }
+  .botao, .consent-banner-button {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    min-height: 56px; padding: 16px 28px; border-radius: 28px;
+    font: 600 16px/1.5 var(--texto); text-decoration: none;
+  }
+  .botao img { width: 24px; height: 24px; flex: none; }
+  .botao-whatsapp { background: var(--whatsapp); color: var(--branco); }
+  .botao-whatsapp:hover { background: var(--whatsapp-hover); }
+  .botao-email, .consent-banner-decline { background: var(--branco); color: var(--tinta); }
+  .botao-email-amarelo, .consent-banner-accept { background: var(--amarelo); color: var(--tinta); }
+  .botao-email-amarelo:hover, .consent-banner-accept:hover { background: var(--ambar-borda); }
+
+  main { overflow-x: clip; }
+  .modulo-cabecalho { display: flex; flex-direction: column; gap: 12px; }
+  .modulo-cabecalho h2 { margin: 0; font: 400 28px/1.2 var(--display); color: var(--tinta); }
+  .modulo-cabecalho p { margin: 0; font: 400 16px/1.5 var(--texto); color: var(--texto-auxiliar); }
+  .selo {
+    align-self: flex-start; padding: 4px 12px; border-radius: 999px; background: var(--tinta); color: var(--branco);
+    font: 400 12px/normal var(--display); letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap;
+  }
+
+  .hero { padding: 32px 20px 24px; }
+  .hero-painel {
+    display: grid; gap: 20px; grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "chapeu" "titulo" "imagem" "busca" "passos" "sub";
+    max-width: 640px; margin: 0 auto;
+  }
+  .chapeu {
+    grid-area: chapeu; margin: 0; display: flex; justify-content: center;
+    padding: 8px 12px; border: 1px solid var(--tinta); border-radius: 999px;
+    font: 700 11.5px/normal var(--texto); letter-spacing: 0.04em; text-transform: uppercase; white-space: nowrap;
+  }
+  .hero h1 { grid-area: titulo; margin: 0; font: 400 28px/1.18 var(--display); letter-spacing: -0.02em; color: var(--tinta); }
+  .hero-imagem { grid-area: imagem; position: relative; margin: 0; aspect-ratio: 350 / 313; }
+  .hero-imagem img { width: 100%; height: 100%; object-fit: contain; }
+  .hero-sub { grid-area: sub; margin: 0; font: 400 16px/1.5 var(--texto); color: var(--texto-auxiliar); }
+
+  .busca {
+    grid-area: busca; padding: 8px; border-radius: 24px; background: var(--amarelo);
+    box-shadow: 0 6px 18px rgba(18, 23, 38, 0.08);
+  }
+  .busca :focus-visible { outline-color: var(--tinta); }
+  .busca-linha { display: flex; flex-direction: column; gap: 8px; }
+  .busca-campo {
+    flex: 1 1 auto; min-width: 0;
+    display: flex; align-items: center; gap: 12px;
+    padding: 18px 16px; border-radius: 16px; background: var(--branco); cursor: text;
+  }
+  .busca-campo:focus-within { outline: 2px solid var(--tinta); outline-offset: 2px; }
+  .busca-campo > img { flex: none; width: 21.2px; height: 21.2px; margin: -1.1px; }
+  .busca-campo input {
+    flex: 1 1 auto; min-width: 0; width: 100%; margin: 0; padding: 0; border: 0; background: none;
+    font: 500 18px/1.3 var(--texto); color: var(--tinta);
+  }
+  .busca-campo input::placeholder { color: var(--texto-auxiliar); opacity: 1; }
+  .busca-campo input:focus { outline: none; }
+  .busca-divisor { flex: none; width: 1px; height: 32px; background: rgba(17, 24, 39, 0.14); }
+  .busca-turno { position: relative; flex: none; display: flex; align-items: center; }
+  .busca-turno select {
+    appearance: none; -webkit-appearance: none; margin: 0; padding: 0 16px 0 0; border: 0; background: none;
+    font: 600 15px/normal var(--texto); color: var(--tinta); cursor: pointer;
+  }
+  .busca-turno select:focus { outline: none; }
+  .busca-turno img { position: absolute; right: -1px; top: 50%; width: 12px; height: 7px; margin-top: -3.5px; pointer-events: none; }
+  .busca-botao {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 16px 28px; border: 0; border-radius: 16px; background: var(--tinta); cursor: pointer;
+    font: 600 16px/1.5 var(--texto); color: var(--branco); white-space: nowrap;
+  }
+  .busca-botao img { width: 18px; height: 18px; margin: -1px; }
+  .busca-botao:hover { background: #1F2937; }
+
+  .passos { grid-area: passos; list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px; }
+  .passos li { display: flex; align-items: center; gap: 8px; font: 500 14px/normal var(--texto); color: var(--tinta); white-space: nowrap; }
+  .passos span {
+    flex: none; display: flex; align-items: center; justify-content: center;
+    width: 24px; height: 24px; border-radius: 12px; background: var(--amarelo);
+    font: 400 12px/normal var(--display); color: var(--tinta);
+  }
+
+  .vantagens { padding: 40px 20px 32px; }
+  .vantagens-cartoes {
+    position: relative; display: flex; flex-direction: column;
+    max-width: 640px; margin: 0 auto; padding: 12px 4px;
+    background: var(--amarelo); border-radius: 48px 20px 56px 16px;
+  }
+  .vantagens-cartoes > img { position: absolute; pointer-events: none; max-width: none; }
+  .vantagens-faixa, .vantagens-formas { display: none; }
+  .vantagens-formas-celular { top: -21.5px; left: -20px; width: calc(100% + 40px); height: auto; }
+  .cartao-beneficio { position: relative; display: flex; flex-direction: column; gap: 16px; padding: 24px; }
+  .cartao-beneficio h3 { margin: 0; font: 400 22px/1.25 var(--display); letter-spacing: -0.02em; }
+  .cartao-beneficio p { margin: 0; font: 400 16px/1.5 var(--texto); }
+  .cartao-titulo { display: flex; flex-direction: column-reverse; align-items: flex-start; gap: 8px 12px; }
+  .cartao-titulo .selo { align-self: auto; }
+
+  .seguro { padding: 32px 20px; }
+  .seguro-grade {
+    max-width: 640px; margin: 0 auto; display: grid; gap: 32px; grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "cabecalho" "imagem" "cartoes";
+  }
+  .seguro .modulo-cabecalho { grid-area: cabecalho; }
+  .seguro-imagem { grid-area: imagem; position: relative; justify-self: center; width: min(100%, 350px); aspect-ratio: 560 / 720; }
+  .seguro-imagem img { position: absolute; max-width: none; }
+  .seguro-formas { top: 0; height: 100%; }
+  .seguro-formas.celular { left: -2.2%; width: 102.2%; }
+  .seguro-formas.computador { display: none; }
+  .seguro-fundo { left: 3.571%; top: 25.556%; width: 89.286%; height: 69.322%; }
+  .seguro-foto { left: 3.571%; top: 5.799%; width: 96.429%; height: 91.943%; }
+  .seguro-cartoes { grid-area: cartoes; list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 24px; }
+  .seguro-cartao { display: flex; align-items: flex-start; gap: 16px; }
+  .icone-quadro {
+    flex: none; display: flex; align-items: center; justify-content: center;
+    width: 56px; height: 56px; border-radius: 16px; background: var(--amarelo);
+  }
+  .icone-quadro img { width: 30px; height: 30px; }
+  .seguro-cartao div { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+  .seguro-cartao h3 { margin: 0; font: 400 20px/1.25 var(--display); color: var(--tinta); }
+  .seguro-cartao p { margin: 0; font: 400 16px/1.5 var(--texto); color: var(--texto-auxiliar); }
+
+  .conferir { padding: 32px 20px; }
+  .conferir-grade {
+    max-width: 640px; margin: 0 auto; display: grid; gap: 32px; grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "cabecalho" "imagem" "lista";
+  }
+  .conferir .modulo-cabecalho { grid-area: cabecalho; }
+  .conferir-imagem { grid-area: imagem; position: relative; width: min(100%, 320px); aspect-ratio: 1; }
+  .conferir-imagem img { position: absolute; max-width: none; }
+  .conferir-formas { inset: 0; width: 100%; height: 100%; }
+  .conferir-formas.computador { display: none; }
+  .conferir-fundo { left: 9.016%; top: 12.295%; width: 81.967%; height: 81.169%; }
+  .conferir-3d { left: 4.918%; top: 4.918%; width: 90.164%; height: 90.164%; object-fit: contain; }
+  .conferir-lista { grid-area: lista; list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 16px; }
+  .conferir-lista li { display: flex; align-items: flex-start; gap: 16px; font: 400 16px/1.5 var(--texto); color: var(--tinta); }
+  .conferir-lista img { flex: none; width: 24px; height: 24px; }
+
+  .caminho { padding: 32px 0; }
+  .caminho-conteudo { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px; }
+  .caminho .modulo-cabecalho { padding: 0 20px; }
+  .caminho-carrossel { position: relative; }
+  .paradas {
+    list-style: none; margin: 0; padding: 0 20px 32px;
+    display: flex; align-items: flex-end; gap: 16px;
+    overflow-x: auto; scroll-snap-type: x mandatory; scroll-padding-inline: 20px;
+    scrollbar-width: none;
+  }
+  .paradas::-webkit-scrollbar { display: none; }
+  .paradas:focus-visible { outline-color: var(--tinta); outline-offset: -2px; }
+  .parada { position: relative; flex: none; width: 300px; display: flex; flex-direction: column; align-items: center; scroll-snap-align: start; }
+  .parada-imagem { position: relative; z-index: 2; width: var(--largura); height: 169px; margin-bottom: -63px; object-fit: contain; }
+  .parada-cartao {
+    position: relative; z-index: 1; width: 300px; height: 274px;
+    display: flex; flex-direction: column; gap: 12px;
+    padding: 56px 40px 24px; border-radius: 24px; background: var(--amarelo); color: var(--tinta);
+  }
+  .parada-cartao h3 { margin: 0; font: 400 22px/1.25 var(--display); }
+  .parada-cartao p { margin: 0; font: 400 16px/1.5 var(--texto); }
+  .parada-cartao .parada-numero { font: 400 32px/normal var(--display); }
+  .parada-enfeite { position: absolute; left: calc(252px + var(--deslocamento, 0px)); top: 266px; height: 40px; width: auto; max-width: none; }
+  .caminho-seta {
+    position: absolute; z-index: 3; top: 210px; width: 40px; height: 40px; padding: 0; border: 0; border-radius: 20px;
+    background: none; cursor: pointer;
+  }
+  .caminho-seta img { width: 40px; height: 40px; }
+  .caminho-seta:disabled { opacity: 0.35; cursor: default; }
+  .caminho-seta:focus-visible { outline-color: var(--tinta); }
+  .caminho-seta.anterior { left: 17px; }
+  .caminho-seta.proxima { right: 17px; }
+  .caminho-pontos { position: absolute; left: 0; right: 0; top: 404px; display: flex; justify-content: center; gap: 8px; }
+  .caminho-pontos span { width: 8px; height: 8px; border-radius: 999px; background: rgba(17, 24, 39, 0.2); transition: width 0.2s, background-color 0.2s; }
+  .caminho-pontos span.ativo { width: 24px; background: var(--amarelo); }
+  .caminho-enfeite { display: none; }
+  @media (prefers-reduced-motion: reduce) { .caminho-pontos span { transition: none; } }
+
+  .direto { padding: 32px 20px; }
+  .direto-conteudo { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px; }
+  .direto-cartoes { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 40px; }
+  .direto-cartao { display: flex; flex-direction: column; gap: 20px; text-align: center; }
+  .direto-arte { position: relative; width: 350px; max-width: 100%; height: 240px; margin: 0 auto; }
+  .direto-arte > * { position: absolute; max-width: none; }
+  .direto-forma { left: var(--forma-x); top: var(--forma-y); width: var(--forma-l); height: var(--forma-a); border-radius: var(--forma-r); background: var(--amarelo); }
+  .direto-imagem { left: var(--imagem-x); top: -39px; width: 250px; height: 250px; }
+  .direto-enfeite { left: var(--enfeite-x); top: var(--enfeite-y); }
+  .direto-texto { display: flex; flex-direction: column; gap: 16px; }
+  .direto-texto h3 { margin: 0; font: 400 20px/1.25 var(--display); color: var(--tinta); }
+  .direto-texto p { margin: 0; font: 400 16px/1.5 var(--texto); color: var(--texto-auxiliar); }
+  .direto-cartao:nth-child(1) .direto-arte { --forma-x: 36px; --forma-y: -5px; --forma-l: 198px; --forma-a: 211px; --forma-r: 40px 58px 99px 44px; --imagem-x: 53px; --enfeite-x: 224px; --enfeite-y: -19px; }
+  .direto-cartao:nth-child(2) .direto-arte { --forma-x: 36px; --forma-y: -13px; --forma-l: 198px; --forma-a: 211px; --forma-r: 91px 91px 26px 91px; --imagem-x: 47px; --enfeite-x: 238px; --enfeite-y: -25px; }
+  .direto-cartao:nth-child(3) .direto-arte { --forma-x: 40px; --forma-y: -5px; --forma-l: 192px; --forma-a: 205px; --forma-r: 11px 47px 47px 83px; --imagem-x: 50.5px; --enfeite-x: 236px; --enfeite-y: -18px; }
+
+  .ajuda { padding: 32px 20px; }
+  .ajuda-conteudo { position: relative; max-width: 640px; margin: 0 auto; }
+  .ajuda-barra {
+    background: var(--tinta); border-radius: 24px 56px 20px 40px;
+    padding: 28px 24px; display: flex; flex-direction: column; gap: 32px;
+  }
+  .ajuda h2 { margin: 0 0 4px; font: 400 20px/1.2 var(--display); color: var(--amarelo); }
+  .ajuda-texto p { margin: 0; font: 400 16px/1.5 var(--texto); color: var(--branco); }
+  .ajuda-botoes { display: flex; flex-direction: column; gap: 16px; }
+  .ajuda-conteudo > img { position: absolute; pointer-events: none; max-width: none; height: auto; }
+  .ajuda-formas-esquerda { left: -14.97px; bottom: -15.75px; width: 32.71px; }
+  .ajuda-formas-direita { right: -6.75px; top: -14.88px; width: 32.83px; }
+  .ajuda-formas-esquerda.computador, .ajuda-formas-direita.computador { display: none; }
+
+  .duvidas { padding: 32px 20px 64px; }
+  .duvidas-conteudo { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 32px; }
+  .duvidas-lista { display: flex; flex-direction: column; gap: 16px; }
+  .duvida { background: var(--amarelo); border-radius: 44px 20px 52px 16px; }
+  .duvida:nth-child(2) { border-radius: 20px 48px 24px 56px; }
+  .duvida:nth-child(3) { border-radius: 52px 16px 40px 24px; }
+  .duvida:nth-child(4) { border-radius: 24px 40px 16px 48px; }
+  .duvida:nth-child(5) { border-radius: 40px 24px 56px 20px; }
+  .duvida:nth-child(6) { border-radius: 16px 52px 24px 40px; }
+  .duvida summary {
+    list-style: none; cursor: pointer;
+    display: flex; align-items: center; gap: 12px; padding: 20px 16px;
+    border-radius: inherit;
+  }
+  .duvida summary::-webkit-details-marker { display: none; }
+  .duvida summary:focus-visible { outline-color: var(--tinta); }
+  .duvida-numero {
+    flex: none; min-width: 48px; text-align: center;
+    padding: 8px 14px; border: 1.5px solid var(--tinta); border-radius: 999px;
+    font: 600 14px/normal var(--texto); color: var(--tinta);
+  }
+  .duvida-pergunta { flex: 1; min-width: 0; font: 400 18px/1.25 var(--display); color: var(--tinta); }
+  .duvida-icone {
+    flex: none; width: 48px; height: 48px; border-radius: 24px;
+    background: var(--tinta) url(img/icone-seta-baixo.svg) center / 24px 24px no-repeat;
+  }
+  .duvida-resposta { margin: 0; padding: 0 76px 32px; font: 400 16px/1.5 var(--texto); color: rgba(255, 255, 255, 0.85); }
+  .duvida-resposta a { color: var(--amarelo); }
+  .duvida[open] { background: var(--tinta); }
+  .duvida[open] summary { align-items: flex-start; padding-top: 32px; padding-bottom: 12px; }
+  .duvida[open] summary:focus-visible { outline-color: var(--amarelo); }
+  .duvida[open] .duvida-numero { background: var(--amarelo); border-color: var(--amarelo); }
+  .duvida[open] .duvida-pergunta { padding-top: 4px; color: var(--branco); }
+  .duvida[open] .duvida-icone { background: var(--amarelo) url(img/icone-seta-cima.svg) center / 24px 24px no-repeat; }
+
+  .rodape { position: relative; z-index: 1; background: var(--tinta); color: var(--branco); border-radius: 32px 16px 0 0; padding: 40px 20px 32px; }
+  .rodape-conteudo { max-width: 640px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
+  .rodape-principal, .rodape-legal { display: flex; flex-direction: column; align-items: flex-start; gap: 24px; }
+  .rodape-legal { gap: 16px; }
+  .rodape .logo { gap: 8px; }
+  .rodape .logo-icone { width: 36px; height: 36px; border-radius: 10px; }
+  .rodape .logo-palavra { font-size: 32px; }
+  .rodape-links { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+  .rodape-links a { font: 500 15px/1.5 var(--texto); color: var(--branco); text-decoration: none; white-space: nowrap; }
+  .rodape-links a:hover { color: var(--amarelo); }
+  .rodape-divisor { width: 100%; height: 1px; margin: 0; border: 0; background: var(--branco); }
+  .rodape-redes { display: flex; align-items: center; gap: 20px; }
+  .rodape-redes a { position: relative; display: block; }
+  .rodape-redes a::before { content: ""; position: absolute; inset: -8px; }
+  .rodape-contato { display: flex; flex-direction: column; gap: 8px; font: 500 14px/1.5 var(--texto); }
+  .rodape-contato p { margin: 0; white-space: nowrap; }
+  .rodape-contato a { color: inherit; text-decoration: none; }
+  .rodape-contato a:hover { color: var(--amarelo); }
+  @media (max-width: 799.98px) { .rodape-legal { padding-right: 60px; } }
+
+  .flutuantes {
+    position: fixed; right: 16px; bottom: 24px; z-index: 40;
+    display: flex; flex-direction: column; align-items: center; gap: 16px;
+  }
+  .flutuante {
+    display: flex; align-items: center; justify-content: center;
+    width: 56px; height: 56px; border: 2px solid var(--branco); border-radius: 28px;
+    filter: drop-shadow(0 6px 9px rgba(18, 23, 38, 0.16));
+  }
+  .flutuante:focus-visible { outline-color: var(--tinta); }
+  .flutuante-topo { background: var(--amarelo); }
+  .flutuante-topo:hover { background: var(--ambar-borda); }
+  .flutuante-topo span {
+    width: 24px; height: 24px; background: var(--tinta);
+    -webkit-mask: url(img/icone-voltar-topo.svg) center / 24px 24px no-repeat;
+    mask: url(img/icone-voltar-topo.svg) center / 24px 24px no-repeat;
+  }
+  .flutuante-whatsapp { background: var(--whatsapp); }
+  .flutuante-whatsapp:hover { background: var(--whatsapp-hover); }
+  .flutuante-whatsapp img { width: 30px; height: 30px; }
+
+  .forma { display: none; }
+
+  .consent-banner {
+    position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 45;
+    max-width: 640px; margin: 0 auto; padding: 24px;
+    background: var(--tinta); color: var(--branco);
+    border-radius: 24px 56px 20px 40px;
+    box-shadow: 0 8px 32px rgba(17, 24, 39, 0.24);
+  }
+  .consent-banner-inner { display: flex; flex-direction: column; gap: 20px; }
+  .consent-banner-text { font: 400 15px/1.5 var(--texto); }
+  .consent-banner-text strong { font-weight: 600; }
+  .consent-banner-link { color: var(--amarelo); }
+  .consent-banner-actions { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 12px; }
+  .consent-banner-button { padding-inline: 16px; border: 0; cursor: pointer; }
+
+  @media (min-width: 600px) {
+    .chave-linha { max-width: 480px; margin: 12px auto 0; }
+    .vantagens-formas-celular { display: none; }
+  }
+
+  @media (min-width: 1200px) {
+    .topo { padding: 24px 64px 0; }
+    .barra { max-width: 1200px; margin: 0 auto; padding: 12px 12px 12px 28px; }
+    .logo { gap: 8px; }
+    .logo-icone { width: 36px; height: 36px; border-radius: 10px; }
+    .logo-palavra { font-size: 32px; }
+    .links { display: flex; gap: 12px; list-style: none; margin: 0; padding: 0; }
+    .links a {
+      display: block; padding: 8px 12px; border-radius: 12px;
+      font: 500 15px/normal var(--texto); color: var(--branco); text-decoration: none; white-space: nowrap;
+    }
+    .links a:hover { background: var(--amarelo); color: var(--tinta); }
+    .chave-barra { display: flex; }
+    .chave-linha, .menu-botao { display: none; }
+    .menu-celular { display: none !important; }
+
+    .modulo-cabecalho h2 { font-size: 36px; }
+    .modulo-cabecalho p { font-size: 18px; }
+
+    .hero { padding: 40px 64px 0; }
+    .hero-painel {
+      max-width: 1200px; padding: 88px 0 88px 80px;
+      grid-template-columns: minmax(0, 632fr) minmax(0, 488fr);
+      grid-template-rows: auto auto auto auto 1fr;
+      grid-template-areas: "chapeu imagem" "titulo imagem" "sub imagem" "busca imagem" "passos imagem";
+      gap: 24px 0; align-items: start;
+    }
+    .chapeu { justify-self: start; padding: 8px 16px; font-size: 12px; letter-spacing: 0.1em; }
+    .hero h1 { font-size: 42px; }
+    .hero-sub { font-size: 19px; }
+    .hero-imagem { aspect-ratio: 487 / 436; overflow: hidden; }
+    .hero-imagem img { position: absolute; left: -0.2%; top: 0; width: 104.67%; height: 100%; max-width: none; object-fit: fill; }
+    .busca { margin-top: 8px; }
+    .busca-linha { flex-direction: row; }
+    .busca-campo { padding: 20px; }
+    .busca-campo input { font-size: 22px; }
+    .passos { display: grid; grid-template-columns: auto 1fr auto 1fr auto; gap: 0; align-items: center; }
+    .passos::before, .passos::after {
+      content: ""; justify-self: center; width: 5.8px; height: 9.8px;
+      background: url(img/icone-seta-passo.svg) center / 5.8px 9.8px no-repeat;
+    }
+    .passos::before { grid-column: 2; grid-row: 1; }
+    .passos::after { grid-column: 4; grid-row: 1; }
+    .passos li:nth-child(1) { grid-column: 1; grid-row: 1; }
+    .passos li:nth-child(2) { grid-column: 3; grid-row: 1; }
+    .passos li:nth-child(3) { grid-column: 5; grid-row: 1; }
+
+    .vantagens { padding: 72px 64px 32px; }
+    .vantagens-cartoes {
+      max-width: 1200px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px;
+      padding: 0; background: none; border-radius: 0;
+    }
+    .vantagens-faixa { display: block; top: -40px; left: 50%; transform: translateX(calc(-50% + 1.12px)); width: 105.52%; height: 287.14px; }
+    .vantagens-formas { display: block; top: 0; left: 50%; transform: translateX(-50%); width: 120%; height: auto; margin-top: -6.425%; }
+    .cartao-beneficio { padding: 32px 32px 36px; }
+    .cartao-titulo { flex-direction: row; flex-wrap: wrap; align-items: center; }
+
+    .seguro { padding: 88px 64px 40px; }
+    .seguro-grade {
+      max-width: 1200px;
+      grid-template-columns: minmax(0, 560fr) minmax(0, 576fr);
+      grid-template-rows: 1fr auto auto 1fr;
+      grid-template-areas: "imagem ." "imagem cabecalho" "imagem cartoes" "imagem .";
+      gap: 32px 64px;
+    }
+    .seguro-imagem { width: 100%; }
+    .seguro-formas.celular { display: none; }
+    .seguro-formas.computador { display: block; left: -4.59%; width: 104.59%; }
+    .seguro-cartoes { gap: 16px; }
+    .seguro-cartao { align-items: center; gap: 20px; padding: 20px 24px; }
+
+    .conferir { padding: 80px 64px 40px; }
+    .conferir-grade {
+      max-width: 1200px;
+      grid-template-columns: minmax(0, 1fr) 488px;
+      grid-template-rows: auto auto;
+      grid-template-areas: "cabecalho imagem" "lista imagem";
+      gap: 32px 64px;
+    }
+    .conferir-imagem { width: 488px; align-self: center; }
+    .conferir-formas.celular { display: none; }
+    .conferir-formas.computador { display: block; }
+    .conferir-lista li { align-items: center; font-size: 18px; }
+    .conferir-lista img { width: 32px; height: 32px; }
+
+    .caminho { padding: 80px 64px 40px; }
+    .caminho-conteudo { max-width: 1200px; gap: 48px; }
+    .caminho .modulo-cabecalho { padding: 0; }
+    .caminho-carrossel { height: 1160px; }
+    .caminho-carrossel::before {
+      content: ""; position: absolute; left: 598px; top: 130px; width: 4px; height: 900px; background: var(--amarelo);
+    }
+    .paradas { display: block; height: 100%; padding: 0; overflow: visible; }
+    .parada { position: absolute; inset: 0; width: auto; display: block; pointer-events: none; }
+    .parada > * { pointer-events: auto; }
+    .parada::before, .parada::after { content: ""; position: absolute; border-radius: 50%; }
+    .parada::before { left: 576px; top: calc(var(--y) - 24px); width: 48px; height: 48px; background: rgba(255, 197, 0, 0.3); }
+    .parada::after { left: 590px; top: calc(var(--y) - 10px); width: 20px; height: 20px; background: var(--amarelo); }
+    .parada-imagem { position: absolute; left: var(--imagem-x); top: var(--imagem-y); width: var(--imagem-l); height: var(--imagem-a); margin: 0; }
+    .parada-cartao { position: absolute; left: var(--cartao-x); top: calc(var(--y) - 99px); width: 420px; height: auto; padding: 28px 32px; }
+    .parada-cartao::after {
+      content: ""; position: absolute; top: 99px; left: var(--ponta-x); width: 20px; height: 20px; border-radius: 3px;
+      background: var(--amarelo); transform: translate(-50%, -50%) rotate(45deg);
+    }
+    .parada-enfeite, .caminho-seta, .caminho-pontos { display: none; }
+    .parada:nth-child(1) { --y: 130px; --imagem-x: 672px; --imagem-y: 0px; --imagem-l: 380px; --imagem-a: 260px; --cartao-x: 136px; --ponta-x: 100%; }
+    .parada:nth-child(2) { --y: 430px; --imagem-x: 148px; --imagem-y: 300px; --imagem-l: 380px; --imagem-a: 260px; --cartao-x: 644px; --ponta-x: 0%; }
+    .parada:nth-child(3) { --y: 730px; --imagem-x: 672px; --imagem-y: 600px; --imagem-l: 380px; --imagem-a: 260px; --cartao-x: 136px; --ponta-x: 100%; }
+    .parada:nth-child(4) { --y: 1030px; --imagem-x: 112px; --imagem-y: 874px; --imagem-l: 416px; --imagem-a: 284px; --cartao-x: 644px; --ponta-x: 0%; }
+    .caminho-enfeite { display: block; position: absolute; pointer-events: none; }
+    .caminho-enfeite.a { left: 101px; top: 1px; }
+    .caminho-enfeite.b { left: 1058px; top: 302px; }
+    .caminho-enfeite.c { left: 102px; top: 602px; }
+    .caminho-enfeite.d { left: 1062px; top: 904px; }
+
+    .direto { padding: 80px 64px 40px; }
+    .direto-conteudo { max-width: 1200px; gap: 48px; }
+    .direto-cartoes { flex-direction: row; gap: 24px; }
+    .direto-cartao { flex: 1 1 0; min-width: 0; text-align: left; }
+    .direto-arte { width: 100%; }
+    .direto-imagem { left: 3px; top: -38.78px; }
+    .direto-cartao:nth-child(1) .direto-arte { --forma-x: 63px; --enfeite-x: 246px; --enfeite-y: -21px; }
+    .direto-cartao:nth-child(2) .direto-arte { --forma-x: 72px; --enfeite-x: 240px; --enfeite-y: -26px; }
+    .direto-cartao:nth-child(3) .direto-arte { --forma-x: 94px; --enfeite-x: 279px; --enfeite-y: -20px; }
+
+    .ajuda { padding: 80px 64px 56px; }
+    .ajuda-conteudo { max-width: 1200px; }
+    .ajuda-barra {
+      flex-direction: row; align-items: center; justify-content: space-between;
+      min-height: 136px; padding: 32px 80px; border-radius: 32px 72px 24px 56px;
+    }
+    .ajuda h2 { font-size: 24px; }
+    .ajuda-texto p { font-size: 18px; }
+    .ajuda-botoes { flex-direction: row; }
+    .ajuda-formas-esquerda.celular, .ajuda-formas-direita.celular { display: none; }
+    .ajuda-formas-esquerda.computador { display: block; left: -34.4px; bottom: -27.9px; width: 47.49px; }
+    .ajuda-formas-direita.computador { display: block; right: -16.1px; top: -23px; width: 47.62px; }
+
+    .duvidas { padding: 64px 64px 124px; }
+    .duvidas-conteudo { max-width: 1200px; gap: 40px; }
+    .duvida summary { gap: 24px; padding: 20px 24px; }
+    .duvida-pergunta { font-size: 22px; }
+    .duvida-resposta { padding: 0 96px 32px; font-size: 17px; }
+
+    .rodape { border-radius: 48px 24px 0 0; padding: 56px 64px 40px; }
+    .rodape-conteudo { max-width: 1200px; gap: 32px; }
+    .rodape-principal, .rodape-legal { flex-direction: row; align-items: center; justify-content: space-between; }
+    .rodape-links { flex-direction: row; gap: 32px; }
+    .rodape-redes { gap: 16px; }
+    .rodape-contato { flex-direction: row; gap: 24px; }
+
+    .flutuantes { right: 32px; bottom: 32px; }
+
+    main { position: relative; z-index: 1; }
+    .hero, .seguro, .caminho, .duvidas { position: relative; }
+    .forma {
+      display: flex; position: absolute; z-index: -1; pointer-events: none;
+      align-items: center; justify-content: center;
+    }
+    .forma > * { flex: none; max-width: none; }
+    .forma-organica-direita { right: -175.91px; top: -350px; width: 471.58px; height: 454.56px; }
+    .forma-organica-direita img { width: 420px; height: 400px; transform: rotate(8deg); }
+    .forma-icone-esquerda { left: -296.53px; top: 230px; width: 379.54px; height: 379.54px; }
+    .forma-icone-esquerda span { width: 320px; height: 320px; border-radius: 84px; background: var(--amarelo); transform: rotate(12deg); }
+    .forma-seguro-direita { right: -237.18px; top: 74.96px; width: 298.18px; height: 437.34px; }
+    .forma-seguro-direita span { width: 230px; height: 402.77px; border-radius: 96px 40px 96px 36px; background: var(--amarelo); transform: rotate(-10.28deg); }
+    .forma-seguro-esquerda { left: -281px; top: 583px; width: 367.76px; height: 585.81px; }
+    .forma-seguro-esquerda img { width: 307.84px; height: 554.96px; transform: rotate(173.6deg); }
+    .forma-caminho-esquerda { left: -241.1px; top: 124px; width: 328.6px; height: 659.28px; }
+    .forma-caminho-esquerda span { width: 220px; height: 630.2px; border-radius: 40px 88px 32px 96px; background: var(--amarelo); transform: rotate(10.25deg); }
+    .forma-caminho-direita { right: -591.44px; top: 106.37px; width: 805.44px; height: 1493.63px; }
+    .forma-caminho-direita img { width: 522.46px; height: 1415.94px; transform: rotate(-12deg); }
+    .forma-duvidas-direita { right: -578.54px; top: 124px; width: 675.98px; height: 830.32px; }
+    .forma-duvidas-direita img { width: 660.66px; height: 817.99px; transform: rotate(1.08deg); }
+
+    .consent-banner { bottom: 32px; max-width: 880px; padding: 24px 32px; border-radius: 32px 72px 24px 56px; }
+    .consent-banner-inner { flex-direction: row; align-items: center; gap: 32px; }
+    .consent-banner-text { flex: 1; font-size: 16px; }
+    .consent-banner-button { padding-inline: 28px; }
+  }
+  @media (min-width: 1200px) and (max-width: 1409.98px) { .rodape { padding-right: 96px; } }
 </style>
-<body id="topo">
-<a class="skip" href="#main">Pular para o conteúdo</a>
+</head>
+<body>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
-<header class="top">
-  <div class="wrap nav">
-    <a class="home" href="#topo" aria-label="Início — voltar ao topo"><span class="wordmark">SUAVAN</span></a>
-    <nav class="nav-links" id="nav-links" aria-label="Seções">
-      <a href="#motoristas">Para motoristas</a>
-      <a href="#familias">Para famílias</a>
-      <a href="#compromissos">Compromissos</a>
-      <a href="#duvidas">Dúvidas</a>
-    </nav>
-    <a class="btn btn-primary cta out" href="https://motorista.suavan.com.br/#acesso">Baixar o app</a>
-    <button type="button" class="menu" aria-label="Abrir o menu" aria-expanded="false" aria-controls="nav-links"><span class="ms" aria-hidden="true">menu</span></button>
-  </div>
+<header class="topo" id="topo">
+  <nav class="barra" aria-label="Principal">
+    <a class="logo" href="#topo" aria-label="Suavan, voltar ao topo">
+      <img class="logo-icone" src="img/icone-app.jpg" width="36" height="36" alt="">
+      <span class="logo-palavra" aria-hidden="true">sua<span>van</span></span>
+    </a>
+    <ul class="links">
+      <li><a href="#vantagens">Vantagens</a></li>
+      <li><a href="#seguranca">Segurança</a></li>
+      <li><a href="#novidades">Novidades</a></li>
+      <li><a href="#pagamento">Pagamento</a></li>
+      <li><a href="#duvidas">Dúvidas</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <div class="chave chave-barra" role="group" aria-label="Escolher a página">
+      <a class="js-motoristas" href="https://motorista.suavan.com.br/">Para motoristas</a>
+      <a href="./" aria-current="page">Para famílias</a>
+    </div>
+    <button class="menu-botao" type="button" aria-label="Abrir o menu" aria-expanded="false" aria-controls="menu-celular">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 </header>
 
-<main id="main">
-<section class="hero peek">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <span class="eyebrow"><span class="ms" aria-hidden="true">directions_bus</span> Sua Van</span>
-      <h1>A van escolar em ordem, <span class="hl">dos dois lados.</span></h1>
-      <p class="lead wide">Para quem dirige: alunos, mensalidades e cobrança no celular, sem papel e caneta. Para quem confia o filho a ela: a cobrança pronta no WhatsApp, com o Pix do motorista — sem intermediário no meio.</p>
-      <div class="hero-ctas">
-        <a class="btn btn-primary btn-lg out" href="https://motorista.suavan.com.br/#acesso"><span class="ms" aria-hidden="true">local_shipping</span> Sou motorista</a>
-        <a class="btn btn-outline btn-lg out" href="https://suavan.com.br/#familias" style="background:transparent;color:#fff;border-color:#9CA3AF"><span class="ms" aria-hidden="true">family_restroom</span> Sou pai ou mãe</a>
-      </div>
-    </div>
+<div class="chave chave-linha" role="group" aria-label="Escolher a página">
+  <a class="js-motoristas" href="https://motorista.suavan.com.br/">Para motoristas</a>
+  <a href="./" aria-current="page">Para famílias</a>
+</div>
 
-    <div class="hero-visual">
-      <div class="phone">
-        <img src="img/app-inicio.png" srcset="img/app-inicio-360.png 360w, img/app-inicio.png 600w" sizes="(min-width:980px) 250px, (min-width:600px) 212px, 166px" width="600" height="1265" alt="Tela Início do app Sua Van: meta do mês com R$ 1.140,00 recebidos de R$ 1.890,00 e a lista de alunos em aberto no mês" fetchpriority="high" decoding="async">
-      </div>
-    </div>
-
-    <div class="hero-proof">
-      <div class="trust">
-        <span><span class="ms" aria-hidden="true">check_circle</span> Grátis para o motorista, sem limite de alunos</span>
-        <span><span class="ms" aria-hidden="true">check_circle</span> O dinheiro vai direto de quem paga para quem dirige</span>
-        <span><span class="ms" aria-hidden="true">check_circle</span> Dados protegidos, no Brasil</span>
-      </div>
-    </div>
+<div class="menu-celular" id="menu-celular" role="dialog" aria-modal="true" aria-label="Menu" hidden>
+  <div class="barra">
+    <a class="logo" href="#topo" aria-label="Suavan, voltar ao topo">
+      <img class="logo-icone" src="img/icone-app.jpg" width="36" height="36" alt="">
+      <span class="logo-palavra" aria-hidden="true">sua<span>van</span></span>
+    </a>
+    <button class="menu-fechar" type="button" aria-label="Fechar o menu"><span></span><span></span></button>
   </div>
-</section>
-
-<section id="portas" style="background:var(--g50)">
-  <div class="wrap">
-    <div class="sec-tag center">Por onde você entra</div>
-    <h2 class="sec-title center">Duas portas, um app</h2>
-    <p class="sec-sub center">Escolha o seu lado. Cada página fala só com você.</p>
-    <div class="doors">
-      <div class="door motorista" id="motoristas">
-        <span class="role"><span class="ms" aria-hidden="true">local_shipping</span> Sou motorista</span>
-        <h3>Saia do papel e caneta. A sua van sob controle, no seu celular.</h3>
-        <p>Seus alunos por escola e turno, quem pagou e quem está em atraso — do jeito que você já anota. E na hora de cobrar, o texto já sai pronto, com o seu Pix.</p>
-        <ul>
-          <li><span class="ms" aria-hidden="true">check_circle</span> Grátis, sem limite de alunos e sem cartão.</li>
-          <li><span class="ms" aria-hidden="true">check_circle</span> Marca pagamento parcial e mostra quem está em atraso.</li>
-          <li><span class="ms" aria-hidden="true">check_circle</span> Funciona no Android que você já tem.</li>
-        </ul>
-        <div class="actions">
-          <a class="btn btn-primary btn-lg out" href="https://motorista.suavan.com.br/#acesso"><span class="ms" aria-hidden="true">download</span> Baixar o app</a>
-          <a class="more out" href="https://motorista.suavan.com.br">Ver a página do motorista <span class="ms" aria-hidden="true">arrow_forward</span></a>
-        </div>
-      </div>
-      <div class="door pais" id="familias">
-        <span class="role"><span class="ms" aria-hidden="true">family_restroom</span> Sou pai ou mãe</span>
-        <h3>A cobrança certa, no seu WhatsApp, direto do motorista.</h3>
-        <p>Hoje o app é do motorista. Se o motorista do seu filho usa o Sua Van, a cobrança do mês chega para você pelo WhatsApp, com o valor combinado e o Pix dele.</p>
-        <ul>
-          <li><span class="ms" aria-hidden="true">check_circle</span> Você não instala nada e não paga nada ao app.</li>
-          <li><span class="ms" aria-hidden="true">check_circle</span> Quem escolhe o motorista é você; o contato é direto.</li>
-          <li><span class="ms" aria-hidden="true">check_circle</span> Os dados do seu filho ficam protegidos, e você pode pedir para ver, corrigir ou apagar.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="como">
-  <div class="wrap">
-    <div class="sec-tag">Como funciona</div>
-    <h2 class="sec-title">Do cadastro à cobrança, em três passos</h2>
-    <p class="sec-sub">O motorista faz no celular o que fazia no caderno. A família só recebe o resultado.</p>
-    <div class="steps">
-      <div class="step"><div class="num" aria-hidden="true">1</div><h3>O motorista cadastra</h3><p>Os alunos, as escolas e o turno de cada um. Se preferir, o responsável preenche os dados do aluno por um link.</p></div>
-      <div class="step"><div class="num" aria-hidden="true">2</div><h3>O app organiza o mês</h3><p>A mensalidade de cada aluno, quem pagou — inclusive só uma parte — e quem está em atraso.</p></div>
-      <div class="step"><div class="num" aria-hidden="true">3</div><h3>A família recebe a cobrança pronta</h3><p>No WhatsApp, com o valor, o vencimento e o Pix do motorista. O pagamento vai direto para ele.</p></div>
-    </div>
-  </div>
-</section>
-
-<div class="band">
-  <div class="wrap inner">
-    <div class="ic"><span class="ms" aria-hidden="true">account_balance_wallet</span></div>
-    <div>
-      <h2>O dinheiro vai de quem paga para quem dirige. O Sua Van não fica no meio.</h2>
-      <p>A cobrança sai com o Pix do motorista e cai na conta dele. O app não recebe, não intermedeia e não fica com nada — e o valor é o que cada família combina com o motorista.</p>
-    </div>
+  <ul class="menu-links">
+    <li><a href="#vantagens">Vantagens</a></li>
+    <li><a href="#seguranca">Segurança</a></li>
+    <li><a href="#novidades">Novidades</a></li>
+    <li><a href="#pagamento">Pagamento</a></li>
+    <li><a href="#duvidas">Dúvidas</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+  <div class="menu-espaco"></div>
+  <div class="menu-contato">
+    <a class="botao botao-whatsapp js-whats" href="/whatsapp/" target="_blank" rel="noopener"><img src="img/icone-whatsapp.svg" width="24" height="24" alt="">WhatsApp</a>
+    <a class="botao botao-email js-email" href="mailto:suporte@suavan.com.br"><img src="img/icone-email.svg" width="24" height="24" alt="">Email</a>
   </div>
 </div>
 
-<section id="compromissos">
-  <div class="wrap">
-    <div class="sec-tag">Compromissos</div>
-    <h2 class="sec-title">Um app que leva a sério o que você confia a ele</h2>
-    <p class="sec-sub">Quatro compromissos escritos nos Termos de uso e na Política de Privacidade — e cumpridos hoje, para o motorista e para a família.</p>
-    <div class="cards">
-      <div class="card">
-        <div class="ic"><span class="ms" aria-hidden="true">lock</span></div>
-        <h3>Dados protegidos, no Brasil</h3>
-        <p>Os dados dos alunos ficam criptografados no celular do motorista e em servidor no Brasil.</p>
-      </div>
-      <div class="card">
-        <div class="ic"><span class="ms" aria-hidden="true">account_balance_wallet</span></div>
-        <h3>O dinheiro não passa pelo app</h3>
-        <p>A família paga no Pix do motorista, e o dinheiro cai inteiro na conta dele. O Sua Van não recebe, não intermedeia e não fica com nada.</p>
-      </div>
-      <div class="card">
-        <div class="ic"><span class="ms" aria-hidden="true">toggle_on</span></div>
-        <h3>Cada um no controle</h3>
-        <p>O motorista define o valor com cada família e pode apagar a própria conta quando quiser. A família escolhe o motorista e pode pedir para ver, corrigir ou apagar os dados do filho.</p>
-      </div>
-      <div class="card">
-        <div class="ic"><span class="ms" aria-hidden="true">support_agent</span></div>
-        <h3>Suporte que responde</h3>
-        <p>Dúvida ou problema? Fale com a gente por <a href="mailto:suporte@suavan.com.br">suporte@suavan.com.br</a>. Para dados pessoais, <a href="mailto:privacidade@suavan.com.br">privacidade@suavan.com.br</a>.</p>
-      </div>
+<main id="conteudo">
+  <section class="hero" aria-labelledby="hero-titulo">
+    <div class="forma forma-organica-direita" aria-hidden="true"><img src="img/fundo-forma-organica-direita.svg" width="420" height="400" alt=""></div>
+    <div class="forma forma-icone-esquerda" aria-hidden="true"><span></span></div>
+    <div class="hero-painel">
+      <p class="chapeu">Busca de van escolar grátis para os pais</p>
+      <h1 id="hero-titulo">Encontre a <span class="destaque">van</span> escolar <span class="destaque">certa</span> para o seu <span class="destaque">filho</span>.</h1>
+      <figure class="hero-imagem">
+        <img src="img/familia-motorista-van-escolar.webp" width="765" height="654" fetchpriority="high" alt="Motorista de van escolar bate a mão com um menino ao lado da van amarela, enquanto uma mãe abraça a filha.">
+      </figure>
+      <p class="hero-sub">Veja quais motoristas atendem a escola dele e saiba quem é cada um antes de fechar. Mais segurança para o seu filho e mais tranquilidade para você.</p>
+      <form class="busca js-busca" action="https://play.google.com/store/apps/details" method="get" role="search" aria-label="Buscar van escolar">
+        <input type="hidden" name="id" value="io.suavan">
+        <input type="hidden" name="hl" value="pt_BR">
+        <div class="busca-linha">
+          <div class="busca-campo">
+            <img src="img/icone-busca.svg" width="21" height="21" alt="">
+            <label class="so-leitor" for="busca-escola">Nome da escola</label>
+            <input id="busca-escola" type="text" placeholder="Nome da escola" autocomplete="off" enterkeyhint="search">
+            <span class="busca-divisor" aria-hidden="true"></span>
+            <div class="busca-turno">
+              <label class="so-leitor" for="busca-turno">Turno</label>
+              <select id="busca-turno">
+                <option>Manhã</option>
+                <option>Tarde</option>
+                <option>Integral</option>
+              </select>
+              <img src="img/icone-seta-turno.svg" width="12" height="7" alt="">
+            </div>
+          </div>
+          <button class="busca-botao" type="submit"><img src="img/icone-busca-botao.svg" width="18" height="18" alt="">Buscar van</button>
+        </div>
+      </form>
+      <ol class="passos" aria-label="Como funciona a busca">
+        <li><span aria-hidden="true">1</span>Busque a escola</li>
+        <li><span aria-hidden="true">2</span>Faça um cadastro rápido</li>
+        <li><span aria-hidden="true">3</span>Continue no app</li>
+      </ol>
     </div>
-    <p class="legal-links"><a href="/termos/" target="_blank" rel="noopener">Termos de uso</a> <a href="/privacidade/" target="_blank" rel="noopener">Política de Privacidade</a> <a href="/excluir-conta/">Como excluir sua conta</a></p>
-  </div>
-</section>
+  </section>
 
-<section id="duvidas" style="background:var(--g50)">
-  <div class="wrap">
-    <div class="sec-tag">Dúvidas</div>
-    <h2 class="sec-title">Perguntas frequentes</h2>
-    <div class="faq" style="margin-top:30px">
-      <details open>
-        <summary>O que é o Sua Van? <span class="ms" aria-hidden="true">expand_more</span></summary>
-        <p>É o app que o motorista de van escolar usa para organizar alunos, escolas e mensalidades e mandar a cobrança pronta pelo WhatsApp, com a própria chave Pix.</p>
-      </details>
-      <details>
-        <summary>Tem que pagar alguma coisa? <span class="ms" aria-hidden="true">expand_more</span></summary>
-        <p>Para o motorista, cadastrar alunos, lançar mensalidade e cobrar é grátis, sem limite de alunos — e continua grátis. Se um dia houver algo pago, o básico segue de graça. Para as famílias, o Sua Van não cobra nada: a mensalidade da van é a que cada uma combina com o motorista.</p>
-      </details>
-      <details>
-        <summary>Já dá para usar? Como eu consigo o app? <span class="ms" aria-hidden="true">expand_more</span></summary>
-        <p>Já dá. O app do motorista está na Google Play, para celular Android, e é grátis, sem limite de alunos. Toque em "Baixar o app": você vai para a página do motorista, com o botão da loja.</p>
-      </details>
-      <details>
-        <summary>Sou pai ou mãe. O que eu faço hoje? <span class="ms" aria-hidden="true">expand_more</span></summary>
-        <p>Hoje o Sua Van é o app do motorista que leva o seu filho: é ele quem organiza os alunos e manda a cobrança, com o Pix dele. Não existe app para famílias.</p>
-      </details>
-      <details>
-        <summary>Como funciona a cobrança da mensalidade? <span class="ms" aria-hidden="true">expand_more</span></summary>
-        <p>O motorista lança a mensalidade do mês, marca quem pagou (e quem pagou só metade) e monta a cobrança com valor, vencimento e o Pix dele, pronta para o WhatsApp. O dinheiro cai direto na conta dele, no valor que ele combinou com cada família.</p>
-      </details>
-      <details>
-        <summary>Onde o Sua Van atua? <span class="ms" aria-hidden="true">expand_more</span></summary>
-        <p>Estamos expandindo para o Brasil todo — peça o seu acesso.</p>
-      </details>
-      <details>
-        <summary>Tem para iPhone? <span class="ms" aria-hidden="true">expand_more</span></summary>
-        <p>Ainda não. Hoje o app é para Android — qualquer aparelho atual serve, sem precisar de celular novo. A versão para iPhone está a caminho.</p>
-      </details>
-      <details>
-        <summary>O Sua Van escolhe o motorista para mim? <span class="ms" aria-hidden="true">expand_more</span></summary>
-        <p>Quem escolhe é você, e o contato é direto com o motorista. O Sua Van é a ferramenta que ele usa para organizar alunos e mensalidades. Alvará, curso e vistoria são obrigação dele com a prefeitura — é lá que você confere.</p>
-      </details>
-      <details>
-        <summary>Onde ficam os dados do meu filho? <span class="ms" aria-hidden="true">expand_more</span></summary>
-        <p>Num servidor no Brasil, criptografados no celular e no caminho até lá. Para ver, corrigir ou apagar os dados, fale com o motorista, que pode fazer na hora pelo app, ou escreva para privacidade@suavan.com.br. A cópia dos recibos guardada no app é a exceção: corrigir o cadastro não muda os recibos já gerados, e, para apagá-la, o caminho é o e-mail. A Política de Privacidade está em suavan.com.br/privacidade.</p>
-      </details>
+  <section class="vantagens" id="vantagens" aria-labelledby="vantagens-titulo">
+    <h2 class="so-leitor" id="vantagens-titulo">Vantagens</h2>
+    <div class="vantagens-cartoes">
+      <img class="vantagens-faixa" src="img/vantagens-faixa.svg" width="1266" height="287" alt="">
+      <img class="vantagens-formas" src="img/vantagens-formas.svg" width="1440" height="313" alt="">
+      <img class="vantagens-formas-celular" src="img/vantagens-formas-celular.svg" width="390" height="561" alt="">
+      <article class="cartao-beneficio">
+        <h3>Ache a van em segundos</h3>
+        <p>Digite a escola, escolha o turno e faça um cadastro rápido. No app você vê os motoristas que podem levar seu filho, sem indicação.</p>
+      </article>
+      <article class="cartao-beneficio">
+        <h3>Grátis para você</h3>
+        <p>A busca não custa nada. Você encontra a van, fala com o motorista e combina tudo sem pagar taxa nenhuma ao Suavan.</p>
+      </article>
+      <article class="cartao-beneficio">
+        <div class="cartao-titulo"><h3>Sempre de olho</h3><span class="selo">Em breve</span></div>
+        <p>Acompanhe o caminho do seu filho em tempo real e esteja na hora certa, no lugar certo. Ele nunca mais vai esperar sozinho.</p>
+      </article>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section class="seguro" id="seguranca" aria-labelledby="seguro-titulo">
+    <div class="forma forma-seguro-direita" aria-hidden="true"><span></span></div>
+    <div class="forma forma-seguro-esquerda" aria-hidden="true"><img src="img/fundo-forma-seguro-esquerda.svg" width="308" height="555" alt="" loading="lazy"></div>
+    <div class="seguro-grade">
+      <div class="modulo-cabecalho">
+        <h2 id="seguro-titulo">Seu filho <span class="destaque">seguro</span> e em <span class="destaque">boas mãos</span> em cada <span class="destaque">trajeto</span></h2>
+        <p>Antes de confiar seu filho a alguém, você precisa saber quem é. No Suavan, você conhece o motorista antes de fechar.</p>
+      </div>
+      <div class="seguro-imagem">
+        <img class="seguro-formas computador" src="img/seguro-formas.svg" width="586" height="720" alt="" loading="lazy">
+        <img class="seguro-fundo" src="img/seguro-fundo.svg" width="500" height="499" alt="" loading="lazy">
+        <img class="seguro-foto" src="img/familia-cumprimenta-motorista.webp" width="810" height="994" alt="Mãe e pai cumprimentam o motorista da van escolar com um aperto de mão." loading="lazy" decoding="async">
+        <img class="seguro-formas celular" src="img/seguro-formas-celular.svg" width="358" height="450" alt="" loading="lazy">
+      </div>
+      <ul class="seguro-cartoes">
+        <li class="seguro-cartao">
+          <span class="icone-quadro"><img src="img/icone-usuario-lupa.svg" width="30" height="30" alt=""></span>
+          <div><h3>Antes de fechar</h3><p>Nome do motorista e as escolas e os turnos que ele atende.</p></div>
+        </li>
+        <li class="seguro-cartao">
+          <span class="icone-quadro"><img src="img/icone-cartao-identificacao.svg" width="30" height="30" alt=""></span>
+          <div><h3>Depois de fechar</h3><p>Telefone, valor da mensalidade e CPF ou CNPJ do motorista.</p></div>
+        </li>
+        <li class="seguro-cartao">
+          <span class="icone-quadro"><img src="img/icone-escudo-check.svg" width="30" height="30" alt=""></span>
+          <div><h3>Pesquise e confira</h3><p>Com os dados em mãos, você pesquisa e confere tudo antes de entregar seu filho.</p></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="conferir" aria-labelledby="conferir-titulo">
+    <div class="conferir-grade">
+      <div class="modulo-cabecalho">
+        <h2 id="conferir-titulo">O que <span class="destaque">conferir</span> antes de contratar</h2>
+        <p>Estes cuidados são exigidos por lei para o transporte escolar. Veja como conferir cada um antes de fechar com o motorista.</p>
+      </div>
+      <div class="conferir-imagem">
+        <img class="conferir-formas computador" src="img/conferir-formas.svg" width="488" height="488" alt="" loading="lazy">
+        <img class="conferir-fundo" src="img/conferir-fundo.svg" width="400" height="396" alt="" loading="lazy">
+        <img class="conferir-3d" src="img/prancheta-com-escudo.webp" width="570" height="661" alt="" loading="lazy" decoding="async">
+        <img class="conferir-formas celular" src="img/conferir-formas-celular.svg" width="320" height="320" alt="" loading="lazy">
+      </div>
+      <ul class="conferir-lista">
+        <li><img src="img/marcador-check.webp" width="48" height="48" alt="" loading="lazy">Motorista com mais de 21 anos e CNH categoria D. Peça para ver a CNH.</li>
+        <li><img src="img/marcador-check.webp" width="48" height="48" alt="" loading="lazy">Curso de transporte escolar em dia. Ele aparece na CNH ou no app Carteira Digital de Trânsito.</li>
+        <li><img src="img/marcador-check.webp" width="48" height="48" alt="" loading="lazy">Van com vistoria a cada seis meses. Peça o comprovante da última.</li>
+        <li><img src="img/marcador-check.webp" width="48" height="48" alt="" loading="lazy">Autorização do órgão de trânsito colada dentro da van, com a lotação permitida.</li>
+        <li><img src="img/marcador-check.webp" width="48" height="48" alt="" loading="lazy">Um cinto para cada criança. Confira se todos funcionam.</li>
+        <li><img src="img/marcador-check.webp" width="48" height="48" alt="" loading="lazy">No máximo uma infração gravíssima nos últimos 12 meses. Pergunte ao motorista.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="caminho" id="novidades" aria-labelledby="caminho-titulo">
+    <div class="forma forma-caminho-esquerda" aria-hidden="true"><span></span></div>
+    <div class="forma forma-caminho-direita" aria-hidden="true"><img src="img/fundo-forma-caminho-direita.svg" width="522" height="1416" alt="" loading="lazy"></div>
+    <div class="caminho-conteudo">
+      <div class="modulo-cabecalho">
+        <span class="selo">Em breve · um app para você</span>
+        <h2 id="caminho-titulo">Cada <span class="destaque">passo</span> do seu <span class="destaque">filho</span>, na <span class="destaque">palma da sua mão</span></h2>
+        <p>Pelo app para as famílias, você recebe um aviso em cada parada. Sem ligar para ninguém e sem ficar na dúvida.</p>
+      </div>
+      <div class="caminho-carrossel">
+        <img class="caminho-enfeite a" src="img/caminho-enfeite-a.svg" width="42" height="40" alt="" loading="lazy">
+        <img class="caminho-enfeite b" src="img/caminho-enfeite-b.svg" width="45" height="40" alt="" loading="lazy">
+        <img class="caminho-enfeite c" src="img/caminho-enfeite-c.svg" width="43" height="41" alt="" loading="lazy">
+        <img class="caminho-enfeite d" src="img/caminho-enfeite-d.svg" width="39" height="41" alt="" loading="lazy">
+        <ol class="paradas" id="paradas" tabindex="0" aria-label="As quatro paradas do caminho">
+          <li class="parada" style="--largura:267px">
+            <img class="parada-imagem" src="img/parada-01-van-chegou.webp" width="570" height="362" alt="" loading="lazy" decoding="async">
+            <div class="parada-cartao">
+              <p class="parada-numero" aria-hidden="true">01</p>
+              <h3>A van chegou</h3>
+              <p>Aviso na hora em que a van para na sua porta. Seu filho sai na hora certa.</p>
+              <img class="parada-enfeite" src="img/parada-enfeite-1.svg" width="49" height="40" alt="" loading="lazy" style="--deslocamento:-2px">
+            </div>
+          </li>
+          <li class="parada" style="--largura:276px">
+            <img class="parada-imagem" src="img/parada-02-chegou-na-escola.webp" width="570" height="349" alt="" loading="lazy" decoding="async">
+            <div class="parada-cartao">
+              <p class="parada-numero" aria-hidden="true">02</p>
+              <h3>Chegou na escola</h3>
+              <p>Você sabe que ele entrou na escola, sem precisar perguntar a ninguém.</p>
+              <img class="parada-enfeite" src="img/parada-enfeite-2.svg" width="48" height="40" alt="" loading="lazy">
+            </div>
+          </li>
+          <li class="parada" style="--largura:217px">
+            <img class="parada-imagem" src="img/parada-03-saiu-da-escola.webp" width="500" height="390" alt="" loading="lazy" decoding="async">
+            <div class="parada-cartao">
+              <p class="parada-numero" aria-hidden="true">03</p>
+              <h3>Saiu da escola</h3>
+              <p>Aviso assim que a van pega seu filho na saída. Começou a volta.</p>
+              <img class="parada-enfeite" src="img/parada-enfeite-3.svg" width="52" height="40" alt="" loading="lazy" style="--deslocamento:-7.75px">
+            </div>
+          </li>
+          <li class="parada" style="--largura:213px">
+            <img class="parada-imagem" src="img/parada-04-chegou-em-casa.webp" width="537" height="426" alt="" loading="lazy" decoding="async">
+            <div class="parada-cartao">
+              <p class="parada-numero" aria-hidden="true">04</p>
+              <h3>Chegou em casa</h3>
+              <p>Seu filho em casa e você tranquilo, onde estiver.</p>
+              <img class="parada-enfeite" src="img/parada-enfeite-4.svg" width="49" height="40" alt="" loading="lazy">
+            </div>
+          </li>
+        </ol>
+        <button class="caminho-seta anterior" type="button" aria-label="Parada anterior" aria-controls="paradas" disabled><img src="img/seta-anterior.svg" width="40" height="40" alt=""></button>
+        <button class="caminho-seta proxima" type="button" aria-label="Próxima parada" aria-controls="paradas"><img src="img/seta-proxima.svg" width="40" height="40" alt=""></button>
+        <div class="caminho-pontos" aria-hidden="true"><span class="ativo"></span><span></span><span></span><span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="direto" id="pagamento" aria-labelledby="direto-titulo">
+    <div class="direto-conteudo">
+      <div class="modulo-cabecalho">
+        <h2 id="direto-titulo">Tudo <span class="destaque">direto</span> com o <span class="destaque">motorista</span></h2>
+        <p>Sem intermediário. Você combina o valor com ele, paga no Pix dele e recebe tudo no seu WhatsApp.</p>
+      </div>
+      <ul class="direto-cartoes">
+        <li class="direto-cartao">
+          <div class="direto-arte" aria-hidden="true">
+            <span class="direto-forma"></span>
+            <img class="direto-imagem" src="img/ficha-do-aluno.webp" width="375" height="375" alt="" loading="lazy" decoding="async">
+            <img class="direto-enfeite" src="img/direto-enfeite-1.svg" width="46" height="43" alt="" loading="lazy">
+          </div>
+          <div class="direto-texto">
+            <h3>Ficha do seu filho</h3>
+            <p>Preencha uma vez, com endereço e contatos de emergência. O motorista tem tudo à mão quando precisar.</p>
+          </div>
+        </li>
+        <li class="direto-cartao">
+          <div class="direto-arte" aria-hidden="true">
+            <span class="direto-forma"></span>
+            <img class="direto-imagem" src="img/cobranca-pix.webp" width="375" height="375" alt="" loading="lazy" decoding="async">
+            <img class="direto-enfeite" src="img/direto-enfeite-2.svg" width="44" height="45" alt="" loading="lazy">
+          </div>
+          <div class="direto-texto">
+            <h3>Cobrança no WhatsApp</h3>
+            <p>A cobrança chega com o Pix do motorista. Você paga direto para ele, sem taxa, sem boleto e sem sair de casa.</p>
+          </div>
+        </li>
+        <li class="direto-cartao">
+          <div class="direto-arte" aria-hidden="true">
+            <span class="direto-forma"></span>
+            <img class="direto-imagem" src="img/recibo-whatsapp.webp" width="375" height="375" alt="" loading="lazy" decoding="async">
+            <img class="direto-enfeite" src="img/direto-enfeite-3.svg" width="42" height="45" alt="" loading="lazy">
+          </div>
+          <div class="direto-texto">
+            <h3>Recibo na hora</h3>
+            <p>Pagou, o recibo chega na hora no seu WhatsApp. Tudo guardado no celular e nada de papel perdido na mochila.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="ajuda" id="contato" aria-labelledby="ajuda-titulo">
+    <div class="ajuda-conteudo">
+      <div class="ajuda-barra">
+        <div class="ajuda-texto">
+          <h2 id="ajuda-titulo">Precisa de ajuda?</h2>
+          <p>Fale com o suporte do Suavan pelo WhatsApp ou por email.</p>
+        </div>
+        <div class="ajuda-botoes">
+          <a class="botao botao-whatsapp js-whats" href="/whatsapp/" target="_blank" rel="noopener"><img src="img/icone-whatsapp.svg" width="24" height="24" alt="">WhatsApp</a>
+          <a class="botao botao-email-amarelo js-email" href="mailto:suporte@suavan.com.br"><img src="img/icone-email.svg" width="24" height="24" alt="">Email</a>
+        </div>
+      </div>
+      <img class="ajuda-formas-esquerda celular" src="img/ajuda-formas-esquerda-celular.svg" width="33" height="37" alt="">
+      <img class="ajuda-formas-direita celular" src="img/ajuda-formas-direita-celular.svg" width="33" height="37" alt="">
+      <img class="ajuda-formas-esquerda computador" src="img/ajuda-formas-esquerda.svg" width="47" height="48" alt="">
+      <img class="ajuda-formas-direita computador" src="img/ajuda-formas-direita.svg" width="48" height="48" alt="">
+    </div>
+  </section>
+
+  <section class="duvidas" id="duvidas" aria-labelledby="duvidas-titulo">
+    <div class="forma forma-duvidas-direita" aria-hidden="true"><img src="img/fundo-forma-duvidas-direita.svg" width="661" height="818" alt="" loading="lazy"></div>
+    <div class="duvidas-conteudo">
+      <div class="modulo-cabecalho">
+        <h2 id="duvidas-titulo">Tire <span class="destaque">suas dúvidas</span></h2>
+        <p>As perguntas mais comuns das famílias sobre o Suavan.</p>
+      </div>
+      <div class="duvidas-lista">
+        <details class="duvida">
+          <summary><span class="duvida-numero">01</span><span class="duvida-pergunta">A busca é grátis?</span><span class="duvida-icone" aria-hidden="true"></span></summary>
+          <p class="duvida-resposta">Sim. A busca é grátis para os pais: você encontra a van, fala com o motorista e combina tudo sem pagar nada ao Suavan.</p>
+        </details>
+        <details class="duvida">
+          <summary><span class="duvida-numero">02</span><span class="duvida-pergunta">Como falo com o motorista?</span><span class="duvida-icone" aria-hidden="true"></span></summary>
+          <p class="duvida-resposta">Pelo app Suavan. Você busca a escola, vê os motoristas que atendem o turno do seu filho e fala direto com quem escolher.</p>
+        </details>
+        <details class="duvida">
+          <summary><span class="duvida-numero">03</span><span class="duvida-pergunta">Como pago a van?</span><span class="duvida-icone" aria-hidden="true"></span></summary>
+          <p class="duvida-resposta">Direto para o motorista, no Pix dele. O dinheiro não passa pelo Suavan, e o Suavan não cobra taxa.</p>
+        </details>
+        <details class="duvida">
+          <summary><span class="duvida-numero">04</span><span class="duvida-pergunta">Preciso baixar algum app?</span><span class="duvida-icone" aria-hidden="true"></span></summary>
+          <p class="duvida-resposta">Sim. A busca continua no app Suavan, que está na <a class="js-play" href="https://play.google.com/store/apps/details?id=io.suavan&amp;hl=pt_BR">Google Play</a> para celulares Android.</p>
+        </details>
+        <details class="duvida">
+          <summary><span class="duvida-numero">05</span><span class="duvida-pergunta">E se não tiver van para a escola do meu filho?</span><span class="duvida-icone" aria-hidden="true"></span></summary>
+          <p class="duvida-resposta">A busca mostra os motoristas que atendem a escola e o turno que você escolheu. Se ainda não houver nenhum, fale com o suporte pelo WhatsApp ou por email.</p>
+        </details>
+        <details class="duvida">
+          <summary><span class="duvida-numero">06</span><span class="duvida-pergunta">Como sei que o motorista é de confiança?</span><span class="duvida-icone" aria-hidden="true"></span></summary>
+          <p class="duvida-resposta">Antes de fechar, você vê o nome do motorista e as escolas e os turnos que ele atende. Depois de fechar, recebe o telefone e o CPF ou CNPJ dele para pesquisar. Confira também os cuidados exigidos por lei, como a CNH categoria D e a vistoria da van.</p>
+        </details>
+      </div>
+    </div>
+  </section>
 </main>
 
-<footer>
-  <div class="wrap row">
-    <div class="foot-brand">
-      <a class="home" href="#topo" aria-label="Voltar ao topo"><span class="wordmark">SUAVAN</span></a>
-      <nav class="social" aria-label="Redes sociais do Sua Van">
-        <a href="https://www.instagram.com/suavan.br/" target="_blank" rel="noopener" data-rede="instagram" aria-label="Instagram do Sua Van (abre em nova aba)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M7.0301.084c-1.2768.0602-2.1487.264-2.911.5634-.7888.3075-1.4575.72-2.1228 1.3877-.6652.6677-1.075 1.3368-1.3802 2.127-.2954.7638-.4956 1.6365-.552 2.914-.0564 1.2775-.0689 1.6882-.0626 4.947.0062 3.2586.0206 3.6671.0825 4.9473.061 1.2765.264 2.1482.5635 2.9107.308.7889.72 1.4573 1.388 2.1228.6679.6655 1.3365 1.0743 2.1285 1.38.7632.295 1.6361.4961 2.9134.552 1.2773.056 1.6884.069 4.9462.0627 3.2578-.0062 3.668-.0207 4.9478-.0814 1.28-.0607 2.147-.2652 2.9098-.5633.7889-.3086 1.4578-.72 2.1228-1.3881.665-.6682 1.0745-1.3378 1.3795-2.1284.2957-.7632.4966-1.636.552-2.9124.056-1.2809.0692-1.6898.063-4.948-.0063-3.2583-.021-3.6668-.0817-4.9465-.0607-1.2797-.264-2.1487-.5633-2.9117-.3084-.7889-.72-1.4568-1.3876-2.1228C21.2982 1.33 20.628.9208 19.8378.6165 19.074.321 18.2017.1197 16.9244.0645 15.6471.0093 15.236-.005 11.977.0014 8.718.0076 8.31.0215 7.0301.0839m.1402 21.6932c-1.17-.0509-1.8053-.2453-2.2287-.408-.5606-.216-.96-.4771-1.3819-.895-.422-.4178-.6811-.8186-.9-1.378-.1644-.4234-.3624-1.058-.4171-2.228-.0595-1.2645-.072-1.6442-.079-4.848-.007-3.2037.0053-3.583.0607-4.848.05-1.169.2456-1.805.408-2.2282.216-.5613.4762-.96.895-1.3816.4188-.4217.8184-.6814 1.3783-.9003.423-.1651 1.0575-.3614 2.227-.4171 1.2655-.06 1.6447-.072 4.848-.079 3.2033-.007 3.5835.005 4.8495.0608 1.169.0508 1.8053.2445 2.228.408.5608.216.96.4754 1.3816.895.4217.4194.6816.8176.9005 1.3787.1653.4217.3617 1.056.4169 2.2263.0602 1.2655.0739 1.645.0796 4.848.0058 3.203-.0055 3.5834-.061 4.848-.051 1.17-.245 1.8055-.408 2.2294-.216.5604-.4763.96-.8954 1.3814-.419.4215-.8181.6811-1.3783.9-.4224.1649-1.0577.3617-2.2262.4174-1.2656.0595-1.6448.072-4.8493.079-3.2045.007-3.5825-.006-4.848-.0608M16.953 5.5864A1.44 1.44 0 1 0 18.39 4.144a1.44 1.44 0 0 0-1.437 1.4424M5.8385 12.012c.0067 3.4032 2.7706 6.1557 6.173 6.1493 3.4026-.0065 6.157-2.7701 6.1506-6.1733-.0065-3.4032-2.771-6.1565-6.174-6.1498-3.403.0067-6.156 2.771-6.1496 6.1738M8 12.0077a4 4 0 1 1 4.008 3.9921A3.9996 3.9996 0 0 1 8 12.0077"/></svg></a>
-        <a href="https://www.tiktok.com/@suavan.br" target="_blank" rel="noopener" data-rede="tiktok" aria-label="TikTok do Sua Van (abre em nova aba)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg></a>
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener" data-rede="facebook" hidden aria-label="Facebook do Sua Van (abre em nova aba)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9.101 23.691v-7.98H6.627v-3.667h2.474v-1.58c0-4.085 1.848-5.978 5.858-5.978.401 0 .955.042 1.468.103a8.68 8.68 0 0 1 1.141.195v3.325a8.623 8.623 0 0 0-.653-.036 26.805 26.805 0 0 0-.733-.009c-.707 0-1.259.096-1.675.309a1.686 1.686 0 0 0-.679.622c-.258.42-.374.995-.374 1.752v1.297h3.919l-.386 2.103-.287 1.564h-3.246v8.245C19.396 23.238 24 18.179 24 12.044c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.628 3.874 10.35 9.101 11.647Z"/></svg></a>
-        <a href="https://www.linkedin.com/company/sua-van/" target="_blank" rel="noopener" data-rede="linkedin" aria-label="LinkedIn do Sua Van (abre em nova aba)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-      </nav>
+<footer class="rodape">
+  <div class="rodape-conteudo">
+    <div class="rodape-principal">
+      <a class="logo" href="#topo" aria-label="Suavan, voltar ao topo">
+        <img class="logo-icone" src="img/icone-app.jpg" width="36" height="36" alt="" loading="lazy">
+        <span class="logo-palavra" aria-hidden="true">sua<span>van</span></span>
+      </a>
+      <ul class="rodape-links">
+        <li><a href="/familias/termos/" target="_blank" rel="noopener">Termos de uso</a></li>
+        <li><a href="/familias/privacidade/" target="_blank" rel="noopener">Política de Privacidade</a></li>
+        <li><a href="/familias/excluir-conta/">Como excluir sua conta</a></li>
+      </ul>
     </div>
-    <nav class="links" aria-label="Links do rodapé">
-      <a href="https://suavan.com.br/" aria-current="page">Página principal</a>
-      <a href="https://motorista.suavan.com.br/">Para motoristas</a>
-      <a href="https://suavan.com.br/#familias">Para famílias</a>
-      <a href="/privacidade/" target="_blank" rel="noopener">Privacidade</a>
-      <a href="/termos/" target="_blank" rel="noopener">Termos</a>
-      <a href="https://suavan.com.br/excluir-conta/">Excluir conta</a>
-      <a href="mailto:suporte@suavan.com.br">suporte@suavan.com.br</a>
-    </nav>
-    <span class="copy">© <span id="ano">2026</span> Sua Van</span>
+    <hr class="rodape-divisor">
+    <div class="rodape-legal">
+      <nav class="rodape-redes" aria-label="Redes sociais do Suavan">
+        <a href="https://www.instagram.com/suavan.br/" target="_blank" rel="noopener" data-rede="instagram" aria-label="Instagram do Suavan (abre em nova aba)"><img src="img/icone-instagram.svg" width="24" height="24" alt="" loading="lazy"></a>
+        <a href="https://www.linkedin.com/company/sua-van/" target="_blank" rel="noopener" data-rede="linkedin" aria-label="LinkedIn do Suavan (abre em nova aba)"><img src="img/icone-linkedin.svg" width="24" height="24" alt="" loading="lazy"></a>
+        <a href="https://www.tiktok.com/@suavan.br" target="_blank" rel="noopener" data-rede="tiktok" aria-label="TikTok do Suavan (abre em nova aba)"><img src="img/icone-tiktok.svg" width="24" height="24" alt="" loading="lazy"></a>
+      </nav>
+      <div class="rodape-contato">
+        <p>WhatsApp: <a class="js-whats" href="/whatsapp/" target="_blank" rel="noopener">(11) 94942-6358</a></p>
+        <p>Email: <a class="js-email" href="mailto:suporte@suavan.com.br">suporte@suavan.com.br</a></p>
+      </div>
+    </div>
   </div>
 </footer>
 
+<div class="flutuantes">
+  <a class="flutuante flutuante-topo" href="#topo" aria-label="Voltar ao topo"><span aria-hidden="true"></span></a>
+  <a class="flutuante flutuante-whatsapp js-whats" href="/whatsapp/" target="_blank" rel="noopener" aria-label="Falar com o suporte pelo WhatsApp"><img src="img/icone-whatsapp-flutuante.svg" width="30" height="30" alt=""></a>
+</div>
+
 <script>
-  function origem(el){
+  (function () {
+    var abrir = document.querySelector('.menu-botao');
+    var menu = document.getElementById('menu-celular');
+    var fechar = menu.querySelector('.menu-fechar');
+    var computador = window.matchMedia('(min-width: 1200px)');
+
+    function definir(aberto, devolverFoco) {
+      menu.hidden = !aberto;
+      abrir.setAttribute('aria-expanded', aberto ? 'true' : 'false');
+      document.documentElement.classList.toggle('menu-aberto', aberto);
+      if (aberto) {
+        fechar.focus();
+      } else if (devolverFoco) {
+        abrir.focus({ preventScroll: true });
+      }
+    }
+
+    abrir.addEventListener('click', function () { definir(true); });
+    fechar.addEventListener('click', function () { definir(false, true); });
+    menu.addEventListener('click', function (e) {
+      if (e.target.closest('a')) definir(false, false);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (menu.hidden) return;
+      if (e.key === 'Escape') { definir(false, true); return; }
+      if (e.key !== 'Tab') return;
+      var focaveis = menu.querySelectorAll('a[href], button');
+      var primeiro = focaveis[0], ultimo = focaveis[focaveis.length - 1];
+      if (e.shiftKey && document.activeElement === primeiro) { e.preventDefault(); ultimo.focus(); }
+      else if (!e.shiftKey && document.activeElement === ultimo) { e.preventDefault(); primeiro.focus(); }
+    });
+    computador.addEventListener('change', function (e) {
+      if (e.matches && !menu.hidden) definir(false, false);
+    });
+  })();
+
+  (function () {
+    var trilho = document.querySelector('.paradas');
+    var anterior = document.querySelector('.caminho-seta.anterior');
+    var proxima = document.querySelector('.caminho-seta.proxima');
+    var pontos = document.querySelectorAll('.caminho-pontos span');
+    var semMovimento = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    function passo() {
+      var itens = trilho.children;
+      return itens.length > 1 ? itens[1].offsetLeft - itens[0].offsetLeft : trilho.clientWidth;
+    }
+
+    function atualizar() {
+      var max = trilho.scrollWidth - trilho.clientWidth;
+      var atual = max <= 1 ? 0 : Math.round(trilho.scrollLeft / passo());
+      if (trilho.scrollLeft >= max - 1) atual = pontos.length - 1;
+      pontos.forEach(function (p, i) { p.classList.toggle('ativo', i === atual); });
+      anterior.disabled = trilho.scrollLeft <= 1;
+      proxima.disabled = trilho.scrollLeft >= max - 1;
+    }
+
+    function mover(direcao) {
+      trilho.scrollBy({ left: direcao * passo(), behavior: semMovimento.matches ? 'auto' : 'smooth' });
+    }
+
+    anterior.addEventListener('click', function () { mover(-1); });
+    proxima.addEventListener('click', function () { mover(1); });
+    trilho.addEventListener('scroll', atualizar, { passive: true });
+    window.addEventListener('resize', atualizar);
+    atualizar();
+  })();
+
+  function origem(el) {
+    if (el.closest('.menu-celular')) return 'menu';
+    if (el.closest('.flutuantes')) return 'flutuante';
+    if (el.closest('.chave')) return 'cabecalho';
     var s = el.closest('section, footer, header');
-    if(!s) return 'outro';
-    if(s.tagName === 'FOOTER') return 'rodape';
-    if(s.tagName === 'HEADER') return 'cabecalho';
-    if(s.id) return s.id;
-    if(s.classList.contains('hero')) return 'hero';
+    if (!s) return 'outro';
+    if (s.tagName === 'FOOTER') return 'rodape';
+    if (s.tagName === 'HEADER') return 'cabecalho';
+    if (s.id) return s.id;
+    if (s.classList.contains('hero')) return 'hero';
     return 'outro';
   }
 
-  (function(){
+  function registrar(el, segmento, evento) {
+    if (typeof window.clarity !== 'function') return;
+    window.clarity('set', 'segmento', segmento);
+    window.clarity('set', 'cta_origem', origem(el));
+    window.clarity('event', evento);
+  }
+
+  function medir(el, segmento, evento) {
+    el.addEventListener('click', function () { registrar(el, segmento, evento); });
+  }
+
+  function referrerPlay(search) {
+    var p = new URLSearchParams(search);
+    function slug(k) { var v = (p.get(k) || '').trim().toLowerCase(); return /^[a-z0-9_-]{1,24}$/.test(v) ? v : ''; }
+    var fonte = slug('utm_source');
+    if (!fonte) return '';
+    var partes = ['utm_source=' + fonte];
+    ['utm_medium', 'utm_campaign', 'utm_content'].forEach(function (k) { var v = slug(k); if (v) partes.push(k + '=' + v); });
+    return partes.join('&');
+  }
+
+  (function () {
+    var play = new URL('https://play.google.com/store/apps/details?id=io.suavan&hl=pt_BR');
+    var ref = referrerPlay(window.location.search);
+    if (ref) play.searchParams.set('referrer', ref);
+
+    document.querySelectorAll('.js-play').forEach(function (el) {
+      el.href = play.toString();
+      medir(el, 'pai', 'play_abrir');
+    });
+
+    var busca = document.querySelector('.js-busca');
+    busca.addEventListener('submit', function (e) {
+      e.preventDefault();
+      registrar(busca, 'pai', 'busca_enviar');
+      window.location.href = play.toString();
+    });
+  })();
+
+  (function () {
     var extra = window.location.search;
-    function repassarUtm(el){
-      if(!extra) return;
-      var u = new URL(el.href);
-      if(!/(^|\.)suavan\.com\.br$/.test(u.hostname) || u.pathname !== '/') return;
-      new URLSearchParams(extra).forEach(function(v, k){ u.searchParams.set(k, v); });
-      el.href = u.toString();
-    }
-    document.querySelectorAll('a.out, footer nav.links a[href^="https://"]').forEach(repassarUtm);
-  })();
-
-  (function(){
-    document.querySelectorAll('a.out').forEach(function(el){
-      el.addEventListener('click', function(){
-        if(typeof window.clarity !== 'function') return;
-        var href = el.getAttribute('href') || '';
-        var seg = href.indexOf('motorista.suavan') > -1 ? 'motorista'
-                : (href.indexOf('#familias') > -1 ? 'pai' : 'outro');
-        window.clarity('set', 'segmento', seg);
-        window.clarity('set', 'cta_origem', origem(el));
-        window.clarity('event', 'cta_' + seg);
-      });
+    document.querySelectorAll('.js-whats').forEach(function (el) {
+      if (extra) el.setAttribute('href', el.getAttribute('href') + extra);
+      medir(el, 'pai', 'acesso_whatsapp_enviar');
     });
   })();
 
-  (function(){
-    var btn = document.querySelector('.menu'), nav = document.getElementById('nav-links');
-    if(!btn || !nav) return;
-    function set(open){
-      var wasInside = nav.contains(document.activeElement);
-      nav.classList.toggle('open', open);
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      btn.querySelector('.ms').textContent = open ? 'close' : 'menu';
-      btn.setAttribute('aria-label', open ? 'Fechar o menu' : 'Abrir o menu');
-      if(open){ var first = nav.querySelector('a'); if(first) first.focus(); }
-      else if(wasInside){ btn.focus(); }
-    }
-    btn.addEventListener('click', function(){ set(!nav.classList.contains('open')); });
-    nav.addEventListener('click', function(e){ if(e.target.closest('a')) set(false); });
-    document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && nav.classList.contains('open')) set(false); });
-  })();
+  document.querySelectorAll('.js-email').forEach(function (el) { medir(el, 'pai', 'email_abrir'); });
 
-  (function(){
-    var eventos = { instagram: 'social_instagram', tiktok: 'social_tiktok', linkedin: 'social_linkedin', facebook: 'social_facebook' };
-    document.querySelectorAll('footer .social a[data-rede]').forEach(function(el){
-      el.addEventListener('click', function(){
-        var ev = eventos[el.getAttribute('data-rede')];
-        if(ev && typeof window.clarity === 'function'){ window.clarity('event', ev); }
-      });
+  (function () {
+    var eventos = { instagram: 'social_instagram', tiktok: 'social_tiktok', linkedin: 'social_linkedin' };
+    document.querySelectorAll('.rodape-redes a[data-rede]').forEach(function (el) {
+      var evento = eventos[el.getAttribute('data-rede')];
+      if (evento) medir(el, 'pai', evento);
     });
   })();
 
-  (function(){ var el = document.getElementById("ano"); if(el){ el.textContent = new Date().getFullYear(); } })();
+  (function () {
+    var extra = window.location.search;
+    document.querySelectorAll('.js-motoristas').forEach(function (el) {
+      if (extra) {
+        var u = new URL(el.href);
+        new URLSearchParams(extra).forEach(function (v, k) { u.searchParams.set(k, v); });
+        el.href = u.toString();
+      }
+      medir(el, 'motorista', 'cta_motorista');
+    });
+  })();
 
-  document.querySelectorAll('#duvidas details').forEach(function(d){
-    d.addEventListener('toggle', function(){ if(d.open && typeof window.clarity === 'function'){ window.clarity('event', 'faq_abrir'); } });
+  document.querySelectorAll('#duvidas details').forEach(function (d) {
+    d.addEventListener('toggle', function () { if (d.open && typeof window.clarity === 'function') { window.clarity('event', 'faq_abrir'); } });
   });
 </script>
-
 </body>
 </html>
